@@ -11,7 +11,7 @@
   width: 100%;
 
   @include tablet {
-    width: 50%;
+    width: calc(50% + 7px);
   }
 
   @include desktop {
@@ -30,7 +30,7 @@
   width: 100%;
 
   @include laptop {
-    width: 50%;
+    width: calc(50% - 7px);
     height: 200px;
   }
 

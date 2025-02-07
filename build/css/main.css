@@ -4480,7 +4480,7 @@ p {
   }
 
   .section-specs__title-wrap {
-    width: 50%;
+    width: calc(50% + 7px);
   }
 
   .section-specs__header .section-specs__body .list {
@@ -4549,8 +4549,6 @@ p {
   .specs-list {
     -moz-column-count: 2;
     column-count: 2;
-    -moz-column-gap: 100px;
-    column-gap: 100px;
   }
 }
 
@@ -4911,7 +4909,7 @@ p {
   }
 
   .section-specs__body {
-    width: 50%;
+    width: calc(50% - 7px);
     height: 200px;
   }
 
@@ -5707,6 +5705,7 @@ p {
 
   .specs-list__item {
     padding: 80px 65px;
+    margin-bottom: -100px;
   }
 
   .specs-list__item h3 {
@@ -5977,11 +5976,6 @@ p {
   .services__slider .slider-services {
     margin-right: -279px;
     margin-bottom: 0;
-  }
-
-  .specs-list {
-    -moz-column-gap: 144px;
-    column-gap: 144px;
   }
 
   .specs-list__item::before {

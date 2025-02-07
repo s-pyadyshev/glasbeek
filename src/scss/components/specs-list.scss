@@ -6,11 +6,6 @@
 
   @include tablet {
     column-count: 2;
-    column-gap: 100px;
-  }
-
-  @include desktop-l {
-    column-gap: 144px;
   }
 }
 
@@ -22,6 +17,7 @@
 
   @include desktop {
     padding: 80px 65px;
+    margin-bottom: -100px;
   }
 }
 
