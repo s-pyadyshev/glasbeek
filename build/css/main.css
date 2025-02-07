@@ -2064,37 +2064,6 @@ p {
   display: none;
 }
 
-.card__text {
-  padding: 30px 39px;
-  background-color: #fff;
-}
-
-.card__text h4 {
-  font-size: 20px;
-  color: #d62028;
-  font-weight: 500;
-  margin-bottom: 4px;
-}
-
-.card__text p {
-  font-size: 14px;
-  font-weight: 300;
-  margin: 0;
-}
-
-.news-slide {
-  height: 234px;
-  width: 156px;
-}
-
-.services-card {
-  height: 100%;
-}
-
-.card__text a {
-  display: none;
-}
-
 .clients__inner {
   position: relative;
   display: flex;
@@ -4728,39 +4697,6 @@ p {
     font-size: 18px;
   }
 
-  .card__text {
-    padding: 30px 48px;
-  }
-
-  .card__text h4 {
-    font-size: 28px;
-  }
-
-  .card__text p {
-    font-family: "Geist";
-    font-size: 20px;
-    line-height: 37px;
-  }
-
-  .news-slide {
-    height: 450px;
-    width: 505px;
-  }
-
-  .news-card .card__text {
-    padding: 40px 42px 18px 53px;
-  }
-
-  .news-card .card__text h4 {
-    margin-bottom: 22px;
-  }
-
-  .card__text a {
-    display: block;
-    color: #d62028;
-    font-size: 18px;
-  }
-
   .clients__inner img {
     width: 15%;
   }
@@ -5588,4 +5524,3 @@ p {
     background-image: url("../images/sprites@2x.png");
   }
 }
-/*# sourceMappingURL=main.css.map */
