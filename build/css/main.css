@@ -3273,6 +3273,7 @@ p {
 .section-specs__body {
   padding: 20px;
   width: 100%;
+  border-top: 1px solid #dadada;
 }
 
 .section-specs__title-wrap h2 {
@@ -4012,7 +4013,11 @@ p {
   }
 
   .section-specs__title-wrap {
-    width: 50%;
+    width: calc(50% - 1px);
+  }
+
+  .section-specs__body {
+    border-left: 1px solid #dadada;
   }
 
   .section-specs__header .section-specs__body .list {
@@ -4448,7 +4453,7 @@ p {
   }
 
   .section-specs__body {
-    width: 50%;
+    width: calc(50% - 1px);
     height: 200px;
   }
 
