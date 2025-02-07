@@ -24,6 +24,11 @@
     height: 1px;
     background-color: #dadada;
 
+    @include laptop {
+      left: -70px;
+      width: calc(100% + 140px);
+    }
+
     @include desktop-l {
       left: -100vw;
       width: 200vw;
@@ -115,6 +120,22 @@
 
   @include laptop {
     margin-bottom: 144px;
+  }
+
+  &:before {
+    height: calc(100% + 40px);
+
+    @include desktop {
+      height: calc(100% + 144px);
+    }
+  }
+
+  &:after {
+    height: calc(100% + 40px);
+
+    @include desktop {
+      height: calc(100% + 144px);
+    }
   }
 }
 
@@ -403,4 +424,18 @@
   top: 0;
   left: 0;
   opacity: 0.9;
+}
+
+.section-why__cards li:nth-child(1) {
+  border-right: 1px solid #dadada;
+  border-bottom: 1px solid #dadada;
+}
+
+.section-why__cards li:nth-child(2) {
+  border-left: 1px solid #dadada;
+  border-bottom: 1px solid #dadada;
+}
+
+.section-why__cards li:nth-child(3) {
+  border-right: 1px solid #dadada;
 }

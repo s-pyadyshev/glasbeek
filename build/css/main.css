@@ -2340,6 +2340,7 @@ p {
   z-index: 11;
   color: #fff;
   border-left: 1px solid transparent;
+  margin-left: 0;
 }
 
 .hero__list {
@@ -3360,6 +3361,14 @@ p {
   margin-bottom: 40px;
 }
 
+.section-why__cards-wrap:before {
+  height: calc(100% + 40px);
+}
+
+.section-why__cards-wrap:after {
+  height: calc(100% + 40px);
+}
+
 .section-why .section-why__header h2 {
   font-size: 22px;
   font-weight: 500;
@@ -3465,6 +3474,20 @@ p {
   top: 0;
   left: 0;
   opacity: 0.9;
+}
+
+.section-why__cards li:nth-child(1) {
+  border-right: 1px solid #dadada;
+  border-bottom: 1px solid #dadada;
+}
+
+.section-why__cards li:nth-child(2) {
+  border-left: 1px solid #dadada;
+  border-bottom: 1px solid #dadada;
+}
+
+.section-why__cards li:nth-child(3) {
+  border-right: 1px solid #dadada;
 }
 
 .section {
@@ -4434,6 +4457,11 @@ p {
     counter-reset: chapter 0;
   }
 
+  .section-why__cards:after {
+    left: -70px;
+    width: calc(100% + 140px);
+  }
+
   .counter-list li::before {
     height: 40px;
     width: 40px;
@@ -5131,6 +5159,14 @@ p {
     padding: 0px;
     margin-top: 0;
     height: 350px;
+  }
+
+  .section-why__cards-wrap:before {
+    height: calc(100% + 144px);
+  }
+
+  .section-why__cards-wrap:after {
+    height: calc(100% + 144px);
   }
 
   .section-why .section-why__header h2 {
