@@ -3738,6 +3738,7 @@ p {
 }
 
 .specs-list {
+  font-size: 0;
   border-top: 1px solid #dadada;
   border-right: 1px solid #dadada;
   -moz-column-count: 1;
@@ -4011,7 +4012,7 @@ p {
   }
 
   .section-specs__title-wrap {
-    width: calc(50% + 7px);
+    width: 50%;
   }
 
   .section-specs__header .section-specs__body .list {
@@ -4080,6 +4081,13 @@ p {
   .specs-list {
     -moz-column-count: 2;
     column-count: 2;
+    border-left: 1px solid #dadada;
+    -moz-column-rule: 1px solid #dadada;
+    column-rule: 1px solid #dadada;
+  }
+
+  .specs-list__item::after {
+    display: none;
   }
 }
 
@@ -4440,7 +4448,7 @@ p {
   }
 
   .section-specs__body {
-    width: calc(50% - 7px);
+    width: 50%;
     height: 200px;
   }
 

@@ -1,4 +1,5 @@
 .specs-list {
+  font-size: 0;
   border-top: 1px solid #dadada;
   border-right: 1px solid #dadada;
   column-count: 1;
@@ -6,6 +7,8 @@
 
   @include tablet {
     column-count: 2;
+    border-left: 1px solid #dadada;
+    column-rule: 1px solid #dadada;
   }
 }
 
@@ -64,6 +67,10 @@
   background-color: #dadada;
   top: 0;
   left: 0;
+
+  @include tablet {
+    display: none;
+  }
 
   @include desktop-l {
     height: 175%;
