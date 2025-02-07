@@ -1,0 +1,50 @@
+.page-news__inner {
+  max-width: 1000px;
+  padding-top: 50px;
+  padding-right: 35px;
+  padding-left: 35px;
+
+  @include desktop {
+    width: 75%;
+    padding-top: 0;
+    padding-right: 72px;
+    padding-left: 72px;
+  }
+
+  .news-list {
+    @include desktop {
+      margin-top: -140px;
+    }
+  }
+}
+
+.page-news-item {
+  overflow: hidden;
+}
+
+.page-news-item__inner {
+  position: relative;
+  max-width: 1000px;
+  padding-right: 35px;
+  padding-left: 35px;
+
+  @include desktop {
+    padding-right: 72px;
+    padding-left: 72px;
+    max-width: 68.2%;
+  }
+
+  @media (min-width: 1800px) {
+    max-width: 1000px;
+  }
+
+  .news-list {
+    @include desktop {
+      margin-top: -140px;
+    }
+  }
+}
+
+.page-news-item__wrap {
+  border-right: 1px solid #dadada;
+}

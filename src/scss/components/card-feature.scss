@@ -1,0 +1,98 @@
+.card-feature {
+  background-color: #fff;
+  border: 1px solid $color-primary;
+  width: 100%;
+  box-shadow: 0 4px 45px 0 #00000014;
+}
+
+.card-feature__header {
+  position: relative;
+  background-color: $color-primary;
+  padding: 16px;
+  font-size: 20px;
+  text-align: center;
+  color: #fff;
+
+  @include tablet {
+    padding: 33px 16px;
+  }
+
+  h3 {
+    font-weight: 500;
+    margin-bottom: 0;
+  }
+}
+
+.card-feature__icon {
+  display: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #fff;
+  fill: $color-primary;
+
+  @include tablet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: -25px;
+    margin: 0 auto;
+    z-index: 1;
+  }
+
+  svg {
+    height: 36px;
+    fill: $color-primary;
+  }
+}
+
+.card-feature__body {
+  padding: 30px;
+  min-height: 260px;
+
+  @media (min-width: 390px) {
+    min-height: 217px;
+  }
+
+  @include tablet {
+    min-height: 290px;
+    padding: 50px 30px 30px;
+  }
+
+  @include desktop {
+    min-height: 212px;
+  }
+
+  @include desktop-l {
+    padding: 50px 30px 30px;
+    min-height: 330px;
+  }
+
+  @media (min-width: 1920px) {
+    padding: 50px 75px 30px;
+  }
+}
+
+.card-feature .card-feature__list-item {
+  font-size: 15px;
+  gap: 20px;
+
+  @include tablet {
+    font-size: 14px;
+  }
+
+  @include desktop-l {
+    font-size: 20px;
+    line-height: 1.8;
+    align-items: flex-start;
+  }
+
+  &:before {
+    @include desktop-l {
+      margin-top: 10px;
+    }
+  }
+}

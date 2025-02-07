@@ -1,0 +1,38 @@
+.input {
+  appearance: none;
+  font-family: $font-secondary;
+  padding: 27px 16px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  background-color: $input-background-color;
+  color: $input-color;
+
+  @include laptop {
+    font-size: 20px;
+    padding: 23px 16px;
+  }
+
+  &:focus {
+    border-color: $input-color;
+  }
+
+  &:hover {
+    border-color: $input-color;
+  }
+
+  &:active {
+    border-color: $input-color;
+  }
+
+  &[disabled] {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+
+  &::placeholder {
+    opacity: 1;
+    transition: $transition-duration;
+    color: $input-placeholder-color;
+  }
+}

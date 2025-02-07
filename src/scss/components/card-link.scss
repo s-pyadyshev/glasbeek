@@ -1,0 +1,49 @@
+.card-link {
+  max-width: 400px;
+  box-shadow: 0 0 15px 5px rgb(0 0 0 / 10%);
+}
+
+.card-link__image {
+  height: 229px;
+  object-fit: cover;
+}
+
+.card-link__body {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  padding: 50px;
+  font-family: $font-secondary;
+  font-size: 28px;
+  font-weight: 500;
+  text-decoration: none;
+  color: $color-primary;
+  gap: 10px;
+
+  > div {
+    min-height: 52px;
+    line-height: 1.7;
+  }
+
+  svg {
+    flex-shrink: 0;
+    display: none;
+    width: 52px;
+    height: 52px;
+    fill: #780000;
+  }
+
+  &:focus,
+  &:hover,
+  &:active {
+    background-color: $color-primary;
+    color: #fff;
+
+    svg {
+      border-radius: 50%;
+      background-color: #780000;
+      display: block;
+      fill: #fff;
+    }
+  }
+}

@@ -1,0 +1,165 @@
+// Backgrounds
+.background-default {
+  background-color: $color-white;
+  color: $color-black;
+}
+
+.background-muted {
+  background-color: $color-muted;
+  color: $color-black;
+}
+
+.background-primary {
+  background-color: $color-primary;
+  color: $color-white;
+}
+
+.background-secondary {
+  background-color: $color-secondary;
+  color: $color-white;
+}
+
+// Text colors
+.text-default {
+  color: $color-white;
+}
+
+.text-muted {
+  color: $color-muted;
+}
+
+.text-primary {
+  color: $color-primary;
+}
+
+.text-secondary {
+  color: $color-secondary;
+}
+
+// Text alignment
+.text-center {
+  text-align: center !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.mt-0 {
+  margin-bottom: 0 !important;
+}
+
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+
+.pt-0 {
+  padding-top: 0 !important;
+}
+
+.pb-0 {
+  padding-bottom: 0 !important;
+}
+
+.full-width {
+  width: 100% !important;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.clearfix {
+  overflow: auto;
+
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+}
+
+.visible-laptop {
+  display: none;
+
+  @include laptop {
+    display: block;
+  }
+}
+
+.hidden-laptop {
+  display: block;
+  font-size: 15px;
+  @include laptop {
+    display: none;
+  }
+}
+
+.list-none {
+  list-style-type: none;
+}
+
+.border-top {
+  border-top: 1px solid #dadada;
+}
+
+.border-right::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  width: 1px;
+  height: 100%;
+  background-color: #fff;
+
+  .background-default &,
+  .background-secondary & {
+    background-color: #dadada;
+  }
+
+  .background-muted & {
+    background-color: #fff;
+  }
+}
+
+.border-left::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 100%;
+  background-color: #fff;
+
+  .background-default &,
+  .background-secondary & {
+    background-color: #dadada;
+  }
+
+  .background-muted & {
+    background-color: #fff;
+  }
+}
+
+.sticky {
+  z-index: 2;
+}

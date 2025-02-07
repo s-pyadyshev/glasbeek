@@ -1,0 +1,19 @@
+.slider-services {
+  margin-bottom: 20px;
+}
+
+.slider-services__controls {
+  position: absolute;
+  bottom: -26px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  right: 0;
+  left: 0;
+
+  @include laptop {
+    justify-content: flex-end;
+    margin: 0;
+    position: static;
+  }
+}

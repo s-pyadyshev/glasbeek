@@ -1,0 +1,177 @@
+$mobile-menu-background-color: $color-primary;
+
+.header {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #fff;
+}
+
+.header__inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
+  @include laptop {
+    padding-left: 32px;
+  }
+
+  @include desktop-l {
+    max-height: 140px;
+    justify-content: flex-end;
+    padding-left: 0;
+  }
+
+  &:before {
+    @include laptop {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1px;
+      height: 100%;
+      background-color: #fff;
+    }
+  }
+}
+
+.header__inner-wrap {
+  background-color: $color-muted;
+  display: flex;
+  align-items: center;
+
+  @include laptop {
+    width: 40%;
+  }
+
+  @include desktop-l {
+    width: auto;
+    height: 140px;
+  }
+}
+
+.header__logo {
+  z-index: 11;
+  position: relative;
+  transition: none;
+  width: 141px;
+  height: 35px;
+
+  @include desktop-l {
+    margin: 0 23px;
+    width: 224px;
+    height: 56px;
+  }
+
+  .menu-active & {
+    border: 1px solid transparent;
+    filter: brightness(0) invert(1);
+  }
+}
+
+.header__menu-toggle {
+  flex-shrink: 0;
+  width: 78px;
+  height: 78px;
+  background-color: $color-primary;
+
+  @include laptop {
+    width: 70px;
+  }
+
+  @include desktop-l {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 140px;
+    min-width: 216px;
+  }
+}
+
+.header__menu {
+  background-color: $color-primary;
+
+  @include laptop {
+    width: 60%;
+    height: 78px;
+    margin-left: auto;
+  }
+
+  @include desktop-l {
+    height: 140px;
+  }
+}
+
+.lang {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+
+.lang li {
+  display: flex;
+  align-items: center;
+}
+
+.lang li:not(:last-child)::after {
+  content: "/";
+  margin-left: 5px;
+  font-size: 18px;
+  margin-right: 5px;
+}
+
+.lang li a {
+  font-size: 20px;
+  text-decoration: none;
+
+  @include laptop {
+    font-size: 14px;
+  }
+
+  @include desktop {
+    font-size: 20px;
+  }
+
+  &:focus,
+  &:hover,
+  &:active {
+    text-decoration: underline;
+  }
+}
+
+.header .header-container {
+  padding-right: 0;
+
+  @include laptop {
+    padding-right: 0;
+  }
+}
+
+.header__lang {
+  display: none;
+
+  @include laptop {
+    display: flex;
+    padding: 0 20px;
+    margin: 0 0 0 auto;
+    min-height: 78px;
+    border-left: 1px solid #fff;
+  }
+
+  @include desktop-l {
+    min-height: 140px;
+    padding: 0 25px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 1800px) {
+    padding: 0 56px;
+  }
+
+  .menu-active & {
+    z-index: 11;
+    color: #fff;
+    border-left: 1px solid transparent;
+  }
+}

@@ -1,0 +1,29 @@
+@each $breakpoint, $width in $container-widths {
+  @if $breakpoint == "default" {
+    .container {
+      max-width: $width;
+    }
+  } @else {
+    .container-#{$breakpoint} {
+      max-width: $width;
+    }
+  }
+}
+
+[class^="container"] {
+  width: 100%;
+  padding-right: 40px;
+  padding-left: 40px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @include laptop {
+    padding-right: 70px;
+    padding-left: 70px;
+  }
+
+  @include desktop-l {
+    padding-right: 216px;
+    padding-left: 216px;
+  }
+}

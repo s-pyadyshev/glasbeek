@@ -1,0 +1,38 @@
+extends pug/base
+
+prepend vars
+  - title = 'Voorbehandeling'
+
+append vars
+
+block content
+  +page-header-pretreatment(
+    'Voorbehandeling',
+    'Bij Glasbeek staan kwaliteit en duurzaamheid centraal in onze voorbehandelingsinstallaties. Met innovatieve oplossingen zoals ECO verwarming, automatische spoelwaterregeling en energiezuinige pompen creëren we efficiënte processen die voldoen aan de hoogste milieustandaarden. Onze systemen zijn ontworpen voor een lange levensduur en passen perfect bij uw productiebehoeften.',
+    'images/pretreatment.jpg'
+    )
+  section.section.background-default.section-equipment.pt-0.pb-0
+    .container
+      .section-equipment__cards.border-left.border-right 
+        h2 Voorbehandelingsinstallaties
+        .section-equipment__cards-wrap
+          div 
+            .card-link 
+              img.card-link__image(src="images/card-why1.jpg" width="400" height="228" alt="")
+              a(href="/").card-link__body
+                div.title Sproeikamer
+                +svg('arrow-right')
+          div 
+            .card-link 
+              img.card-link__image(src="images/card-why1.jpg" width="400" height="228" alt="")
+              a(href="/").card-link__body
+                div.title Sproeitunnel
+                +svg('arrow-right')
+          div 
+            .card-link 
+              img.card-link__image(src="images/card-why1.jpg" width="400" height="228" alt="")
+              a(href="/").card-link__body
+                div.title Badenreeks
+                +svg('arrow-right')
+  include pug/components/section-contact-us
+  include pug/components/section-specs

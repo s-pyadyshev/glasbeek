@@ -1,0 +1,16 @@
+.section-contact__form {
+  position: relative;
+  max-width: 1000px;
+  padding: 80px 25px;
+
+  @include laptop {
+    max-width: 505px;
+  }
+
+  @include desktop {
+    max-width: 68.2%;
+    padding-top: 40px;
+    padding-right: 70px;
+    padding-left: 70px;
+  }
+}

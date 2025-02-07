@@ -1,0 +1,99 @@
+.card-news__date {
+  position: absolute;
+  background-color: $color-primary;
+  bottom: 0;
+  right: 0;
+  height: 40px;
+  max-width: 300px;
+  width: 90%;
+  color: #fff;
+  padding: 10px 12px;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+
+  @include desktop {
+    height: 72px;
+    max-width: 216px;
+    color: $color-white;
+    padding: 22px 14px;
+    font-size: 20px;
+  }
+}
+
+.card-news__header {
+  position: relative;
+}
+
+.card-news__body {
+  padding: 25px 10%;
+
+  @include desktop {
+    padding: 25px 25px 15px;
+  }
+
+  @include desktop-l {
+    padding: 38px 50px 15px;
+  }
+}
+.card-news__body h3 {
+  font-weight: 500;
+  color: $color-primary;
+
+  @include desktop {
+    font-size: 22px;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+    margin-bottom: 42px;
+  }
+}
+
+.card-news__body p {
+  font-size: 14px;
+  line-height: 1.9;
+  font-weight: 300;
+  font-family: "Geist";
+
+  @include desktop {
+    font-size: 20px;
+  }
+}
+
+.card-news__footer a {
+  color: $color-primary;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: -0.3px;
+}
+
+.card-news__footer {
+  padding: 0 10% 10%;
+  @include desktop {
+    padding: 0 52px 45px;
+  }
+}
+
+.card-news__header img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+
+  @include tablet {
+    height: 224px;
+  }
+
+  @include laptop {
+    height: 314px;
+  }
+  @include desktop {
+    height: 288px;
+  }
+}
+
+.card-news {
+  width: 100%;
+
+  @include desktop {
+    max-width: 504px;
+  }
+}

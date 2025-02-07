@@ -1,0 +1,70 @@
+.menu-toggle-close {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: inherit;
+  height: inherit;
+
+  padding: 0;
+  background: none;
+  border: 0;
+
+  .menu-active & {
+    z-index: 10;
+    position: relative;
+    display: flex;
+  }
+}
+
+.menu-toggle-close__text {
+  position: absolute;
+  top: calc(50% - 8px);
+  right: 70px;
+  color: $color-white;
+
+  .menu-active & {
+    display: block;
+  }
+
+  @include desktop {
+    display: none;
+    font-size: 20px;
+    top: calc(50% - 10px);
+    right: 65px;
+  }
+}
+
+.menu-toggle-open {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: inherit;
+  height: inherit;
+  padding: 0;
+  background: none;
+  border: 0;
+
+  .menu-active & {
+    display: none;
+  }
+}
+
+.menu-toggle-open svg {
+  height: 78px;
+  width: 30px;
+
+  @include desktop-l {
+    height: 42px;
+    width: 42px;
+  }
+}
+
+.menu-toggle-close svg {
+  height: 78px;
+  width: 30px;
+
+  @include desktop-l {
+    height: 42px;
+    width: 42px;
+  }
+}

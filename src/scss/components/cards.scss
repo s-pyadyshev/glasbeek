@@ -1,0 +1,66 @@
+.card__text {
+  padding: 30px 39px;
+  background-color: $color-white;
+  @include desktop {
+    padding: 30px 48px;
+  }
+}
+
+.card__text h4 {
+  font-size: 20px;
+  color: $color-primary;
+  font-weight: 500;
+  margin-bottom: 4px;
+  @include desktop {
+    font-size: 28px;
+  }
+}
+
+.card__text p {
+  font-size: 14px;
+  font-weight: 300;
+  margin: 0;
+  @include desktop {
+    font-family: "Geist";
+
+    font-size: 20px;
+
+    line-height: 37px;
+  }
+}
+
+.news-slide {
+  height: 234px;
+  width: 156px;
+
+  @include desktop {
+    height: 450px;
+    width: 505px;
+  }
+}
+
+.services-card {
+  height: 100%;
+}
+
+.news-card .card__text {
+  @include desktop {
+    padding: 40px 42px 18px 53px;
+  }
+}
+
+.news-card .card__text h4 {
+  @include desktop {
+    margin-bottom: 22px;
+  }
+}
+
+.card__text a {
+  display: none;
+
+  @include desktop {
+    display: block;
+    color: $color-primary;
+    font-size: 18px;
+  }
+}

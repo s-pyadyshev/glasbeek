@@ -1,0 +1,13 @@
+extends pug/base
+
+prepend vars
+  - title = 'Contact'
+
+append vars
+
+block content
+  +page-header-contact(
+    'Contact',
+    'Heeft u interesse in onze dienstverlening en producten? Vul hier uw gegevens in en wij nemen zo spoedig mogelijk contact met u op!'
+    )
+  include pug/components/section-contact

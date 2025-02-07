@@ -1,0 +1,9 @@
+.section {
+  padding-top: $section-padding-vertical;
+  padding-bottom: $section-padding-vertical;
+
+  @include desktop {
+    padding-top: $section-padding-vertical-desktop;
+    padding-bottom: $section-padding-vertical-desktop;
+  }
+}

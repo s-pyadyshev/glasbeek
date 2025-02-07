@@ -1,0 +1,10 @@
+$label-color: $color-black;
+$label-font-size: 18px;
+
+.label {
+  font-family: $font-secondary;
+  font-weight: 300;
+  font-size: $label-font-size;
+  color: $label-color;
+  margin-bottom: 10px;
+}

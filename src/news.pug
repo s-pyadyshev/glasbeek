@@ -1,0 +1,65 @@
+extends pug/base
+
+prepend vars
+  - title = 'News'
+
+append vars
+
+block content
+  +page-header-news(
+    'Nieuws',
+    'Hier vindt u de laatste updates, innovaties en ontwikkelingen bij Glasbeek. Blijf op de hoogte van onze nieuwe producten, projecten en duurzame oplossingen die de industrie vooruit helpen.'
+  )
+  section.page-news.backround-default
+    .container
+      .page-news__wrap
+        .page-news__inner
+          ul.news-list
+            li.news-list__item 
+              article.card-news
+                .card-news__header 
+                  img(src="images/news-image1.jpg" width="428" height="288" alt="")
+                  .card-news__date 18 juni 2021
+                .card-news__body 
+                  h3 Nieuwe poederlakinstallatie bij Signatekst N.V.
+                  p Deze maand heeft Glasbeek een nieuwe poederlakinstallatie opgeleverd bij Signatekst N.V...
+                .card-news__footer
+                  a(href="/") Lees meer
+            li.news-list__item 
+              article.card-news
+                .card-news__header 
+                  img(src="images/card-why1.jpg" width="428" height="288" alt="")
+                  .card-news__date 18 juni 2021
+                .card-news__body 
+                  h3 Nieuwe poederlakinstallatie bij Signatekst N.V.
+                  p Deze maand heeft Glasbeek een nieuwe poederlakinstallatie opgeleverd bij Signatekst N.V...
+                .card-news__footer
+                  a(href="/") Lees meer
+            li.news-list__item 
+              article.card-news
+                .card-news__header 
+                  img(src="images/card-why1.jpg" width="428" height="288" alt="")
+                  .card-news__date 18 juni 2021
+                .card-news__body 
+                  h3 Nieuwe poederlakinstallatie bij Signatekst N.V.
+                  p Deze maand heeft Glasbeek een nieuwe poederlakinstallatie opgeleverd bij Signatekst N.V...
+                .card-news__footer
+                  a(href="/") Lees meer
+            li.news-list__item 
+              article.card-news
+                .card-news__header 
+                  img(src="images/card-why1.jpg" width="428" height="288" alt="")
+                  .card-news__date 18 juni 2021
+                .card-news__body 
+                  h3 Nieuwe poederlakinstallatie bij Signatekst N.V.
+                  p Deze maand heeft Glasbeek een nieuwe poederlakinstallatie opgeleverd bij Signatekst N.V...
+                .card-news__footer
+                  a(href="/") Lees meer
+          nav.pagination
+            a.pagination__prev.icon-pagination-prev.disabled(href="/")
+              +svg('arrow-left')
+            div pagina 1/5
+            a.pagination__next.icon-pagination-next(href="/")
+              +svg('arrow-right')
+
+

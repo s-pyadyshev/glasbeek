@@ -1,0 +1,107 @@
+.card {
+  max-width: 405px;
+  padding: 25px;
+  box-shadow: 0 4px 45px 0 #00000014;
+  background-color: #fff;
+
+  @include desktop {
+    padding: 50px;
+  }
+
+  h3 {
+    font-weight: 500;
+    font-family: $font-secondary;
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+
+  p {
+    font-size: 15px;
+
+    @include laptop {
+      font-size: 20px;
+    }
+  }
+}
+
+.card--contact {
+  background-color: $color-primary;
+  color: #fff;
+}
+
+.card--contact h3 {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.card--contact p {
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight: 300;
+  font-family: $font-secondary;
+}
+
+.card--contact b {
+  font-weight: 300;
+  font-size: 24px;
+}
+
+.card--contact__section {
+  margin-top: 50px;
+}
+
+.card__body {
+  padding: 24px 40px;
+}
+
+.card__footer {
+  padding-top: 42px;
+
+  @include tablet {
+    padding: 34px 0;
+  }
+}
+
+.card-aside {
+  max-width: 480px;
+  padding: 52px;
+}
+
+.card-contact {
+  z-index: 4;
+  max-width: 334px;
+  padding: 35px;
+
+  @include tablet {
+    padding: 35px;
+  }
+
+  @include desktop-l {
+    padding: 70px 70px 40px;
+  }
+
+  h3 {
+    font-weight: 500;
+  }
+
+  .card__footer {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+.card.card--service {
+  padding: 0;
+
+  h3 {
+    font-family: $font-primary;
+    margin-bottom: 0;
+    color: $color-primary;
+  }
+
+  p {
+    font-family: $font-secondary;
+  }
+}

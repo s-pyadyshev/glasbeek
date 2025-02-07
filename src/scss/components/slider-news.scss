@@ -1,0 +1,33 @@
+.slider-news .swiper-slide {
+  height: auto;
+}
+
+.slider-news__controls {
+  position: absolute;
+  bottom: -80px;
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  width: 100%;
+
+  @include tablet {
+    bottom: auto;
+    top: -80px;
+    right: -15px;
+    justify-content: flex-end;
+    width: auto;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    position: static;
+    width: 40px;
+    height: 40px;
+    margin: 0;
+
+    @include tablet {
+      width: 52px;
+      height: 52px;
+    }
+  }
+}

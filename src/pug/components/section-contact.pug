@@ -1,0 +1,24 @@
+section.section.section-contact.background-default.pt-0.pb-0
+  .container
+    .section-contact__form.border-left.border-right
+      form.form.form--contact(action="post")
+        .form-group
+          .form-control
+            label.label(for="name") Naam:
+            input.input#name(type="text" name="name")
+          .form-control
+            label.label(for="org") Organisatie:
+            input.input#org(type="text" name="org")
+        .form-group
+          .form-control
+            label.label(for="email") E-mail:
+            input.input#email(type="email" name="email")
+          .form-control
+            label.label(for="tel") Telefoon:
+            input.input#tel(type="tel" name="tel")
+        .form-group
+          label.label(for="message") Bericht:
+          .form-control.full-width
+            textarea.textarea#message(name="message" rows="9")
+        
+        button.button.button--primary(type="submit") Verzenden

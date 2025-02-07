@@ -1,0 +1,94 @@
+.card-why {
+  min-height: 350px;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 38px 38px 120px;
+
+  @include laptop {
+    padding: 40px;
+  }
+
+  @include desktop {
+    padding: 70px 72px;
+  }
+  @include desktop-l {
+    min-height: 432px;
+    padding: 120px 72px;
+  }
+
+  > * {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+.card-why-tabs {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+  bottom: 40px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.card-why h3 {
+  font-weight: 500;
+  color: $color-primary;
+  font-size: 20px;
+  margin-bottom: 20px;
+
+  line-height: 25px;
+  @include laptop {
+    font-size: 20px;
+    line-height: 38px;
+    margin-bottom: 14px;
+  }
+
+  @include desktop {
+    font-size: 28px;
+  }
+}
+
+.card-why p {
+  font-size: 14px;
+  font-family: $font-secondary;
+  font-weight: 300;
+  margin: 0;
+  line-height: 22px;
+
+  @include laptop {
+    font-size: 14px;
+  }
+
+  @include desktop {
+    font-size: 20px;
+    line-height: 38px;
+  }
+}
+
+.card-why-tabs__tab-button {
+  background-color: #dadada !important;
+  border-radius: 50%;
+  color: $color-white;
+  height: 39px;
+  width: 39px;
+  font-size: 22px;
+  font-weight: 500;
+
+  &:focus,
+  &:hover,
+  &:active {
+    background-color: $color-primary !important;
+  }
+}
+
+.card-why-tabs__tab-button:not(:last-child) {
+  margin-right: 22px;
+}

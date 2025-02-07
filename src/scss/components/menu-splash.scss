@@ -1,0 +1,31 @@
+.menu-splash {
+  z-index: -1;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  color: #fff;
+  background-image: url(../images/menu.jpg);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+
+  @include laptop {
+    font-size: 64px;
+  }
+}
+
+.menu-splash__title {
+  max-width: 250px;
+  text-align: center;
+
+  @include laptop {
+    max-width: 350px;
+  }
+}

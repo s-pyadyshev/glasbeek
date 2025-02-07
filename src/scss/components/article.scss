@@ -1,0 +1,60 @@
+.article {
+  padding-top: 60px;
+  font-family: $font-secondary;
+  word-break: break-word;
+
+  ul {
+    font-size: 20px;
+    list-style-position: inside;
+  }
+
+  li {
+    margin-bottom: 10px;
+  }
+
+  li::marker {
+    font-size: 0.8rem;
+  }
+
+  p {
+    font-size: 20px;
+  }
+}
+
+.article__body {
+  position: relative;
+  max-width: 1000px;
+  padding: 60px 72px;
+}
+
+.article__slider {
+  max-width: 1000px;
+  padding: 60px 0 72px;
+
+  .slider-photo {
+    z-index: 3;
+    width: 100vw;
+
+    @include desktop {
+      margin-left: calc(-70% - 140px);
+      width: 100vw;
+    }
+
+    @include desktop-l {
+      width: 1216px;
+      margin-left: -289px;
+    }
+  }
+
+  .slider-photo__controls {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    position: static;
+    margin-top: 50px;
+
+    @include laptop {
+      justify-content: flex-end;
+    }
+  }
+}

@@ -1,0 +1,91 @@
+.services__inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 36px;
+
+  @include laptop {
+    flex-direction: row;
+    padding: 220px 76px 55px;
+  }
+}
+
+.services__list {
+  flex-shrink: 0;
+  position: relative;
+  margin-bottom: 40px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: calc(100% + 76px * 2);
+    left: 0;
+    margin: 0 -76px;
+    height: 1px;
+    background-color: #dadada;
+
+    @include laptop {
+      display: none;
+    }
+  }
+
+  @include laptop {
+    width: 32.7%;
+  }
+
+  li {
+    font-weight: 600;
+  }
+
+  a {
+    display: block;
+    max-width: 480px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 17px;
+    outline: none;
+    appearance: none;
+    text-decoration: none;
+    text-align: center;
+    background-color: $color-primary;
+    color: #fff;
+
+    @include laptop {
+      padding: 25px;
+      margin-top: 68px;
+      font-weight: 500;
+      font-size: 20px;
+      text-decoration: underline;
+      background-color: transparent;
+      text-align: left;
+      padding: 0;
+      color: $color-primary;
+    }
+  }
+}
+
+.services__slider {
+  @include laptop {
+    width: 68.3%;
+    padding-left: 70px;
+  }
+
+  .slider-services {
+    z-index: 3;
+    padding: 50px;
+    margin: -50px;
+    margin-right: -76px;
+    padding-right: 76px;
+    padding-bottom: 60px;
+
+    @include laptop {
+      margin-right: -140px;
+      padding-right: 140px;
+    }
+
+    @include desktop-l {
+      margin-right: -279px;
+      margin-bottom: 0;
+    }
+  }
+}

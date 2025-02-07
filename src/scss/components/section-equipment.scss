@@ -1,0 +1,96 @@
+.section-equipment .card-link .card-link__body {
+  padding: 14px;
+  font-size: 20px;
+  font-weight: 500;
+  height: 60px;
+  align-items: center;
+
+  @include desktop {
+    font-size: 28px;
+    padding: 40px 20px;
+    height: auto;
+  }
+
+  @include desktop-l {
+    padding: 50px;
+  }
+}
+
+.section-equipment .card-link {
+  @include tablet {
+    max-width: 280px;
+  }
+
+  @include laptop {
+    max-width: 250px;
+  }
+  @include desktop {
+    max-width: 280px;
+  }
+
+  @include desktop-l {
+    max-width: 400px;
+  }
+}
+.section-equipment .title {
+  min-height: auto;
+  @include desktop {
+    min-height: 52px;
+  }
+}
+
+.card-link svg {
+  width: 40px;
+  height: 40px;
+
+  @include desktop {
+    width: 52px;
+    height: 52px;
+  }
+}
+
+.section-equipment__cards h2 {
+  font-size: 22px;
+  margin-bottom: 30px;
+
+  @include desktop {
+    font-size: 36px;
+    margin-bottom: 60px;
+  }
+}
+
+.section-equipment__cards-wrap {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+
+  @include tablet {
+    flex-direction: row;
+    gap: 60px;
+  }
+
+  @include laptop {
+    flex-wrap: nowrap;
+    gap: 30px;
+  }
+
+  @include desktop {
+    gap: 72px;
+  }
+}
+
+.section-equipment__cards {
+  position: relative;
+  padding: 40px;
+
+  @include laptop {
+    padding: 40px;
+  }
+
+  @include desktop {
+    padding: 70px;
+  }
+}
