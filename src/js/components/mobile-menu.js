@@ -19,6 +19,7 @@ export const mobileMenu = (() => {
       menu.classList.remove("menu--closed");
       mobileMenuClose.focus();
       splashTitle.setAttribute("data-scrollspy", "animate");
+      splashTitle.classList.add("animate__animated");
     });
 
     mobileMenuClose.addEventListener("click", function () {
@@ -31,6 +32,7 @@ export const mobileMenu = (() => {
       menu.classList.add("menu--closed");
       menu.classList.remove("menu--open");
       splashTitle.removeAttribute("data-scrollspy");
+      splashTitle.classList.remove("animate__animated");
     });
   };
 

@@ -2,44 +2,6 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/js/components/accordion.js":
-/*!****************************************!*\
-  !*** ./src/js/components/accordion.js ***!
-  \****************************************/
-/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   accordion: function() { return /* binding */ accordion; }
-/* harmony export */ });
-const accordion = (() => {
-  const init = () => {
-    const accordionList = document.querySelectorAll(".accordion-list");
-    if (!accordionList.length) {
-      return;
-    }
-    const toggleAccordion = event => {
-      event.stopPropagation();
-      const accordionItem = event.target.closest(".accordion");
-      const accordionContent = accordionItem.querySelector(".accordion__content");
-      accordionItem.classList.toggle("active");
-      if (accordionItem.classList.contains("active")) {
-        accordionContent.style.maxHeight = accordionContent.scrollHeight + "px";
-      } else {
-        accordionContent.style.maxHeight = "0";
-      }
-    };
-    accordionList.forEach(accordion => {
-      accordion.addEventListener("click", toggleAccordion);
-    });
-  };
-  return {
-    init
-  };
-})();
-
-/***/ }),
-
 /***/ "./src/js/components/mobile-menu.js":
 /*!******************************************!*\
   !*** ./src/js/components/mobile-menu.js ***!
@@ -66,6 +28,7 @@ const mobileMenu = (() => {
       menu.classList.remove("menu--closed");
       mobileMenuClose.focus();
       splashTitle.setAttribute("data-scrollspy", "animate");
+      splashTitle.classList.add("animate__animated");
     });
     mobileMenuClose.addEventListener("click", function () {
       $(".menu__link").css("opacity", "1");
@@ -77,6 +40,7 @@ const mobileMenu = (() => {
       menu.classList.add("menu--closed");
       menu.classList.remove("menu--open");
       splashTitle.removeAttribute("data-scrollspy");
+      splashTitle.classList.remove("animate__animated");
     });
   };
   return {
@@ -111,6 +75,9 @@ const scrollspy = function () {
   const init = function () {
     const scrollspyElements = document.querySelectorAll("[data-scrollspy]");
     if (!scrollspyElements.length) {
+      return;
+    }
+    if (document.body.classList.contains("menu-active") === false) {
       return;
     }
     applyScrollspyClasses(scrollspyElements);
@@ -428,16 +395,14 @@ function isElementCompletelyInViewport(element) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _vendor_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./vendor.js */ "./src/js/vendor.js");
-/* harmony import */ var _components_accordion_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/accordion.js */ "./src/js/components/accordion.js");
-/* harmony import */ var _components_mobile_menu_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/mobile-menu.js */ "./src/js/components/mobile-menu.js");
-/* harmony import */ var _components_sliderNews_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/sliderNews.js */ "./src/js/components/sliderNews.js");
-/* harmony import */ var _components_sliderPhoto_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/sliderPhoto.js */ "./src/js/components/sliderPhoto.js");
-/* harmony import */ var _components_sliderServices_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/sliderServices.js */ "./src/js/components/sliderServices.js");
-/* harmony import */ var _components_tabs_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/tabs.js */ "./src/js/components/tabs.js");
-/* harmony import */ var _components_toggle_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/toggle.js */ "./src/js/components/toggle.js");
-/* harmony import */ var _components_scrollspy_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/scrollspy.js */ "./src/js/components/scrollspy.js");
-/* harmony import */ var _vendor_sticky_js_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./vendor/sticky-js.js */ "./src/js/vendor/sticky-js.js");
-
+/* harmony import */ var _components_mobile_menu_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/mobile-menu.js */ "./src/js/components/mobile-menu.js");
+/* harmony import */ var _components_sliderNews_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/sliderNews.js */ "./src/js/components/sliderNews.js");
+/* harmony import */ var _components_sliderPhoto_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/sliderPhoto.js */ "./src/js/components/sliderPhoto.js");
+/* harmony import */ var _components_sliderServices_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/sliderServices.js */ "./src/js/components/sliderServices.js");
+/* harmony import */ var _components_tabs_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/tabs.js */ "./src/js/components/tabs.js");
+/* harmony import */ var _components_toggle_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/toggle.js */ "./src/js/components/toggle.js");
+/* harmony import */ var _components_scrollspy_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/scrollspy.js */ "./src/js/components/scrollspy.js");
+/* harmony import */ var _vendor_sticky_js_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./vendor/sticky-js.js */ "./src/js/vendor/sticky-js.js");
 
 
 
@@ -448,16 +413,15 @@ __webpack_require__.r(__webpack_exports__);
 
 
 window.addEventListener("load", () => {
-  _components_accordion_js__WEBPACK_IMPORTED_MODULE_1__.accordion.init();
-  _components_mobile_menu_js__WEBPACK_IMPORTED_MODULE_2__.mobileMenu.init();
-  _components_sliderNews_js__WEBPACK_IMPORTED_MODULE_3__.sliderNews.init();
-  _components_sliderPhoto_js__WEBPACK_IMPORTED_MODULE_4__.sliderPhoto.init();
-  _components_sliderServices_js__WEBPACK_IMPORTED_MODULE_5__.sliderServices.init();
-  _components_tabs_js__WEBPACK_IMPORTED_MODULE_6__.tabs.init();
-  _components_toggle_js__WEBPACK_IMPORTED_MODULE_7__.toggle.init();
-  _components_scrollspy_js__WEBPACK_IMPORTED_MODULE_8__.scrollspy.init();
+  _components_mobile_menu_js__WEBPACK_IMPORTED_MODULE_1__.mobileMenu.init();
+  _components_sliderNews_js__WEBPACK_IMPORTED_MODULE_2__.sliderNews.init();
+  _components_sliderPhoto_js__WEBPACK_IMPORTED_MODULE_3__.sliderPhoto.init();
+  _components_sliderServices_js__WEBPACK_IMPORTED_MODULE_4__.sliderServices.init();
+  _components_tabs_js__WEBPACK_IMPORTED_MODULE_5__.tabs.init();
+  _components_toggle_js__WEBPACK_IMPORTED_MODULE_6__.toggle.init();
+  _components_scrollspy_js__WEBPACK_IMPORTED_MODULE_7__.scrollspy.init();
   const rellax = new Rellax(".rellax");
-  const sticky = new _vendor_sticky_js_js__WEBPACK_IMPORTED_MODULE_9__.Sticky(".sticky");
+  const sticky = new _vendor_sticky_js_js__WEBPACK_IMPORTED_MODULE_8__.Sticky(".sticky");
   function initDropdown() {
     $(".js-dropdown").on("click", function (e) {
       e.preventDefault();

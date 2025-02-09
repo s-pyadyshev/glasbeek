@@ -126,7 +126,7 @@
     border-bottom: 1px solid $color-white;
   }
 
-  &.active + .menu__list.active {
+  &.active+.menu__list.active {
     display: block;
   }
 
@@ -152,7 +152,7 @@
   }
 }
 
-.menu__item--submenu > a.menu__link {
+.menu__item--submenu>a.menu__link {
   display: none;
 
   @include laptop {
@@ -185,14 +185,14 @@
   }
 
   .menu-splash {
-    animation: animate-menu-splash 2s linear;
+    animation: animate-menu-splash 3s linear;
   }
 
-  .menu__item--submenu > a.menu__link {
+  .menu__item--submenu>a.menu__link {
     display: none;
   }
 
-  .menu__item--submenu > button.menu__link {
+  .menu__item--submenu>button.menu__link {
     display: block;
     margin: 0 auto;
 
@@ -207,9 +207,11 @@
     z-index: 10;
     opacity: 1;
   }
+
   50% {
     opacity: 1;
   }
+
   100% {
     opacity: 0;
   }

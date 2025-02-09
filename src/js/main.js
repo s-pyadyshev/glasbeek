@@ -1,5 +1,4 @@
 import "./vendor.js";
-import { accordion } from "./components/accordion.js";
 import { mobileMenu } from "./components/mobile-menu.js";
 import { sliderNews } from "./components/sliderNews.js";
 import { sliderPhoto } from "./components/sliderPhoto.js";
@@ -12,7 +11,6 @@ import { Sticky } from "./vendor/sticky-js.js";
 window.addEventListener(
   "load",
   () => {
-    accordion.init();
     mobileMenu.init();
     sliderNews.init();
     sliderPhoto.init();

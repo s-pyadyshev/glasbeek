@@ -18,7 +18,9 @@ export const scrollspy = (function () {
     if (!scrollspyElements.length) {
       return;
     }
-
+    if (document.body.classList.contains("menu-active") === false) {
+      return;
+    }
     applyScrollspyClasses(scrollspyElements);
 
     document.addEventListener(
