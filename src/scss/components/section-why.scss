@@ -2,7 +2,7 @@
   display: flex;
   flex-wrap: wrap;
 
-  > * {
+  >* {
     @include tablet {
       display: block;
       width: 50%;
@@ -24,12 +24,12 @@
     height: 1px;
     background-color: #dadada;
 
-    @include desktop {
+    @include laptop {
       left: -70px;
       width: calc(100% + 140px);
     }
 
-    @include desktop {
+    @include desktop-l {
       left: -216px;
       width: calc(100% + 432px);
     }
@@ -114,7 +114,7 @@
   position: relative;
   margin-bottom: 40px;
 
-  @include laptop {
+  @include desktop {
     margin-bottom: 144px;
   }
 
@@ -192,7 +192,7 @@
       width: calc(100% + 140px);
     }
 
-    @include desktop {
+    @include desktop-l {
       left: -216px;
       width: calc(100% + 432px);
     }
@@ -206,6 +206,7 @@
   @include laptop {
     padding: 30px 30px;
   }
+
   @include desktop {
     width: 54%;
     padding: 36px 50px 30px 70px;
@@ -258,7 +259,7 @@
       width: calc(100% + 70px);
     }
 
-    @include desktop {
+    @include desktop-l {
       right: -216px;
       width: calc(100% + 432px);
     }
@@ -295,6 +296,7 @@
     bottom: -6%;
     left: -20%;
   }
+
   @media (min-width: 1920px) {
     top: -24%;
     left: -8%;
@@ -434,12 +436,10 @@
 
 .section-why__cards li::after {
   content: " ";
-  background: linear-gradient(
-    266deg,
-    rgba(255, 255, 255, 0.6699054621848739) 0%,
-    rgba(255, 255, 255, 1) 79%,
-    rgba(255, 255, 255, 0.9220063025210083) 100%
-  );
+  background: linear-gradient(266deg,
+      rgba(255, 255, 255, 0.6699054621848739) 0%,
+      rgba(255, 255, 255, 1) 79%,
+      rgba(255, 255, 255, 0.9220063025210083) 100%);
   position: absolute;
   height: 100%;
   width: 100%;

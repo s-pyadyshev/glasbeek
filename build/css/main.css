@@ -3497,6 +3497,10 @@ p {
   padding-bottom: 40px;
 }
 
+.services {
+  overflow: hidden;
+}
+
 .services__inner {
   position: relative;
   display: flex;
@@ -3547,6 +3551,10 @@ p {
   margin-right: -76px;
   padding-right: 76px;
   padding-bottom: 60px;
+}
+
+.services {
+  overflow: hidden;
 }
 
 .services__inner {
@@ -4477,6 +4485,11 @@ p {
     counter-reset: chapter 0;
   }
 
+  .section-why__cards:after {
+    left: -70px;
+    width: calc(100% + 140px);
+  }
+
   .counter-list li::before {
     height: 40px;
     width: 40px;
@@ -4484,10 +4497,6 @@ p {
     top: 16px;
     left: -20px;
     padding: 7px;
-  }
-
-  .section-why__cards-wrap {
-    margin-bottom: 144px;
   }
 
   .section-why__text:after {
@@ -4611,7 +4620,7 @@ p {
 
   .slider-services__controls {
     justify-content: flex-end;
-    margin: 0;
+    margin: 20px 0 0 0;
     position: static;
   }
 }
@@ -5167,16 +5176,6 @@ p {
     font-size: 20px;
   }
 
-  .section-why__cards:after {
-    left: -70px;
-    width: calc(100% + 140px);
-  }
-
-  .section-why__cards:after {
-    left: -216px;
-    width: calc(100% + 432px);
-  }
-
   .counter-list li::before {
     height: 70px;
     width: 70px;
@@ -5190,6 +5189,10 @@ p {
     padding: 0px;
     margin-top: 0;
     height: 350px;
+  }
+
+  .section-why__cards-wrap {
+    margin-bottom: 144px;
   }
 
   .section-why__cards-wrap:before {
@@ -5209,11 +5212,6 @@ p {
     line-height: 28px;
   }
 
-  .section-why__text:after {
-    left: -216px;
-    width: calc(100% + 432px);
-  }
-
   .section-why__text {
     width: 54%;
     padding: 36px 50px 30px 70px;
@@ -5221,11 +5219,6 @@ p {
 
   .section-why__contact-wrap {
     width: 46%;
-  }
-
-  .section-why__contact-wrap::after {
-    right: -216px;
-    width: calc(100% + 432px);
   }
 
   .section-why__contact-wrap img {
@@ -5470,6 +5463,11 @@ p {
     letter-spacing: -1px;
   }
 
+  .section-why__cards:after {
+    left: -216px;
+    width: calc(100% + 432px);
+  }
+
   .section-why__header {
     height: 400px;
   }
@@ -5483,9 +5481,19 @@ p {
     line-height: 38px;
   }
 
+  .section-why__text:after {
+    left: -216px;
+    width: calc(100% + 432px);
+  }
+
   .section-why__text {
     padding: 70px 10px 30px 70px;
     width: 54%;
+  }
+
+  .section-why__contact-wrap::after {
+    right: -216px;
+    width: calc(100% + 432px);
   }
 
   .section-why__contact-wrap img {
@@ -5523,6 +5531,10 @@ p {
   .services__slider .slider-services {
     margin-right: -279px;
     margin-bottom: 0;
+  }
+
+  .slider-services__controls {
+    margin: 0;
   }
 
   .specs-list__item::before {
