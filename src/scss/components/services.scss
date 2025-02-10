@@ -1,3 +1,9 @@
+.services {
+  @include laptop {
+    overflow: hidden;
+  }
+}
+
 .services__inner {
   position: relative;
   display: flex;

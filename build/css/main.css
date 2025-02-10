@@ -3633,6 +3633,14 @@ p {
   left: 0;
 }
 
+.slider-services .card--service {
+  max-width: 100%;
+}
+
+.slider-services .card--service img {
+  width: 100%;
+}
+
 .slider .swiper-slide h2,
 .slider-thumbs .swiper-slide h2 {
   text-align: center;
@@ -4554,6 +4562,10 @@ p {
     width: 50%;
   }
 
+  .services {
+    overflow: hidden;
+  }
+
   .services__inner {
     flex-direction: row;
     padding: 110px 76px 55px;
@@ -4587,6 +4599,10 @@ p {
   .services__slider .slider-services {
     margin-right: -140px;
     padding-right: 140px;
+  }
+
+  .services {
+    overflow: hidden;
   }
 
   .services__inner {
@@ -5056,6 +5072,10 @@ p {
     height: max-content;
   }
 
+  .section-benefits h2 {
+    margin-bottom: 95px;
+  }
+
   .section-benefits .sun {
     top: -10%;
     width: 610px;
@@ -5085,6 +5105,10 @@ p {
   .section-benefits__cards {
     margin-right: -35px;
     margin-left: -35px;
+  }
+
+  .section-benefits__inner {
+    padding-top: 130px;
   }
 
   .section-benefits__links a {

@@ -17,6 +17,10 @@
     @include tablet {
       text-align: center;
     }
+
+    @include desktop {
+      margin-bottom: 95px;
+    }
   }
 
   @include tablet {
@@ -147,11 +151,11 @@
     margin-left: -70px;
   }
 
-  > * {
+  >* {
     width: 100%;
   }
 
-  + .cards-tabs {
+  +.cards-tabs {
     z-index: 4;
     margin-right: -20px;
     margin-left: -20px;
@@ -169,6 +173,10 @@
 
   @include tablet {
     height: 1000px;
+  }
+
+  @include desktop {
+    padding-top: 130px;
   }
 }
 
