@@ -77,9 +77,6 @@ const scrollspy = function () {
     if (!scrollspyElements.length) {
       return;
     }
-    if (document.body.classList.contains("menu-active") === false) {
-      return;
-    }
     applyScrollspyClasses(scrollspyElements);
     document.addEventListener("scroll", (0,_helpers_js__WEBPACK_IMPORTED_MODULE_0__.throttle)(() => {
       applyScrollspyClasses(scrollspyElements);
