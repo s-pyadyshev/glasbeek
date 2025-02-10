@@ -3,6 +3,9 @@ import { throttle, isElementCompletelyInViewport } from "../helpers.js";
 const applyScrollspyClasses = (elements) => {
   elements.forEach((element) => {
     if (isElementCompletelyInViewport(element)) {
+      if (element.classList.contains("no-animate")) {
+        return;
+      }
       const animationClass = element.dataset.scrollspy;
 
       element.classList.add("animate__animated");
@@ -18,6 +21,7 @@ export const scrollspy = (function () {
     if (!scrollspyElements.length) {
       return;
     }
+
     applyScrollspyClasses(scrollspyElements);
 
     document.addEventListener(

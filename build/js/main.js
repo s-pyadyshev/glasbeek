@@ -65,6 +65,9 @@ __webpack_require__.r(__webpack_exports__);
 const applyScrollspyClasses = elements => {
   elements.forEach(element => {
     if ((0,_helpers_js__WEBPACK_IMPORTED_MODULE_0__.isElementCompletelyInViewport)(element)) {
+      if (element.classList.contains("no-animate")) {
+        return;
+      }
       const animationClass = element.dataset.scrollspy;
       element.classList.add("animate__animated");
       element.classList.add(animationClass);
