@@ -2024,12 +2024,14 @@ p {
 }
 
 .card.card--service h3 {
+  font-size: 20px;
   font-family: "TT Firs Neue Trl", -apple-system, BlinkMacSystemFont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
   margin-bottom: 0;
   color: #d62028;
 }
 
 .card.card--service p {
+  font-weight: 300;
   font-family: "Geist", -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
 }
 
@@ -3497,10 +3499,6 @@ p {
   padding-bottom: 40px;
 }
 
-.services {
-  overflow: hidden;
-}
-
 .services__inner {
   position: relative;
   display: flex;
@@ -3551,10 +3549,6 @@ p {
   margin-right: -76px;
   padding-right: 76px;
   padding-bottom: 60px;
-}
-
-.services {
-  overflow: hidden;
 }
 
 .services__inner {
@@ -3813,7 +3807,9 @@ p {
 }
 
 .textarea {
-  padding: 16px 25px;
+  font-size: 16px;
+  font-family: "Geist", -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
+  padding: 27px 16px;
   border-color: #000;
   resize: vertical;
   background-color: #eee;
@@ -4623,6 +4619,11 @@ p {
     margin: 20px 0 0 0;
     position: static;
   }
+
+  .textarea {
+    font-size: 20px;
+    padding: 23px 16px;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -4724,6 +4725,10 @@ p {
 
   .card {
     padding: 50px;
+  }
+
+  .card.card--service h3 {
+    font-size: 28px;
   }
 
   .card__text {

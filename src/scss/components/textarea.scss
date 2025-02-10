@@ -1,6 +1,13 @@
 .textarea {
-  padding: $input-padding;
+  font-size: 16px;
+  font-family: $font-secondary;
+  padding: 27px 16px;
   border-color: $input-border-color;
   resize: vertical;
-  background-color: #eee;
+  background-color: $input-background-color;
+
+  @include laptop {
+    font-size: 20px;
+    padding: 23px 16px;
+  }
 }
