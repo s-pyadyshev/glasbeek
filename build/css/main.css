@@ -2345,6 +2345,11 @@ p {
   margin-left: 0;
 }
 
+.hero {
+  overflow: hidden;
+  background: linear-gradient(180deg, rgb(238, 238, 238) 0%, rgb(238, 238, 238) 75%, rgb(255, 255, 255) 75%, rgb(255, 255, 255) 100%);
+}
+
 .hero__list {
   list-style-type: none;
   display: flex;
@@ -2391,16 +2396,6 @@ p {
   width: 100%;
   -o-object-fit: cover;
   object-fit: cover;
-}
-
-.hero__image:after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: -50vw;
-  width: calc(100vw + 49%);
-  height: 1px;
-  background-color: #dadada;
 }
 
 .hero__image img {
@@ -4252,12 +4247,27 @@ p {
     border-left: 1px solid #fff;
   }
 
+  .hero {
+    background: #f3f3f3;
+  }
+
   .hero__text {
     position: absolute;
     z-index: 2;
     left: 0;
     top: 0;
     padding: 72px;
+    max-width: 400px;
+  }
+
+  .hero__image:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -50vw;
+    width: calc(100vw + 49%);
+    height: 1px;
+    background-color: #dadada;
   }
 
   .hero__image img {
@@ -4546,7 +4556,7 @@ p {
 
   .services__inner {
     flex-direction: row;
-    padding: 220px 76px 55px;
+    padding: 110px 76px 55px;
   }
 
   .services__list::after {
@@ -4581,7 +4591,7 @@ p {
 
   .services__inner {
     flex-direction: row;
-    padding: 220px 76px 55px;
+    padding: 110px 76px 55px;
   }
 
   .services__list::after {
@@ -4841,6 +4851,7 @@ p {
   }
 
   .hero {
+    overflow: visible;
     max-height: 500px;
   }
 
@@ -4866,6 +4877,10 @@ p {
   .hero__inner {
     display: flex;
     justify-content: end;
+  }
+
+  .hero__text {
+    max-width: 100%;
   }
 
   .hero__image img {
@@ -5251,6 +5266,14 @@ p {
   .section {
     padding-top: 80px;
     padding-bottom: 80px;
+  }
+
+  .services__inner {
+    padding: 220px 76px 55px;
+  }
+
+  .services__inner {
+    padding: 220px 76px 55px;
   }
 
   .specs-list__item {

@@ -6,6 +6,10 @@
 
   @include laptop {
     flex-direction: row;
+    padding: 110px 76px 55px;
+  }
+
+  @include desktop {
     padding: 220px 76px 55px;
   }
 }
