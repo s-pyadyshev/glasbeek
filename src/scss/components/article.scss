@@ -2,10 +2,19 @@
   padding-top: 60px;
   font-family: $font-secondary;
   word-break: break-word;
+  font-size: 14px;
+
+  * {
+    font-size: inherit;
+  }
+
+  @include desktop {
+    font-size: 20px;
+  }
 
   ul {
-    font-size: 20px;
     list-style-position: inside;
+
   }
 
   li {
@@ -16,9 +25,6 @@
     font-size: 0.8rem;
   }
 
-  p {
-    font-size: 20px;
-  }
 }
 
 .article__body {

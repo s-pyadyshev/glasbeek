@@ -44,6 +44,11 @@
   background: none;
   border: 0;
 
+  &:focus,
+  &:focus-visible {
+    outline: none;
+  }
+
   .menu-active & {
     display: none;
   }

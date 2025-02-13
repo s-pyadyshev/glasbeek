@@ -10,11 +10,3 @@ $tab-border-color: $color-secondary;
 .tab-button {
   background: none;
 }
-
-[data-tab-content] {
-  display: none;
-
-  &.is-active {
-    display: block;
-  }
-}

@@ -6,10 +6,14 @@
 
   svg {
     position: absolute;
-    top: 80%;
+    top: 60%;
     width: 100%;
     height: 100%;
     stroke: $color-primary;
+
+    @include tablet {
+      top: 80%;
+    }
 
     @include desktop {
       height: max-content;

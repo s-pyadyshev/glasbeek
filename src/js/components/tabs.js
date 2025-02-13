@@ -6,6 +6,16 @@ export const tabs = (() => {
       return;
     }
 
+    const dataTabsContent = document.querySelectorAll(
+      `[data-tabs-content] > [data-tab-content]`
+    );
+
+    dataTabsContent.forEach((item) => {
+      if (!item.classList.contains("is-active")) {
+        item.classList.add("visually-hidden");
+      }
+    });
+
     tabContainers.forEach((tabContainer) => {
       const currentTab = tabContainer.getAttribute("data-tabs");
 
@@ -37,14 +47,16 @@ export const tabs = (() => {
           `[data-tabs=${currentTab}] > button`
         );
 
-        matchingTabDataAll.forEach((item) =>
-          item.classList.remove("is-active")
-        );
+        matchingTabDataAll.forEach((item) => {
+          item.classList.add("visually-hidden");
+          item.classList.remove("is-active");
+        });
         activeTabContent.classList.remove("is-active");
         activeTabButton.classList.remove("is-active");
 
         tabButtonAll.forEach((item) => item.classList.remove("is-active"));
         matchingTabData.classList.add("is-active");
+        matchingTabData.classList.remove("visually-hidden");
         tabButton.classList.add("is-active");
       });
     });

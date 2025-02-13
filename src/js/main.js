@@ -22,7 +22,7 @@ window.addEventListener(
     const sticky = new Sticky(".sticky");
 
     function initDropdown() {
-      $(".js-dropdown").on("click", function (e) {
+      $(".js-dropdown").on("mouseenter", function (e) {
         e.preventDefault();
         var $this = $(this);
 

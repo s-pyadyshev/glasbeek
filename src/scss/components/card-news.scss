@@ -5,7 +5,7 @@
   right: 0;
   height: 40px;
   max-width: 300px;
-  width: 90%;
+  min-width: 66%;
   color: #fff;
   padding: 10px 12px;
   color: #fff;
@@ -36,6 +36,7 @@
     padding: 38px 50px 15px;
   }
 }
+
 .card-news__body h3 {
   font-weight: 500;
   color: $color-primary;
@@ -68,6 +69,7 @@
 
 .card-news__footer {
   padding: 0 10% 10%;
+
   @include desktop {
     padding: 0 52px 45px;
   }
@@ -85,6 +87,7 @@
   @include laptop {
     height: 314px;
   }
+
   @include desktop {
     height: 288px;
   }

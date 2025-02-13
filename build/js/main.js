@@ -16,7 +16,10 @@ const mobileMenu = (() => {
   const init = () => {
     const mobileMenuOpen = document.querySelector(".js-open-menu");
     const menu = document.querySelector(".menu");
-    const splashTitle = document.querySelector(".menu-splash__title .scribble svg");
+    // const splashTitle = document.querySelector(
+    //   ".menu-splash__title .scribble svg"
+    // );
+
     if (!mobileMenuOpen) {
       return;
     }
@@ -27,8 +30,8 @@ const mobileMenu = (() => {
       menu.classList.add("menu--open");
       menu.classList.remove("menu--closed");
       mobileMenuClose.focus();
-      splashTitle.setAttribute("data-scrollspy", "animate");
-      splashTitle.classList.add("animate__animated");
+      // splashTitle.setAttribute("data-scrollspy", "animate");
+      // splashTitle.classList.add("animate__animated");
     });
     mobileMenuClose.addEventListener("click", function () {
       $(".menu__link").css("opacity", "1");
@@ -39,8 +42,8 @@ const mobileMenu = (() => {
       body.classList.toggle("menu-active");
       menu.classList.add("menu--closed");
       menu.classList.remove("menu--open");
-      splashTitle.removeAttribute("data-scrollspy");
-      splashTitle.classList.remove("animate__animated");
+      // splashTitle.removeAttribute("data-scrollspy");
+      // splashTitle.classList.remove("animate__animated");
     });
   };
   return {
@@ -251,6 +254,12 @@ const tabs = (() => {
     if (!tabContainers.length) {
       return;
     }
+    const dataTabsContent = document.querySelectorAll(`[data-tabs-content] > [data-tab-content]`);
+    dataTabsContent.forEach(item => {
+      if (!item.classList.contains("is-active")) {
+        item.classList.add("visually-hidden");
+      }
+    });
     tabContainers.forEach(tabContainer => {
       const currentTab = tabContainer.getAttribute("data-tabs");
       tabContainer.addEventListener("click", event => {
@@ -265,11 +274,15 @@ const tabs = (() => {
         const activeTabContent = document.querySelector(`[data-tabs-content="${currentTab}"] > [data-tab-content].is-active`);
         const activeTabButton = document.querySelector(`[data-tabs=${currentTab}] > button.is-active`);
         const tabButtonAll = document.querySelectorAll(`[data-tabs=${currentTab}] > button`);
-        matchingTabDataAll.forEach(item => item.classList.remove("is-active"));
+        matchingTabDataAll.forEach(item => {
+          item.classList.add("visually-hidden");
+          item.classList.remove("is-active");
+        });
         activeTabContent.classList.remove("is-active");
         activeTabButton.classList.remove("is-active");
         tabButtonAll.forEach(item => item.classList.remove("is-active"));
         matchingTabData.classList.add("is-active");
+        matchingTabData.classList.remove("visually-hidden");
         tabButton.classList.add("is-active");
       });
     });
@@ -423,7 +436,7 @@ window.addEventListener("load", () => {
   const rellax = new Rellax(".rellax");
   const sticky = new _vendor_sticky_js_js__WEBPACK_IMPORTED_MODULE_8__.Sticky(".sticky");
   function initDropdown() {
-    $(".js-dropdown").on("click", function (e) {
+    $(".js-dropdown").on("mouseenter", function (e) {
       e.preventDefault();
       var $this = $(this);
       if ($this.next().hasClass("show")) {

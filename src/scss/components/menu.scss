@@ -45,6 +45,7 @@
   list-style-type: none;
   gap: 32px;
   text-align: center;
+  padding-top: 160px;
 
   @include laptop {
     gap: 24px;
@@ -65,7 +66,6 @@
     width: 100%;
     text-align: center;
     max-width: 1920px;
-    padding-top: 160px;
 
     @include desktop {
       column-count: 2;
@@ -84,8 +84,8 @@
 
     .menu-active & {
       column-count: 1;
-      padding-top: 60px;
-      margin-bottom: -60px;
+      padding-top: 30px;
+      margin-bottom: -30px;
 
       @include desktop {
         position: absolute;
@@ -148,7 +148,11 @@
 
 .menu__item {
   .menu-active & {
-    margin-bottom: 60px;
+    margin-bottom: 30px;
+
+    @include laptop {
+      margin-bottom: 60px;
+    }
   }
 }
 
@@ -179,13 +183,8 @@
 
   .menu__list {
     @include desktop {
-      padding-top: 160px;
       padding-left: 208px;
     }
-  }
-
-  .menu-splash {
-    animation: animate-menu-splash 3s linear;
   }
 
   .menu__item--submenu>a.menu__link {
@@ -202,17 +201,17 @@
   }
 }
 
-@keyframes animate-menu-splash {
-  0% {
-    z-index: 10;
-    opacity: 1;
-  }
+// @keyframes animate-splash {
+//   0% {
+//     z-index: 10;
+//     opacity: 1;
+//   }
 
-  50% {
-    opacity: 1;
-  }
+//   50% {
+//     opacity: 1;
+//   }
 
-  100% {
-    opacity: 0;
-  }
-}
+//   100% {
+//     opacity: 0;
+//   }
+// }

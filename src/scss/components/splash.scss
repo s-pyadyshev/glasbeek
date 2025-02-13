@@ -1,4 +1,5 @@
-.menu-splash {
+.splash {
+  display: none;
   z-index: -1;
   opacity: 0;
   position: fixed;
@@ -21,7 +22,7 @@
   }
 }
 
-.menu-splash__title {
+.splash__title {
   max-width: 250px;
   text-align: center;
 

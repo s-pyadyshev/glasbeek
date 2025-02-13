@@ -2,9 +2,9 @@ export const mobileMenu = (() => {
   const init = () => {
     const mobileMenuOpen = document.querySelector(".js-open-menu");
     const menu = document.querySelector(".menu");
-    const splashTitle = document.querySelector(
-      ".menu-splash__title .scribble svg"
-    );
+    // const splashTitle = document.querySelector(
+    //   ".menu-splash__title .scribble svg"
+    // );
 
     if (!mobileMenuOpen) {
       return;
@@ -18,8 +18,8 @@ export const mobileMenu = (() => {
       menu.classList.add("menu--open");
       menu.classList.remove("menu--closed");
       mobileMenuClose.focus();
-      splashTitle.setAttribute("data-scrollspy", "animate");
-      splashTitle.classList.add("animate__animated");
+      // splashTitle.setAttribute("data-scrollspy", "animate");
+      // splashTitle.classList.add("animate__animated");
     });
 
     mobileMenuClose.addEventListener("click", function () {
@@ -31,8 +31,8 @@ export const mobileMenu = (() => {
       body.classList.toggle("menu-active");
       menu.classList.add("menu--closed");
       menu.classList.remove("menu--open");
-      splashTitle.removeAttribute("data-scrollspy");
-      splashTitle.classList.remove("animate__animated");
+      // splashTitle.removeAttribute("data-scrollspy");
+      // splashTitle.classList.remove("animate__animated");
     });
   };
 
