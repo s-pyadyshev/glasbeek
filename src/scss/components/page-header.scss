@@ -36,54 +36,18 @@
 
 .page-header--news .page-header__aside {
   @include laptop {
-    width: 50%;
-    padding-top: 50px;
-    padding-bottom: 50px;
-  }
-
-  @include desktop {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    padding-top: 50px;
-    margin-right: auto;
     margin-left: auto;
-    width: calc(30% - 25px);
-    margin-bottom: 0;
-    padding-top: 70px;
-  }
-
-  &:after {
-    @include laptop {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 70px;
-      width: 1px;
-      height: 100%;
-      background-color: #fff;
-    }
-
-    @include desktop-l {
-      right: 216px;
-    }
   }
 }
 
-.page-header--news .page-header__aside > * {
+.page-header--news .page-header__aside>* {
   margin-right: auto;
   margin-left: auto;
 }
 
-.page-header--news .page-header__text {
-  @include laptop {
-    width: 50%;
-    border-right: 0;
-  }
-
-  @include desktop {
-    max-width: 100%;
-    width: 68.2%;
+.page-header--news .page-header__aside {
+  @include tablet {
+    border-left: none;
   }
 }
 
@@ -154,19 +118,20 @@
   position: relative;
   text-align: left;
   padding: 40px 25px;
-  border-left: 1px solid #fff;
   border-right: 1px solid #fff;
+  border-left: 1px solid #fff;
 
-  @include laptop {
-    width: 505px;
+  @include tablet {
+    max-width: 50%;
     padding: 50px;
     padding-bottom: 40px;
     padding-left: 25px;
+    border-right: none;
   }
 
   @include desktop {
     max-width: 100%;
-    width: 68.2%;
+    width: 58%;
     padding-top: 70px;
     padding-bottom: 70px;
     padding-left: 70px;
@@ -196,21 +161,30 @@
 .page-header__aside {
   width: 100%;
   border-right: 1px solid #fff;
+  border-left: 1px solid #fff;
+
+  @include tablet {
+    width: 50%;
+    padding: 40px 25px 0;
+    border-right: 1px solid #fff;
+  }
 
   @include laptop {
-    border-right: none;
+    width: calc(50% - 50px);
     padding-top: 50px;
   }
 
   @include desktop {
-    width: calc(30% - 50px);
+    width: calc(42% - 50px);
+    border-left: none;
     margin-bottom: 0;
     padding-top: 70px;
   }
 
-  > * {
-    margin-left: 0;
+  >* {
+    margin-left: auto;
     margin-right: auto;
+    margin-bottom: 40px;
 
     @include desktop {
       margin-left: 0;
@@ -231,7 +205,7 @@
     padding-top: 70px;
   }
 
-  > * {
+  >* {
     max-width: 338px;
 
     @include laptop {
@@ -328,7 +302,7 @@
     right: 216px;
   }
 
-  > * {
+  >* {
     @include laptop {
       margin-left: auto;
       margin-right: auto;

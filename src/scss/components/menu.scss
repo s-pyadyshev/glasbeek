@@ -54,11 +54,14 @@
     padding-top: 0;
     width: 100%;
     justify-content: space-between;
-    padding-left: 72px;
+    padding-left: 36px;
+    padding-right: 36px;
   }
 
   @include desktop {
     gap: 32px;
+    padding-left: 72px;
+    padding-right: 0;
   }
 
   .menu-active & {

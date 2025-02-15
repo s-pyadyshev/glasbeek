@@ -67,6 +67,14 @@
 .card-aside {
   max-width: 480px;
   padding: 52px;
+
+  @include tablet {
+    padding: 25px;
+  }
+
+  @include laptop {
+    padding: 52px;
+  }
 }
 
 .card-contact {

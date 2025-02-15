@@ -18,7 +18,7 @@ export const sliderNews = (function () {
       },
       breakpoints: {
         768: {
-          slidesPerView: 2,
+          slidesPerView: 2.5,
           spaceBetween: 36,
         },
         1200: {

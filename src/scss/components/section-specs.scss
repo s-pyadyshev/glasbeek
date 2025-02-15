@@ -14,7 +14,7 @@
   padding: 20px;
   width: 100%;
 
-  @include tablet {
+  @include laptop {
     width: calc(50% - 1px);
   }
 
@@ -25,7 +25,7 @@
 
   @include desktop-l {
     height: 360px;
-    padding: 93px 45px 45px 73px;
+    padding: 90px 45px 45px 72px;
   }
 }
 
@@ -57,6 +57,7 @@
 .section-specs__title-wrap h2 {
   font-size: 22px;
   line-height: 1.3;
+  margin-bottom: 0;
 
   @include desktop {
     font-size: 32px;

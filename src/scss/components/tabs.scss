@@ -10,3 +10,14 @@ $tab-border-color: $color-secondary;
 .tab-button {
   background: none;
 }
+
+[data-tab-content] {
+  @include tablet {
+    display: block;
+    position: static;
+    overflow: visible;
+    margin: 0;
+    height: auto;
+    clip: auto;
+  }
+}

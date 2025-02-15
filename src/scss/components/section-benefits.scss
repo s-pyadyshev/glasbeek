@@ -24,18 +24,18 @@
   }
 
   @include tablet {
-    height: 1000px;
+    height: 800px;
     background-size: cover;
     background-position: 0 0;
+  }
+
+  @include desktop {
+    height: 1000px;
   }
 
   [data-tab-content] {
     background-repeat: no-repeat;
     background-size: contain;
-
-    @include tablet {
-      display: block;
-    }
   }
 
   .sun {
@@ -50,12 +50,19 @@
 
     @include tablet {
       top: 0;
+      left: -15%;
     }
 
+
     @include desktop {
+      left: -20%;
       top: -10%;
       width: 610px;
       height: 700px;
+    }
+
+    @include desktop-l {
+      left: -15%;
     }
   }
 

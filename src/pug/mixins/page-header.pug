@@ -22,7 +22,7 @@ mixin page-header(title, text, image)
 
 mixin page-header-pretreatment(title, text, image)
   section.page-header(style=`background-image: url(images/page-header-gradient.png), url(${image})`)
-    .page-header__inner.border-left.border-right
+    .page-header__inner
       .page-header__text
         h1
           span.scribble= title
@@ -44,7 +44,7 @@ mixin page-header-pretreatment(title, text, image)
 
 mixin page-header-news(title, text, image)
   section.page-header.page-header--news.background-muted
-    .page-header__inner.border-left.border-right
+    .page-header__inner
       .page-header__text
         h1
           span.scribble= title

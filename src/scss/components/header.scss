@@ -13,7 +13,7 @@ $mobile-menu-background-color: $color-primary;
   justify-content: space-between;
   width: 100%;
 
-  @include laptop {
+  @include tablet {
     padding-left: 32px;
   }
 
@@ -24,7 +24,7 @@ $mobile-menu-background-color: $color-primary;
   }
 
   &:before {
-    @include laptop {
+    @include tablet {
       content: "";
       position: absolute;
       top: 0;
@@ -43,28 +43,53 @@ $mobile-menu-background-color: $color-primary;
 
   @include laptop {
     width: 40%;
+    gap: 30px;
   }
 
   @include desktop-l {
     width: auto;
     height: 140px;
+    gap: 0;
   }
 }
 
 .header__logo {
-  z-index: 11;
   position: relative;
   transition: none;
   width: 141px;
   height: 35px;
 
+  @include tablet {
+    height: 79px;
+    padding: 21px 0;
+  }
+
   @include desktop-l {
     margin: 0 23px;
     width: 224px;
-    height: 56px;
+    height: 140px;
+    padding: 42px 0;
+  }
+
+  &:after {
+    @include tablet {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: -32px;
+      width: 1px;
+      height: 100%;
+      background-color: #fff;
+      opacity: 1;
+    }
+
+    .menu-active & {
+      display: none;
+    }
   }
 
   .menu-active & {
+    z-index: 11;
     border: 1px solid transparent;
     filter: brightness(0) invert(1);
   }
@@ -154,9 +179,8 @@ $mobile-menu-background-color: $color-primary;
   @include laptop {
     display: flex;
     padding: 0 20px;
-    margin: 0 0 0 auto;
+    margin: 0 auto;
     min-height: 78px;
-    border-left: 1px solid #fff;
   }
 
   @include desktop-l {
