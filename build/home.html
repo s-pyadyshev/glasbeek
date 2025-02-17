@@ -18,7 +18,7 @@
 		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#4d2f91">
 		<meta name="msapplication-TileColor" content="#ffffff">
 		<meta name="theme-color" content="#ffffff">
-		<link rel="stylesheet" href="./css/main.css?v=1739801710885">
+		<link rel="stylesheet" href="./css/main.css?v=1739833050150">
 	</head>
 	<body>
 		<div class="page-wrapper">
@@ -56,19 +56,21 @@
 									<li class="menu__item"><a class="menu__link" href="/news">Nieuws</a></li>
 									<li class="menu__item"><a class="menu__link" href="/contact">Contact</a></li>
 								</ul>
+								<ul class="lang menu__lang">
+									<li> <a href="/">NL</a></li>
+									<li><a href="/en">EN</a></li>
+									<li> <a href="/de">DE</a></li>
+								</ul>
 							</nav>
 						</div>
 						<div class="header__menu-toggle">
-							<button class="menu-toggle-open js-open-menu" type="button">
-								<svg>
-									<use xlink:href="./images/sprites.svg#menu-open"></use>
-								</svg>
-							</button>
-							<button class="menu-toggle-close js-close-menu" type="button">
-								<div class="menu-toggle-close__text">Sluiten</div>
-								<svg>
-									<use xlink:href="./images/sprites.svg#menu-close"></use>
-								</svg>
+							<button class="menu-toggle js-toggle-menu" type="button">
+								<div class="menu-toggle__text">Sluiten</div>
+								<div class="menu-icon">
+									<div class="menu-icon__line"> </div>
+									<div class="menu-icon__line"> </div>
+									<div class="menu-icon__line"></div>
+								</div>
 							</button>
 						</div>
 					</div>
@@ -358,24 +360,24 @@
 						<div class="section-why__cards-wrap border-left border-right">
 							<ul class="section-why__cards counter-list tab-content" data-tabs-content="tabs-why">
 								<li class="is-active" data-tab-content="tab1why">
-									<div class="card-why" style="background-image: url(images/card-why1.jpg)">
+									<div class="card-why" style="background-image: url(images/card-why1.jpg)" data-scrollspy="animate__slideInLeft">
 										<h3>Ontwerp aangepast aan wensen klant</h3>
 										<p>Het is uw product, organisatie en wensen waar wij onze producten op ontwerpen. Bij ons staat de klant centraal van eerste ontwerp tot oplevering, opleiding en service. </p>
 									</div>
 								</li>
-								<li data-tab-content="tab2why">
+								<li data-tab-content="tab2why" data-scrollspy="animate__slideInRight">
 									<div class="card-why" style="background-image: url(images/card-why2.jpg)">
 										<h3>Duurzaam productieproces</h3>
 										<p>Met onze geavanceerde productiemethoden en automatisering zorgen we voor een stabiele en duurzame productie. Zo kunnen we de kwaliteit garanderen die we beloven.</p>
 									</div>
 								</li>
-								<li data-tab-content="tab3why">
+								<li data-tab-content="tab3why" data-scrollspy="animate__slideInLeft">
 									<div class="card-why" style="background-image: url(images/card-why3.jpg)">
 										<h3>Grenzeloos enthousiast voor vernieuwing</h3>
 										<p>Voorop lopen in innovatie en verduurzamen van nieuwe en bestaande installaties is een klant gerichte strategie die we graag samen met u tot in perfectie doorvoeren.</p>
 									</div>
 								</li>
-								<li data-tab-content="tab4why">
+								<li data-tab-content="tab4why" data-scrollspy="animate__slideInRight">
 									<div class="card-why" style="background-image: url(images/card-why4.jpg)">
 										<h3>Snelle levertijden</h3>
 										<p>Productie engineering, produceren, monteren en service vanuit onze eigen twee fabrieken garandeert korte en flexibele levertijden.</p>
@@ -425,7 +427,7 @@
 				</div>
 			</footer>
 		</div><script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-		<script src="./js/vendor.js?v=1739801710885"></script>
-		<script src="./js/main.js?v=1739801710885"></script>
+		<script src="./js/vendor.js?v=1739833050150"></script>
+		<script src="./js/main.js?v=1739833050150"></script>
 	</body>
 </html>

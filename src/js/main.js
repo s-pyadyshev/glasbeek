@@ -9,10 +9,12 @@ import { tabs } from "./components/tabs.js";
 import { toggle } from "./components/toggle.js";
 import { scrollspy } from "./components/scrollspy.js";
 import ScrollMagic from "scrollmagic";
+import { splash } from "./components/splash.js";
 
 window.addEventListener(
   "load",
   () => {
+    splash.init();
     mobileMenu.init();
     sliderNews.init();
     sliderPhoto.init();
@@ -28,6 +30,7 @@ window.addEventListener(
 
     const stickyElementWrapper = document.querySelector(".page-header__aside");
     const stickyElement = document.querySelector(".sticky");
+
     if (stopElement && stickyElement && stickyElementWrapper) {
       const stickyElementWrapperPaddingTop = parseFloat(
         window.getComputedStyle(stickyElementWrapper).paddingTop

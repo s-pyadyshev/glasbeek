@@ -18,7 +18,7 @@
   flex-direction: column;
   gap: 10px;
 
-  @include desktop {
+  @include laptop {
     gap: 40px;
     flex-direction: row;
     max-width: 556px;
@@ -30,7 +30,7 @@
   align-items: center;
   gap: 12px;
 
-  @include desktop {
+  @include laptop {
     gap: 0;
   }
 }
@@ -41,7 +41,7 @@
   flex-shrink: 0;
   fill: $color-primary;
 
-  @include desktop {
+  @include laptop {
     height: 52px;
     width: 54px;
   }
@@ -51,7 +51,7 @@
   font-size: 15px;
   margin: 0;
 
-  @include desktop {
+  @include laptop {
     font-size: 28px;
   }
 }
@@ -76,10 +76,6 @@
     left: 0;
     top: 0;
     padding: 72px;
-    max-width: 400px;
-  }
-
-  @include desktop {
     max-width: 100%;
   }
 }
@@ -87,6 +83,10 @@
 .hero__text h1 {
   letter-spacing: 0.3px;
   max-width: 500px;
+
+  @include laptop {
+    font-size: 48px;
+  }
 }
 
 .hero__image {
@@ -106,6 +106,8 @@
       background-color: #dadada;
     }
   }
+
+
 }
 
 .hero__image img {
@@ -116,13 +118,13 @@
 
   @include laptop {
     height: 575px;
-    width: 60%;
+    width: calc(100% - 204px);
+    border-left: 1px solid #fff;
     margin-left: auto;
   }
 
-  @include desktop {
-    max-width: 1200px;
-    width: 100%;
+  @include desktop-l {
+    width: calc(100% - 278px);
   }
 }
 
@@ -135,9 +137,16 @@
   left: auto;
   width: 100%;
   height: 100%;
-  max-width: 1200px;
   background: linear-gradient(90deg,
       rgba(238, 238, 238, 0.5) 0%,
       rgba(238, 238, 238, 0.25) 50%,
       transparent 100%);
+
+  @include laptop {
+    width: calc(100% - 204px);
+  }
+
+  @include desktop-l {
+    width: calc(100% - 278px);
+  }
 }

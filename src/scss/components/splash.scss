@@ -1,7 +1,7 @@
 .splash {
   display: none;
-  z-index: -1;
   opacity: 0;
+  z-index: -1;
   position: fixed;
   top: 0;
   left: 0;
@@ -16,9 +16,16 @@
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: cover;
+  transition: all 0.3s;
 
   @include laptop {
     font-size: 64px;
+  }
+
+  &.active {
+    z-index: 200;
+    animation: fadeInSplash 3s;
+    animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
   }
 }
 

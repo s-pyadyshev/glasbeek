@@ -5,13 +5,16 @@
   left: 0;
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   transform: translateX(-100%);
   transition-property: transform, opacity;
   transition-duration: $transition-duration * 2;
   height: 100%;
+  flex-direction: column;
+  align-items: center;
 
   @include laptop {
+    flex-direction: row;
     align-items: center;
     position: static;
     transform: translateX(0);
@@ -24,6 +27,21 @@
 
   @include desktop-l {
     justify-content: flex-end;
+  }
+}
+
+.menu__lang {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #fff;
+
+  @include laptop {
+    display: none;
+  }
+
+  li:not(:last-child)::after {
+    margin-right: 12px;
+    margin-left: 12px;
   }
 }
 
@@ -187,7 +205,11 @@
 
   .menu__list {
     @include desktop {
-      padding-left: 208px;
+      padding-left: 110px;
+    }
+
+    @include desktop-l {
+      padding-left: 240px;
     }
   }
 

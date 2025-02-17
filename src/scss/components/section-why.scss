@@ -115,6 +115,12 @@
   position: relative;
   margin-bottom: 40px;
 
+  &.border-left {
+    &:before {
+      left: -1px;
+    }
+  }
+
   @include desktop {
     margin-bottom: 144px;
   }
@@ -337,7 +343,7 @@
 .section-specs__title-wrap .arrow-bottom,
 .section-why__header .arrow-bottom {
   position: absolute;
-  z-index: 2;
+  z-index: 4;
   height: 100px;
   bottom: -9%;
   right: 2%;
@@ -362,7 +368,6 @@
   }
 
   @include desktop-l {
-    z-index: 2;
     bottom: -13%;
     height: 181px;
     left: 43%;
@@ -415,6 +420,10 @@
   }
 }
 
+.section-why__cards li {
+  z-index: 2;
+}
+
 .section-why__cards li:hover {
   &:before {
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
@@ -424,6 +433,7 @@
 .section-why__cards li:nth-child(odd) {
   @include laptop {
     width: 50%;
+    border-bottom: 1px solid #dadada;
   }
 
   @include desktop-l {
@@ -434,6 +444,7 @@
 .section-why__cards li:nth-child(even) {
   @include laptop {
     width: 50%;
+    border-bottom: 1px solid #dadada;
   }
 
   @include desktop-l {

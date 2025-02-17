@@ -14,36 +14,29 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 const mobileMenu = (() => {
   const init = () => {
-    const mobileMenuOpen = document.querySelector(".js-open-menu");
-    const menu = document.querySelector(".menu");
-    // const splashTitle = document.querySelector(
-    //   ".menu-splash__title .scribble svg"
-    // );
-
-    if (!mobileMenuOpen) {
+    const mobileMenuToggle = document.querySelector(".js-toggle-menu");
+    if (!mobileMenuToggle) {
       return;
     }
-    const mobileMenuClose = document.querySelector(".js-close-menu");
+    const menu = document.querySelector(".menu");
     const body = document.querySelector("body");
-    mobileMenuOpen.addEventListener("click", function () {
-      body.classList.toggle("menu-active");
-      menu.classList.add("menu--open");
-      menu.classList.remove("menu--closed");
-      mobileMenuClose.focus();
-      // splashTitle.setAttribute("data-scrollspy", "animate");
-      // splashTitle.classList.add("animate__animated");
-    });
-    mobileMenuClose.addEventListener("click", function () {
-      $(".menu__link").css("opacity", "1");
-      $(".menu__link.dropdown").removeClass("active");
-      $(".js-dropdown").removeClass("is-open");
-      $(".js-dropdown").next().removeClass("show");
-      $(".js-dropdown").next().slideUp(0);
-      body.classList.toggle("menu-active");
-      menu.classList.add("menu--closed");
-      menu.classList.remove("menu--open");
-      // splashTitle.removeAttribute("data-scrollspy");
-      // splashTitle.classList.remove("animate__animated");
+    mobileMenuToggle.addEventListener("click", function () {
+      if (!mobileMenuToggle.classList.contains("active")) {
+        mobileMenuToggle.classList.add("active");
+        body.classList.toggle("menu-active");
+        menu.classList.add("menu--open");
+        menu.classList.remove("menu--closed");
+      } else {
+        mobileMenuToggle.classList.remove("active");
+        $(".menu__link").css("opacity", "1");
+        $(".menu__link.dropdown").removeClass("active");
+        $(".js-dropdown").removeClass("is-open");
+        $(".js-dropdown").next().removeClass("show");
+        $(".js-dropdown").next().slideUp(0);
+        body.classList.toggle("menu-active");
+        menu.classList.add("menu--closed");
+        menu.classList.remove("menu--open");
+      }
     });
   };
   return {
@@ -323,6 +316,43 @@ const sliderServices = function () {
 
 /***/ }),
 
+/***/ "./src/js/components/splash.js":
+/*!*************************************!*\
+  !*** ./src/js/components/splash.js ***!
+  \*************************************/
+/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   splash: function() { return /* binding */ splash; }
+/* harmony export */ });
+const splash = (() => {
+  const init = () => {
+    const splashElement = document.querySelector(".splash");
+    if (!splashElement) {
+      return;
+    }
+    if (window.location.pathname === "/" || window.location.pathname === "/en" || window.location.pathname === "/de") {
+      const scribble = splashElement.querySelector(".scribble svg");
+      if (!sessionStorage.getItem("splashShown")) {
+        splashElement.classList.add("active");
+        scribble.classList.toggle("animate__animated");
+        setTimeout(() => {
+          splashElement.classList.remove("active");
+        }, 3000);
+        sessionStorage.setItem("splashShown", "true");
+      } else {
+        splashElement.classList.remove("active");
+      }
+    }
+  };
+  return {
+    init
+  };
+})();
+
+/***/ }),
+
 /***/ "./src/js/components/tabs.js":
 /*!***********************************!*\
   !*** ./src/js/components/tabs.js ***!
@@ -503,6 +533,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_toggle_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/toggle.js */ "./src/js/components/toggle.js");
 /* harmony import */ var _components_scrollspy_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/scrollspy.js */ "./src/js/components/scrollspy.js");
 /* harmony import */ var scrollmagic__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! scrollmagic */ "./node_modules/scrollmagic/scrollmagic/uncompressed/ScrollMagic.js");
+/* harmony import */ var _components_splash_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/splash.js */ "./src/js/components/splash.js");
+
 
 
 
@@ -515,6 +547,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 window.addEventListener("load", () => {
+  _components_splash_js__WEBPACK_IMPORTED_MODULE_11__.splash.init();
   _components_mobile_menu_js__WEBPACK_IMPORTED_MODULE_1__.mobileMenu.init();
   _components_sliderNews_js__WEBPACK_IMPORTED_MODULE_2__.sliderNews.init();
   _components_sliderPhoto_js__WEBPACK_IMPORTED_MODULE_3__.sliderPhoto.init();
@@ -589,7 +622,6 @@ window.addEventListener("load", () => {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _vendor_rellax_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./vendor/rellax.js */ "./src/js/vendor/rellax.js");
 
-// import ScrollMagic from "scrollmagic";
 
 /***/ }),
 

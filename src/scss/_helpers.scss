@@ -182,13 +182,32 @@
   border-right: 1px solid #dadada;
   border-left: 1px solid #dadada;
   height: 40px;
+  border-right: none;
+  border-left: none;
+
+  .container {
+    height: 100%;
+    max-width: calc(100% - 80px);
+    margin: 0 auto;
+    border-right: 1px solid #dadada;
+    border-left: 1px solid #dadada;
+    padding: 0;
+
+    @include laptop {
+      max-width: calc(100% - 140px);
+    }
+
+    @include desktop-l {
+      width: calc(1920px - 449px);
+    }
+  }
 
   &:before {
     content: "";
     position: absolute;
     top: -1px;
     left: -50vw;
-    width: 150vw;
+    width: 145vw;
     height: 1px;
     background-color: #dadada;
   }
