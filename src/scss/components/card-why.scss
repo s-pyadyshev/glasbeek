@@ -4,6 +4,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   padding: 38px 38px 120px;
+  transition: all 0.2s;
 
   @include laptop {
     padding: 40px;
@@ -16,6 +17,32 @@
   @include desktop-l {
     min-height: 432px;
     padding: 120px 72px;
+  }
+
+  &:hover {
+    background-image: none !important;
+    background: $color-primary;
+    color: #fff;
+
+    h3 {
+      color: #fff;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+
+  &:after {
+    content: " ";
+    background: radial-gradient(40.97% 209.48% at 64.03% 59.03%, rgba(255, 255, 255, 0.79) 0%, rgba(255, 255, 255, 0.82) 58%, #fff 100%);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    opacity: 0.9;
   }
 
   >* {
@@ -83,6 +110,7 @@
   width: 39px;
   font-size: 22px;
   font-weight: 500;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.2);
 
   &:focus,
   &:hover,

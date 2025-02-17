@@ -8,6 +8,12 @@
     margin-right: 0;
     padding-right: 0;
   }
+
+  @include desktop {
+    padding-left: 46%;
+    margin-left: -74%;
+    width: 170%;
+  }
 }
 
 .section-news h2 {

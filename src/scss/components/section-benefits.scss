@@ -2,10 +2,17 @@
   position: relative;
   overflow: hidden;
   min-height: 680px;
-  background-image: url("../images/windmills.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 85% 0;
+
+  @include tablet {
+    height: 800px;
+    background-size: cover;
+    background-position: 0 0;
+  }
+
+  @include desktop {
+    height: 1000px;
+    padding-top: 80px;
+  }
 
   h2 {
     position: relative;
@@ -23,19 +30,23 @@
     }
   }
 
-  @include tablet {
-    height: 800px;
-    background-size: cover;
-    background-position: 0 0;
-  }
-
-  @include desktop {
-    height: 1000px;
-  }
 
   [data-tab-content] {
     background-repeat: no-repeat;
     background-size: contain;
+  }
+
+  .windmills {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    background-image: url("../images/windmills.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 85% 0;
+    background-position: fixed;
   }
 
   .sun {
@@ -181,10 +192,6 @@
   @include tablet {
     min-height: 1000px;
   }
-
-  @include desktop {
-    padding-top: 130px;
-  }
 }
 
 .section-benefits__links {
@@ -196,6 +203,7 @@
   font-family: $font-secondary;
   font-size: 20px;
   color: $color-primary;
+  text-decoration: none;
 
   @include laptop {
     margin-top: 40px;
@@ -203,10 +211,8 @@
 
   a {
     font-size: 15px;
-    display: block;
     max-width: 234px;
     margin: 0 auto;
-    padding: 16px;
     background-color: $color-primary;
     color: #fff;
     font-weight: 400;
@@ -217,7 +223,6 @@
       font-weight: 600;
       font-size: 20px;
       background-color: transparent;
-      text-decoration: underline;
       color: $color-primary;
     }
   }

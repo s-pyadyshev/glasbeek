@@ -2,7 +2,7 @@ import Swiper from "swiper";
 import { Navigation, Pagination } from "swiper/modules";
 export const sliderServices = (function () {
   const init = function () {
-    const swiper = new Swiper(".slider-services", {
+    const swiperServices = new Swiper(".slider-services", {
       modules: [Navigation, Pagination],
       slidesPerView: 1,
       spaceBetween: 15,
@@ -19,11 +19,11 @@ export const sliderServices = (function () {
       breakpoints: {
         768: {
           slidesPerView: 1.5,
-          spaceBetween: 36,
           spaceBetween: 25,
         },
         1600: {
           slidesPerView: 2.5,
+          spaceBetween: 25,
         },
       },
     });

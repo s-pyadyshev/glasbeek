@@ -334,6 +334,7 @@
   }
 }
 
+.section-specs__title-wrap .arrow-bottom,
 .section-why__header .arrow-bottom {
   position: absolute;
   z-index: 2;
@@ -398,7 +399,6 @@
 }
 
 .section-why__link-wrap .button {
-  background-color: $color-primary;
   color: $color-white;
   min-height: 54px;
   width: 144px;
@@ -412,6 +412,12 @@
     width: 244px;
     min-height: 72px;
     padding: 22px 15px;
+  }
+}
+
+.section-why__cards li:hover {
+  &:before {
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
   }
 }
 
@@ -433,18 +439,6 @@
   @include desktop-l {
     width: 46% !important;
   }
-}
-
-.section-why__cards li::after {
-  content: " ";
-  background: radial-gradient(40.97% 209.48% at 64.03% 59.03%, rgba(255, 255, 255, 0.79) 0%, rgba(255, 255, 255, 0.82) 58%, #fff 100%);
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  opacity: 0.9;
 }
 
 .section-why__cards li:nth-child(1) {

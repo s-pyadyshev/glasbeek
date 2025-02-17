@@ -7,10 +7,10 @@
   @include tablet {
     grid-template-columns: 1fr 1fr;
   }
+
   @include desktop {
     grid-template-columns: 1fr 1fr;
     gap: 72px;
-    max-width: 725px;
     list-style-type: none;
   }
 
@@ -20,5 +20,5 @@
 }
 
 .news-list__item {
-  box-shadow: 1px 1px 8px gray;
+  box-shadow: 0px 4px 46.7px 0px #00000026;
 }

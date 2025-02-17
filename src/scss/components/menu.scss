@@ -139,6 +139,7 @@
 
   .menu-active & {
     font-size: 28px;
+    transition: none;
   }
 
   &.dropdown.active {

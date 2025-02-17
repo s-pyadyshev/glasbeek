@@ -52,7 +52,7 @@ mixin page-header-news(title, text, image)
         if text
           p= text
       aside.page-header__aside
-        .card-contact.background-primary.sticky(data-sticky-for="1199")
+        .card-contact.background-primary.sticky
           h3 Benieuwd wat we voor u kunnen betekenen?
           .card__footer
             a(href="/").button.full-width Contact
@@ -60,7 +60,7 @@ mixin page-header-news(title, text, image)
 mixin page-header-news-detail(title, text, image)
   section.page-header.page-header--news.page-header--news-item.background-muted
     .page-header__inner.border-left.border-right.pb-0
-      .page-header__text.page-header__text--news-item
+      .page-header__text
         h1
           span.scribble= title
         if text
@@ -68,17 +68,16 @@ mixin page-header-news-detail(title, text, image)
         .page-header__photo
           img(src="images/news.jpg" width="929" height="326" alt="news")
           .page-header__news-date.background-primary 18 juni 2021
-      aside.page-header__aside.page-header__aside--news-item
+      aside.page-header__aside.hidden-tablet.visible-desktop
         .card-contact.background-primary.sticky(data-sticky-for="1199")
           h3 Benieuwd wat we voor u kunnen betekenen?
-
           .card__footer
             a(href="/contact.html").button.full-width Contact
 
 mixin page-header-contact(title, text, image)
   section.page-header.page-header--contact.background-muted
     .page-header__inner.border-left.border-right
-      .page-header__text.border-right
+      .page-header__text
         h1
           span.scribble= title
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 182 30" data-scrollspy="animate"><path stroke="#d62028" d="M2 2C60.0432 2 118.097 3.14155 176.153 3.14155C212.256 3.14155 103.998 5.45919 67.9179 6.56619C60.3299 6.79901 52.5434 7.70774 44.9932 7.70774C44.7656 7.70774 43.3382 7.70774 43.753 7.70774C48.4268 7.70774 53.0997 7.67613 57.7709 7.83458C71.9277 8.31478 94.1897 10.5616 115.436 10.5616C138.76 10.5616 149.178 10.5616 151.462 10.5616" style="fill:none;stroke-linecap:round;stroke-miterlimit:10;stroke-width:3px"/></svg>
@@ -111,3 +110,30 @@ mixin page-header-contact(title, text, image)
           .card--contact__section
             b KVK
             p KvK 29021512
+
+
+mixin page-header-slider(title, text, image)
+  section.page-header.page-header--slider.background-muted
+    .page-header__inner
+      .page-header__text
+        h1
+          span.scribble= title
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 283 40" fill="none" data-scrollspy="animate"><path stroke="#D62028" d="M2.133 4c109.261 0 219.053-2 327.93-2C434.826 2-88.827 14 15.937 14c72.044 0 144.39 4 216.195 4" style="fill:none;stroke-linecap:round;stroke-miterlimit:10;stroke-width:3px"/></svg>
+        if text
+          p= text
+      aside.page-header__aside 
+        .swiper.slider-product
+          .swiper-wrapper
+            .swiper-slide
+              img(src="images/product-slide1.jpg" alt="")
+            .swiper-slide
+              img(src="images/card-why1.jpg" alt="")
+            .swiper-slide
+              img(src="images/card-why1.jpg" alt="")
+            .swiper-slide
+              img(src="images/card-why1.jpg" alt="")
+          a.swiper-button-prev.pagination__prev.icon-pagination-prev(href="/")
+              +svg('arrow-left')
+          a.swiper-button-next.pagination__next.icon-pagination-next(href="/")
+            +svg('arrow-right')
+        .swiper-pagination

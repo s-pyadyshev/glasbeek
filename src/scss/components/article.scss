@@ -3,6 +3,7 @@
   font-family: $font-secondary;
   word-break: break-word;
   font-size: 14px;
+  font-weight: 300;
 
   * {
     font-size: inherit;
@@ -39,16 +40,16 @@
 
   .slider-photo {
     z-index: 3;
-    width: 100vw;
+    width: calc(100vw - 35px);
 
     @include desktop {
-      margin-left: calc(-70% - 140px);
-      width: 100vw;
+      margin-left: -142px;
+      width: calc(100% + 213px);
     }
 
     @include desktop-l {
-      width: 1216px;
-      margin-left: -289px;
+      margin-left: -288px;
+      width: calc(100% + 359px);
     }
   }
 

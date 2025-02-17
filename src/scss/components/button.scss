@@ -29,7 +29,7 @@ $button-color-active: $color-white;
   &:focus,
   &:hover,
   &:active {
-    background-color: $color-secondary;
+    background-color: #780000;
     border-color: $color-secondary;
     color: $color-white;
 
@@ -111,7 +111,7 @@ $button-color-active: $color-white;
     &:focus,
     &:hover,
     &:active {
-      background-color: $color-secondary;
+      background-color: #780000;
       border-color: $color-secondary;
 
       .background-secondary & {

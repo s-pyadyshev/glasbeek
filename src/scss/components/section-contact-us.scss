@@ -3,7 +3,7 @@
   border-bottom: 1px solid #dadada;
 }
 
-.section-contact-us .background-primary {
+.poster-wrap {
   padding: 30px 37px 0;
   display: flex;
   flex-direction: column-reverse;
@@ -16,7 +16,7 @@
   }
 }
 
-.section-contact-us .background-primary img {
+.poster-wrap img {
   margin-left: -50%;
   width: auto;
   height: 315px;
@@ -45,7 +45,7 @@
   }
 }
 
-.section-contact-us__actions a {
+.poster__actions a {
   @include desktop {
     font-size: 20px;
   }
@@ -54,9 +54,18 @@
   &:hover {
     text-decoration: none;
   }
+
+  &:not(.button) {
+    text-decoration: none;
+
+    &:focus,
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
-.section-contact-us__text .button {
+.poster__text .button {
   min-height: 54px;
   padding: 17px;
   max-width: 242px;
@@ -76,7 +85,7 @@
   }
 }
 
-.section-contact-us__text h2 {
+.poster__text h2 {
   font-size: 18px;
   margin-bottom: 20px;
   text-align: left;
@@ -97,7 +106,7 @@
   }
 }
 
-.section-contact-us__actions {
+.poster__actions {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -112,8 +121,8 @@
   }
 }
 
-.section-contact-us__text {
-  z-index: 2;
+.poster__text {
+  z-index: 3;
   position: absolute;
   display: flex;
   flex-direction: column;

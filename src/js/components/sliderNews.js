@@ -22,8 +22,7 @@ export const sliderNews = (function () {
           spaceBetween: 36,
         },
         1200: {
-          slidesPerView: 3,
-          spaceBetween: 36,
+          slidesPerView: 2.5,
         },
       },
     });

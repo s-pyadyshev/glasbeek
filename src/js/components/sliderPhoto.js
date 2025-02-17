@@ -2,9 +2,9 @@ import Swiper from "swiper";
 import { Navigation, Pagination } from "swiper/modules";
 export const sliderPhoto = (function () {
   const init = function () {
-    const swiper = new Swiper(".slider-photo", {
+    const swiperPhoto = new Swiper(".slider-photo", {
       modules: [Navigation, Pagination],
-      slidesPerView: 2,
+      slidesPerView: 1.5,
       spaceBetween: 25,
       navigation: {
         nextEl: ".swiper-button-next",
@@ -18,7 +18,7 @@ export const sliderPhoto = (function () {
       },
       breakpoints: {
         768: {
-          slidesPerView: 3,
+          slidesPerView: 2.5,
           spaceBetween: 25,
         },
       },

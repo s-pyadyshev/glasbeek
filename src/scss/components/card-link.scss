@@ -1,6 +1,28 @@
 .card-link {
+  display: block;
   max-width: 400px;
-  box-shadow: 0 0 15px 5px rgb(0 0 0 / 10%);
+  box-shadow: 0 0 15px 5px rgb(0 0 0 / 20%);
+  text-decoration: none;
+
+  &:focus,
+  &:hover,
+  &:active {
+    .card-link__body {
+      background-color: $color-primary;
+      color: #fff;
+      transition: all 0.2s;
+
+      svg {
+        border-radius: 50%;
+        background-color: #780000;
+        display: block;
+        fill: #fff;
+        transition: all 0.2s;
+      }
+    }
+
+
+  }
 }
 
 .card-link__image {
@@ -19,8 +41,9 @@
   text-decoration: none;
   color: $color-primary;
   gap: 10px;
+  transition: all 0.2s;
 
-  > div {
+  >div {
     min-height: 52px;
     line-height: 1.7;
   }
@@ -31,19 +54,8 @@
     width: 52px;
     height: 52px;
     fill: #780000;
+    transition: all 0.2s;
   }
 
-  &:focus,
-  &:hover,
-  &:active {
-    background-color: $color-primary;
-    color: #fff;
 
-    svg {
-      border-radius: 50%;
-      background-color: #780000;
-      display: block;
-      fill: #fff;
-    }
-  }
 }

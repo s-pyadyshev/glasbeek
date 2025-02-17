@@ -31,10 +31,9 @@
 }
 
 .page-news__inner {
-  max-width: 1000px;
   padding-top: 50px;
-  padding-right: 35px;
-  padding-left: 35px;
+  padding-right: 25px;
+  padding-left: 25px;
 
   @include desktop {
     width: 75%;
@@ -56,14 +55,14 @@
 
 .page-news-item__inner {
   position: relative;
-  max-width: 1000px;
+  max-width: 1040px;
   padding-right: 35px;
   padding-left: 35px;
 
   @include desktop {
     padding-right: 72px;
     padding-left: 72px;
-    max-width: 68.2%;
+    max-width: 68%;
   }
 
   @media (min-width: 1800px) {
