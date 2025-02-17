@@ -46,30 +46,6 @@
   li {
     font-weight: 600;
   }
-
-  a {
-    max-width: 480px;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    padding: 17px;
-    outline: none;
-    appearance: none;
-    text-decoration: none;
-    text-align: center;
-    background-color: $color-primary;
-    color: #fff;
-
-    @include laptop {
-      padding: 25px;
-      margin-top: 68px;
-      font-weight: 500;
-      font-size: 20px;
-      background-color: transparent;
-      text-align: left;
-      padding: 0;
-      color: $color-primary;
-    }
-  }
 }
 
 .services__slider {

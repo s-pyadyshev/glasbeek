@@ -8,9 +8,11 @@
 
 .list.list--services {
   gap: 30px;
+  margin-bottom: 36px;
 
   @include laptop {
     gap: 66px;
+    margin-bottom: 0;
   }
 }
 

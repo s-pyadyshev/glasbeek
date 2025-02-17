@@ -555,7 +555,7 @@ window.addEventListener("load", () => {
     }
   }
   function initDropdown() {
-    $(".js-dropdown").on("mouseenter", function (e) {
+    $(".js-dropdown").on(window.matchMedia("(min-width: 1200px)").matches ? "mouseenter" : "click", function (e) {
       e.preventDefault();
       let $this = $(this);
       if ($this.next().hasClass("show")) {
