@@ -10,6 +10,7 @@ import { toggle } from "./components/toggle.js";
 import { scrollspy } from "./components/scrollspy.js";
 import ScrollMagic from "scrollmagic";
 import { splash } from "./components/splash.js";
+import { relocateContact } from "./components/relocateContact.js";
 
 window.addEventListener(
   "load",
@@ -24,6 +25,7 @@ window.addEventListener(
     tabs.init();
     toggle.init();
     scrollspy.init();
+    relocateContact.init();
     const rellax = new Rellax(".rellax");
 
     const stopElement = document.querySelector(".sticky-stop");

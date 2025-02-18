@@ -46,6 +46,47 @@ const mobileMenu = (() => {
 
 /***/ }),
 
+/***/ "./src/js/components/relocateContact.js":
+/*!**********************************************!*\
+  !*** ./src/js/components/relocateContact.js ***!
+  \**********************************************/
+/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   relocateContact: function() { return /* binding */ relocateContact; }
+/* harmony export */ });
+/* harmony import */ var _helpers_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../helpers.js */ "./src/js/helpers.js");
+
+const relocateContact = (() => {
+  const init = () => {
+    const cardContact = document.querySelector(".card--contact");
+    const contactForm = document.querySelector(".form--contact");
+    const pageHeaderAside = document.querySelector(".page-header__aside--contact");
+    if (!cardContact || !contactForm || !pageHeaderAside) {
+      return;
+    }
+    const relocateCardContact = (0,_helpers_js__WEBPACK_IMPORTED_MODULE_0__.debounce)(() => {
+      if (window.matchMedia("(max-width: 1024px)").matches) {
+        contactForm.after(cardContact);
+      } else {
+        if (!cardContact.contains(pageHeaderAside)) {
+          pageHeaderAside.prepend(cardContact);
+        }
+      }
+    }, 200);
+    relocateCardContact();
+    window.addEventListener("resize", () => {
+      relocateCardContact();
+    });
+  };
+  return {
+    init
+  };
+})();
+
+/***/ }),
+
 /***/ "./src/js/components/scrollspy.js":
 /*!****************************************!*\
   !*** ./src/js/components/scrollspy.js ***!
@@ -534,6 +575,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_scrollspy_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/scrollspy.js */ "./src/js/components/scrollspy.js");
 /* harmony import */ var scrollmagic__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! scrollmagic */ "./node_modules/scrollmagic/scrollmagic/uncompressed/ScrollMagic.js");
 /* harmony import */ var _components_splash_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/splash.js */ "./src/js/components/splash.js");
+/* harmony import */ var _components_relocateContact_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/relocateContact.js */ "./src/js/components/relocateContact.js");
+
 
 
 
@@ -557,6 +600,7 @@ window.addEventListener("load", () => {
   _components_tabs_js__WEBPACK_IMPORTED_MODULE_7__.tabs.init();
   _components_toggle_js__WEBPACK_IMPORTED_MODULE_8__.toggle.init();
   _components_scrollspy_js__WEBPACK_IMPORTED_MODULE_9__.scrollspy.init();
+  _components_relocateContact_js__WEBPACK_IMPORTED_MODULE_12__.relocateContact.init();
   const rellax = new Rellax(".rellax");
   const stopElement = document.querySelector(".sticky-stop");
   const stickyElementWrapper = document.querySelector(".page-header__aside");
