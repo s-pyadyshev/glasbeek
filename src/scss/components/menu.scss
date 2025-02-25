@@ -161,10 +161,10 @@
   }
 
   &.dropdown.active {
-    font-weight: 500;
+    font-weight: 600;
     color: #780000;
     opacity: 1 !important;
-    border-color: #780000;
+    border-bottom: 1px solid #780000 !important;
   }
 }
 
@@ -210,6 +210,12 @@
 
     @include desktop-l {
       padding-left: 240px;
+    }
+
+    .menu__list {
+      @include desktop {
+        padding-left: 240px;
+      }
     }
   }
 

@@ -8,11 +8,13 @@
 
 .list.list--services {
   gap: 30px;
-  margin-bottom: 36px;
+  line-height: 1;
+  font-size: 15px;
 
   @include laptop {
+    font-size: 20px;
+    line-height: normal;
     gap: 66px;
-    margin-bottom: 0;
   }
 }
 

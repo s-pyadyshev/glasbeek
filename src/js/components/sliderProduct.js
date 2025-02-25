@@ -14,7 +14,7 @@ export const sliderProduct = (function () {
         type: "bullets",
         bulletElement: "button",
       },
-      spaceBetween: 26
+      spaceBetween: 50,
     });
   };
 

@@ -46,6 +46,16 @@
   cursor: pointer;
   transform: rotate(0deg);
   transition: all 0.5s ease-in-out;
+
+  &:focus,
+  &:hover,
+  &:active {
+
+    .menu-icon__line:nth-child(2),
+    .menu-icon__line:nth-child(3) {
+      width: 41px;
+    }
+  }
 }
 
 .menu-toggle:not(.active) .menu-icon {

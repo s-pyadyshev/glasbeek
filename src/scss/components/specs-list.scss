@@ -35,7 +35,7 @@
   word-break: break-word;
 
   @include desktop {
-    padding: 80px 65px;
+    padding: 80px 70px;
     margin-bottom: -100px;
   }
 }
@@ -50,11 +50,12 @@
 }
 
 .specs-list p {
+  font-family: $font-secondary;
+  font-weight: 300;
   line-height: 1.9;
 
   @include desktop {
     font-size: 20px;
-    letter-spacing: -0.7px;
     margin: 0;
   }
 }

@@ -198,7 +198,8 @@
     }
 
     @include desktop-l {
-      width: calc(1920px - 449px);
+      width: calc(100% - 432px);
+      max-width: calc(1920px - 432px);
     }
   }
 
@@ -227,8 +228,6 @@
   text-decoration: none;
   max-width: 480px;
   width: 100%;
-  margin-top: 40px;
-  margin-bottom: 40px;
   padding: 17px;
   outline: none;
   appearance: none;
@@ -242,7 +241,6 @@
     justify-content: flex-start;
     width: auto;
     padding: 25px;
-    margin-top: 68px;
     font-weight: 500;
     font-size: 20px;
     background-color: transparent;
@@ -290,3 +288,23 @@
     }
   }
 }
+
+// .arrow-bottom {
+//   stroke: $color-primary;
+
+//   path {
+//     stroke-dashoffset: 1000px;
+//     stroke-dasharray: 1000px;
+//     transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0s;
+//     transition-delay: 0.3s;
+//     transition-duration: 1.5s;
+//   }
+
+//   &.animate__animated {
+//     opacity: 1;
+
+//     path {
+//       stroke-dashoffset: 0;
+//     }
+//   }
+// }

@@ -19,20 +19,6 @@
     padding: 120px 72px;
   }
 
-  &:hover {
-    background-image: none !important;
-    background: $color-primary;
-    color: #fff;
-
-    h3 {
-      color: #fff;
-    }
-
-    &::after {
-      display: none;
-    }
-  }
-
   &:after {
     content: " ";
     background: radial-gradient(40.97% 209.48% at 64.03% 59.03%, rgba(255, 255, 255, 0.79) 0%, rgba(255, 255, 255, 0.82) 58%, #fff 100%);

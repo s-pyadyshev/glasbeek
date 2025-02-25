@@ -1,10 +1,10 @@
 import Swiper from "swiper";
-import { Autoplay } from "swiper/modules";
+import { Autoplay, Grid } from "swiper/modules";
 
 export const sliderClients = (function () {
   const init = function () {
     const swiperClients = new Swiper(".slider-clients", {
-      modules: [Autoplay],
+      modules: [Autoplay, Grid],
       slidesPerView: 1,
       loop: true,
       autoplay: {

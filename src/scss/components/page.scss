@@ -12,6 +12,10 @@
 
   .news-list {
     @include desktop {
+      margin-top: -180px;
+    }
+
+    @include desktop-l {
       margin-top: -140px;
     }
   }

@@ -92,6 +92,7 @@
     }
 
     @include desktop {
+      top: -20%;
       left: -15%;
       width: 416px;
       height: 233px;
@@ -122,7 +123,7 @@
 
   .cloud3 {
     position: absolute;
-    top: 0;
+    top: -20%;
     left: 59%;
     width: 284px;
     height: 160px;
@@ -217,10 +218,13 @@
     color: #fff;
     font-weight: 400;
     text-decoration: none;
+    margin-top: 40px;
+    margin-bottom: 40px;
 
-    @include desktop {
+    @include laptop {
       max-width: 100%;
       font-weight: 600;
+      margin-top: 68px;
       font-size: 20px;
       background-color: transparent;
       color: $color-primary;

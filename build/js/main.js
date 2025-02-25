@@ -146,7 +146,7 @@ __webpack_require__.r(__webpack_exports__);
 const sliderClients = function () {
   const init = function () {
     const swiperClients = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".slider-clients", {
-      modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Autoplay],
+      modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Autoplay, swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Grid],
       slidesPerView: 1,
       loop: true,
       autoplay: {
@@ -298,7 +298,7 @@ const sliderProduct = function () {
         type: "bullets",
         bulletElement: "button"
       },
-      spaceBetween: 26
+      spaceBetween: 50
     });
   };
   return {
@@ -611,6 +611,7 @@ window.addEventListener("load", () => {
     const scene = new scrollmagic__WEBPACK_IMPORTED_MODULE_10__.Scene({
       triggerElement: stickyElement,
       triggerHook: 0,
+      offset: -70,
       duration: getDuration
     }).addTo(controller);
     if (window.matchMedia("(min-width: 1200px)").matches) {
@@ -647,6 +648,7 @@ window.addEventListener("load", () => {
         $this.next().fadeIn(500);
         $this.addClass("active");
         $(".menu__link").css("opacity", "0.5");
+        $(".menu__link").css("border-bottom", "1px solid transparent");
         $this.next().find(".menu__link").css("opacity", "1");
       }
     });

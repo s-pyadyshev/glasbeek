@@ -42,6 +42,7 @@
 .page-header--contact .page-header__text p {
   @include tablet {
     font-size: 18px;
+    max-width: 450px;
   }
 }
 
@@ -244,6 +245,8 @@
 }
 
 .page-header--contact .page-header__aside .card {
+  box-shadow: 0px 4px 46.7px 0px #D620284D;
+
   @include tablet {
     border-left: 0;
     max-width: 100%;
@@ -305,8 +308,11 @@
 
   @include desktop {
     font-size: 48px;
-    margin-top: 50px;
     margin-bottom: 50px;
+  }
+
+  @include desktop-l {
+    margin-top: 50px;
   }
 }
 
@@ -314,6 +320,10 @@
   font-size: 14px;
   font-weight: 300;
   line-height: 1.9;
+
+  @include tablet {
+    font-size: 16px;
+  }
 
   @include laptop {
     font-size: 20px;
@@ -375,33 +385,41 @@
   }
 }
 
+.page-header--slider {
+  overflow: hidden;
+}
+
 .page-header--slider .page-header__text {
   max-width: 100%;
 
   @include laptop {
-    width: 45%;
+    width: 50%;
   }
 }
 
 .page-header--slider .swiper-button-prev {
   position: absolute;
   box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+  left: 31px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
 
   @include desktop {
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
+    left: 23px;
   }
 }
 
 .page-header--slider .swiper-button-next {
   position: absolute;
   box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+  right: 31px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
 
   @include desktop-l {
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
+    right: 23px;
   }
 }
 
@@ -416,7 +434,7 @@
   @include laptop {
     gap: 30px;
     justify-content: center;
-    width: calc(55% - 70px);
+    width: 50%;
     padding: 70px 0 25px;
     border-left: 1px solid #fff;
   }
@@ -428,10 +446,6 @@
 
 .page-header--slider .page-header__inner {
   gap: 0;
-
-  @include desktop {
-    gap: 70px;
-  }
 }
 
 .page-header--slider h1 {
@@ -453,6 +467,3 @@
     font-size: 20px;
   }
 }
-
-
-.page-header--slider {}

@@ -42,6 +42,7 @@ window.addEventListener(
       const scene = new ScrollMagic.Scene({
         triggerElement: stickyElement,
         triggerHook: 0,
+        offset: -70,
         duration: getDuration,
       }).addTo(controller);
 
@@ -83,6 +84,7 @@ window.addEventListener(
             $this.next().fadeIn(500);
             $this.addClass("active");
             $(".menu__link").css("opacity", "0.5");
+            $(".menu__link").css("border-bottom", "1px solid transparent");
             $this.next().find(".menu__link").css("opacity", "1");
           }
         }

@@ -65,6 +65,7 @@
   font-size: 22px;
   top: 44px;
   left: -17px;
+  transition: background-color 0.2s;
 
   @include laptop {
     height: 40px;
@@ -422,11 +423,11 @@
 
 .section-why__cards li {
   z-index: 2;
-}
 
-.section-why__cards li:hover {
-  &:before {
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  &:hover {
+    &::before {
+      background-color: #780000;
+    }
   }
 }
 

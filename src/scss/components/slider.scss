@@ -86,9 +86,13 @@
   opacity: 1;
   width: 14px;
   height: 14px;
+  background: #fff;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
   margin-right: 8px;
   margin-left: 8px;
-  background: #fff;
 }
 
 .swiper-pagination-bullet-active {
@@ -104,19 +108,19 @@
 
 .slider-product {
   max-width: 743px;
-  width: calc(100% + 52px);
-  margin-right: -26px !important;
-  margin-left: -26px !important;
-  padding-right: 26px;
-  padding-left: 26px;
+  width: calc(100% + 100px);
+  margin-right: -50px !important;
+  margin-left: -50px !important;
+  padding-right: 50px;
+  padding-left: 50px;
   margin-bottom: 0;
 
   @include desktop {
-    max-width: calc(100% + 52px);
+    max-width: calc(100% + 100px);
   }
 
   +.swiper-pagination {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 
     @include desktop {
       margin-bottom: 0;
