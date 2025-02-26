@@ -33,7 +33,7 @@
   }
 
   @include desktop-l {
-    padding: 38px 50px 15px;
+    padding: 38px 50px 10px;
   }
 }
 
@@ -53,7 +53,7 @@
   font-size: 14px;
   line-height: 1.9;
   font-weight: 300;
-  font-family: "Geist";
+  font-family: $font-secondary;
 
   @include desktop {
     font-size: 20px;
@@ -61,17 +61,28 @@
 }
 
 .card-news__footer a {
+  font-family: $font-primary;
   color: $color-primary;
-  font-weight: 600;
+  font-weight: 300;
   font-size: 18px;
   letter-spacing: -0.3px;
+
+  @include laptop {
+    font-weight: 600;
+  }
 }
 
 .card-news__footer {
   padding: 0 10% 10%;
 
   @include desktop {
-    padding: 0 52px 45px;
+    padding: 0 25px 25px;
+  }
+
+  @include desktop-l {
+    padding-right: 52px;
+    padding-left: 52px;
+    padding-bottom: 40px;
   }
 }
 

@@ -2,7 +2,7 @@ import Swiper from "swiper";
 import { Navigation, Pagination } from "swiper/modules";
 export const sliderNews = (function () {
   const init = function () {
-    const swiper = new Swiper(".slider-news", {
+    const swiperNews = new Swiper(".slider-news", {
       modules: [Navigation, Pagination],
       slidesPerView: 1,
       spaceBetween: 18,

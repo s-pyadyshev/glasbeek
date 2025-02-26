@@ -354,7 +354,7 @@
     right: auto;
     height: 80px;
     bottom: -14%;
-    left: 35%;
+    left: 80%;
   }
 
   @include laptop {
@@ -365,13 +365,11 @@
   @include desktop {
     height: 120px;
     bottom: -15%;
-    left: 45%;
   }
 
   @include desktop-l {
     bottom: -13%;
     height: 181px;
-    left: 43%;
   }
 }
 
@@ -405,6 +403,8 @@
 }
 
 .section-why__link-wrap .button {
+  position: relative;
+  z-index: 2;
   color: $color-white;
   min-height: 54px;
   width: 144px;
@@ -432,7 +432,7 @@
 }
 
 .section-why__cards li:nth-child(odd) {
-  @include laptop {
+  @include tablet {
     width: 50%;
     border-bottom: 1px solid #dadada;
   }
@@ -443,7 +443,7 @@
 }
 
 .section-why__cards li:nth-child(even) {
-  @include laptop {
+  @include tablet {
     width: 50%;
     border-bottom: 1px solid #dadada;
   }
@@ -459,10 +459,18 @@
 }
 
 .section-why__cards li:nth-child(2) {
-  border-left: 1px solid #dadada;
   border-bottom: 1px solid #dadada;
+
+  @include tablet {
+    border-left: 0;
+  }
 }
 
 .section-why__cards li:nth-child(3) {
   border-right: 1px solid #dadada;
+  border-bottom: 1px solid #dadada;
+}
+
+.section-why__cards li:nth-child(4) {
+  border-bottom: 1px solid #dadada;
 }

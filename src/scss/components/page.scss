@@ -12,10 +12,6 @@
 
   .news-list {
     @include desktop {
-      margin-top: -180px;
-    }
-
-    @include desktop-l {
       margin-top: -140px;
     }
   }
@@ -30,10 +26,12 @@
   max-width: 1040px;
   padding-right: 35px;
   padding-left: 35px;
+  padding-bottom: 40px;
 
   @include desktop {
     padding-right: 72px;
     padding-left: 72px;
+    padding-bottom: 0;
     max-width: 68%;
   }
 
@@ -44,6 +42,10 @@
   }
 }
 
-.page-news-item__wrap {
-  border-right: 1px solid #dadada;
+.page-news-item .page-news-item__wrap {
+  border-right: 0;
+
+  @include desktop {
+    border-right: 1px solid #dadada;
+  }
 }

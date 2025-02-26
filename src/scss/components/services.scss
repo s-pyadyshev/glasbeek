@@ -40,7 +40,16 @@
     }
   }
 
+  @media (min-width: 800px) and (max-width: 1024px) {
+    display: flex;
+    align-items: center;
+    padding-bottom: 36px;
+  }
+
   @include laptop {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 0;
     width: 32.7%;
   }
 
@@ -50,11 +59,35 @@
   }
 
   a {
+    display: block;
+    background-color: $color-primary;
+    color: #fff;
     margin-top: 40px;
     margin-bottom: 40px;
+    max-width: 234px;
+    width: 100%;
+    padding: 17px;
+    margin-right: auto;
+    margin-left: auto;
 
     @include laptop {
+      display: inline-flex;
+      padding: 0;
+      width: auto;
+      max-width: 100%;
       margin-top: 68px;
+      margin-right: 0;
+      margin-left: 0;
+      background: none;
+      color: $color-primary;
+    }
+
+    &:after {
+      display: none;
+
+      @include laptop {
+        display: block;
+      }
     }
   }
 }

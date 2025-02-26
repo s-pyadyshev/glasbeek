@@ -8,9 +8,10 @@ import { sliderClients } from "./components/sliderClients.js";
 import { tabs } from "./components/tabs.js";
 import { toggle } from "./components/toggle.js";
 import { scrollspy } from "./components/scrollspy.js";
-import ScrollMagic from "scrollmagic";
 import { splash } from "./components/splash.js";
 import { relocateContact } from "./components/relocateContact.js";
+import { relocateContactNews } from "./components/relocateContactNews.js";
+import { stickyCard } from "./components/stickyCard.js";
 
 window.addEventListener(
   "load",
@@ -26,42 +27,9 @@ window.addEventListener(
     toggle.init();
     scrollspy.init();
     relocateContact.init();
+    relocateContactNews.init();
+    stickyCard.init();
     const rellax = new Rellax(".rellax");
-
-    const stopElement = document.querySelector(".sticky-stop");
-
-    const stickyElementWrapper = document.querySelector(".page-header__aside");
-    const stickyElement = document.querySelector(".sticky");
-
-    if (stopElement && stickyElement && stickyElementWrapper) {
-      const stickyElementWrapperPaddingTop = parseFloat(
-        window.getComputedStyle(stickyElementWrapper).paddingTop
-      );
-
-      const controller = new ScrollMagic.Controller();
-      const scene = new ScrollMagic.Scene({
-        triggerElement: stickyElement,
-        triggerHook: 0,
-        offset: -70,
-        duration: getDuration,
-      }).addTo(controller);
-
-      if (window.matchMedia("(min-width: 1200px)").matches) {
-        scene.setPin(stickyElement, { pushFollowers: false });
-      }
-
-      window.addEventListener("resize", () => {
-        if (window.matchMedia("(min-width: 1200px)").matches) {
-          scene.setPin(stickyElement, { pushFollowers: false });
-        } else {
-          scene.removePin(stickyElement, true);
-        }
-      });
-
-      function getDuration() {
-        return stopElement.offsetHeight - stickyElementWrapperPaddingTop;
-      }
-    }
 
     function initDropdown() {
       $(".js-dropdown").on(

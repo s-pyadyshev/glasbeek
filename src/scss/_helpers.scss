@@ -226,26 +226,18 @@
   position: relative;
   overflow: hidden;
   text-decoration: none;
-  max-width: 480px;
-  width: 100%;
-  padding: 17px;
   outline: none;
   appearance: none;
   text-decoration: none;
   text-align: center;
-  background-color: $color-primary;
-  color: #fff;
   justify-content: center;
 
   @include laptop {
     justify-content: flex-start;
-    width: auto;
-    padding: 25px;
     font-weight: 500;
     font-size: 20px;
     background-color: transparent;
     text-align: left;
-    padding: 0;
     color: $color-primary;
   }
 
@@ -273,38 +265,40 @@
   }
 
   &:after {
+    content: "";
+    flex-shrink: 0;
+    transition: background-position 0.5s;
+    width: 25px;
+    height: 28px;
+    display: block;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='15' fill='none'%3E%3Cpath fill='%23D62028' d='M1 6.5a1 1 0 1 0 0 2v-2Zm23.294 1.707a1 1 0 0 0 0-1.414L17.931.429a1 1 0 1 0-1.415 1.414L22.173 7.5l-5.657 5.657a1 1 0 0 0 1.414 1.414l6.364-6.364ZM1 8.5h22.587v-2H1v2Z'/%3E%3C/svg%3E");
+    background-position: -10px 50%;
+    background-size: 28px 16px;
 
-
-    @include laptop {
-      content: "";
-      transition: background-position 0.5s;
-      width: 25px;
-      height: 28px;
-      display: block;
-      background-repeat: no-repeat;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='15' fill='none'%3E%3Cpath fill='%23D62028' d='M1 6.5a1 1 0 1 0 0 2v-2Zm23.294 1.707a1 1 0 0 0 0-1.414L17.931.429a1 1 0 1 0-1.415 1.414L22.173 7.5l-5.657 5.657a1 1 0 0 0 1.414 1.414l6.364-6.364ZM1 8.5h22.587v-2H1v2Z'/%3E%3C/svg%3E");
-      background-position: -10px 50%;
-      background-size: 28px 16px;
-    }
   }
 }
 
-// .arrow-bottom {
-//   stroke: $color-primary;
+.arrow-bottom {
+  stroke: $color-primary;
 
-//   path {
-//     stroke-dashoffset: 1000px;
-//     stroke-dasharray: 1000px;
-//     transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0s;
-//     transition-delay: 0.3s;
-//     transition-duration: 1.5s;
-//   }
+  path {
+    stroke-dashoffset: 1000px;
+    stroke-dasharray: 1000px;
+    transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0s;
+    transition-delay: 0.3s;
+    transition-duration: 1.5s;
+  }
 
-//   &.animate__animated {
-//     opacity: 1;
+  path+path {
+    transition-delay: 1s;
+  }
 
-//     path {
-//       stroke-dashoffset: 0;
-//     }
-//   }
-// }
+  &.animate__animated {
+    opacity: 1;
+
+    path {
+      stroke-dashoffset: 0;
+    }
+  }
+}

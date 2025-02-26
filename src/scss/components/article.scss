@@ -1,5 +1,5 @@
 .article {
-  padding-top: 60px;
+  padding-top: 40px;
   font-family: $font-secondary;
   word-break: break-word;
   font-size: 14px;
@@ -64,4 +64,9 @@
       justify-content: flex-end;
     }
   }
+}
+
+.article__slider+.card-contact {
+  margin-right: auto;
+  margin-left: auto;
 }

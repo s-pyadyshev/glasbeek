@@ -18,9 +18,13 @@
   flex-direction: column;
   gap: 10px;
 
+  @include tablet {
+    gap: 60px;
+    flex-direction: row;
+  }
+
   @include laptop {
     gap: 40px;
-    flex-direction: row;
     max-width: 556px;
   }
 }
@@ -41,6 +45,11 @@
   flex-shrink: 0;
   fill: $color-primary;
 
+  @include tablet {
+    width: 35px;
+    height: 35px;
+  }
+
   @include laptop {
     height: 52px;
     width: 54px;
@@ -50,6 +59,10 @@
 .hero__list li p {
   font-size: 15px;
   margin: 0;
+
+  @include tablet {
+    font-size: 18px;
+  }
 
   @include laptop {
     font-size: 28px;

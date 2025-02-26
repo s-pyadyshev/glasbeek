@@ -11,7 +11,6 @@
 
   @include desktop {
     height: 1000px;
-    padding-top: 80px;
   }
 
   h2 {
@@ -193,6 +192,10 @@
   @include tablet {
     min-height: 1000px;
   }
+
+  @include desktop {
+    padding-top: 80px;
+  }
 }
 
 .section-benefits__links {
@@ -213,21 +216,33 @@
   a {
     font-size: 15px;
     max-width: 234px;
+    width: 100%;
     margin: 0 auto;
     background-color: $color-primary;
     color: #fff;
     font-weight: 400;
     text-decoration: none;
-    margin-top: 40px;
-    margin-bottom: 40px;
+    padding: 18px 40px;
 
-    @include laptop {
+    @include desktop {
+      padding: 0;
+      width: auto;
       max-width: 100%;
       font-weight: 600;
       margin-top: 68px;
       font-size: 20px;
       background-color: transparent;
       color: $color-primary;
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+
+    &:after {
+      display: none;
+
+      @include desktop {
+        display: block;
+      }
     }
   }
 }

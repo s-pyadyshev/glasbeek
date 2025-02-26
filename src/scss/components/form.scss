@@ -66,6 +66,12 @@
   .button {
     padding-right: 62px;
     padding-left: 62px;
+    margin-right: auto;
+    margin-left: auto;
+
+    @include laptop {
+      margin-left: 0;
+    }
   }
 
   .form-group {
