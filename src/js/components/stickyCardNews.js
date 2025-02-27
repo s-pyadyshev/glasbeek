@@ -9,16 +9,13 @@ export const stickyCardNews = (() => {
     const stickyElementWrapper = document.querySelector(".page-header__aside");
     const stickyElement = document.querySelector(".sticky");
 
-    // Exit if required elements are missing
     if (!stopElement || !stickyElementWrapper || !stickyElement) {
       return;
     }
 
-    // Initialize ScrollMagic controller and scene
     controller = new ScrollMagic.Controller();
     setupScene(stickyElement, stickyElementWrapper, stopElement);
 
-    // Update pin state and add resize event listener
     updatePinState(stickyElement);
     window.addEventListener("resize", () => onWindowResize(stickyElement));
   };
@@ -28,7 +25,6 @@ export const stickyCardNews = (() => {
       window.getComputedStyle(stickyElementWrapper).paddingTop
     );
 
-    // Create a new ScrollMagic scene
     scene = new ScrollMagic.Scene({
       triggerElement: stickyElement,
       triggerHook: 0,
