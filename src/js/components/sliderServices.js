@@ -25,6 +25,10 @@ export const sliderServices = (function () {
           slidesPerView: 2.5,
           spaceBetween: 25,
         },
+        1921: {
+          slidesPerView: 3,
+          spaceBetween: 25,
+        },
       },
     });
   };

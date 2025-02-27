@@ -51,6 +51,10 @@
   font-family: $font-secondary;
 
   @include desktop {
+    font-size: 18px;
+  }
+
+  @include desktop-l {
     font-size: 20px;
   }
 }
@@ -66,6 +70,16 @@
 
 .card--contact__section {
   margin-top: 50px;
+}
+
+.card--contact__section a {
+  text-decoration: none;
+  border-bottom: 1px solid #fff;
+
+  &:focus,
+  &:hover {
+    border-bottom: 1px solid transparent;
+  }
 }
 
 .card__body {

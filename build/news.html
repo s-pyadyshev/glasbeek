@@ -1,272 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta color-scheme="dark light">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width">
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="en_GB">
-    <meta property="og:title" content="News">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="News">
-    <title>News</title>
-    <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#4d2f91">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="theme-color" content="#ffffff">
-    <link rel="stylesheet" href="./css/main.css?v=1740610665314">
-</head>
-
-<body>
-    <div class="page-wrapper">
-        <div class="splash">
-            <div class="splash__title"><span>Leading in</span><b><span class="scribble">
-                        sustainable<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 350 60" data-scrollspy="animate" class="no-animate">
-                            <path stroke="#fff" d="M2 2.62545C20.7733 2.62545 39.6523 2.74118 58.5197 2.74118C132.681 2.74118 207.291 1.1128 281.439 2.68332C303.269 3.14569 324.969 3.66707 346.838 3.66707C372.471 3.66707 295.626 5.34152 269.999 5.69243C222.292 6.34566 174.54 7.68025 126.821 7.83353C112.185 7.88055 68.3406 8.14229 82.9375 8.87515C133.196 11.3984 284.451 12 234.055 12" style="fill:none;stroke-linecap:round;stroke-miterlimit:10;stroke-width:3px" />
-                        </svg></span></b><span>design</span></div>
-        </div>
-        <header class="header background-muted">
-            <div class="container header-container">
-                <div class="header__inner">
-                    <div class="header__inner-wrap">
-                        <a class="header__logo" href="/">
-                            <img class="logo" src="images/logo.svg" alt="glasbeek logo." width="224" height="56">
-                        </a>
-                        <div class="header__lang">
-                            <ul class="lang">
-                                <li>
-                                    <a href="/">NL</a>
-                                </li>
-                                <li>
-                                    <a href="/en">EN</a>
-                                </li>
-                                <li>
-                                    <a href="/de">DE</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="header__menu">
-                        <nav class="menu">
-                            <ul class="menu__list">
-                                <li class="menu__item">
-                                    <a class="menu__link active" href="/">Home</a>
-                                </li>
-                                <li class="menu__item menu__item--submenu">
-                                    <a class="menu__link" href="/products">Producten</a>
-                                    <button class="menu__link dropdown js-dropdown">Producten</button>
-                                    <ul class="menu__list">
-                                        <li class="menu__item">
-                                            <a class="menu__link" href="/pretreatment">Voorbehandeling</a>
-                                        </li>
-                                        <li class="menu__item">
-                                            <a class="menu__link" href="/powder-coating">Poederlakken</a>
-                                        </li>
-                                        <li class="menu__item">
-                                            <a class="menu__link" href="/ovens">Ovens</a>
-                                        </li>
-                                        <li class="menu__item">
-                                            <a class="menu__link" href="/transport">Transport</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="menu__item">
-                                    <a class="menu__link" href="/service">Service</a>
-                                </li>
-                                <li class="menu__item">
-                                    <a class="menu__link" href="/glasbeek">Glasbeek</a>
-                                </li>
-                                <li class="menu__item">
-                                    <a class="menu__link" href="/news">Nieuws</a>
-                                </li>
-                                <li class="menu__item">
-                                    <a class="menu__link" href="/contact">Contact</a>
-                                </li>
-                            </ul>
-                            <ul class="lang menu__lang">
-                                <li>
-                                    <a href="/">NL</a>
-                                </li>
-                                <li>
-                                    <a href="/en">EN</a>
-                                </li>
-                                <li>
-                                    <a href="/de">DE</a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <div class="header__menu-toggle">
-                        <button class="menu-toggle js-toggle-menu" type="button">
-                            <div class="menu-toggle__text">Sluiten</div>
-                            <div class="menu-icon">
-                                <div class="menu-icon__line"> </div>
-                                <div class="menu-icon__line"> </div>
-                                <div class="menu-icon__line"></div>
-                            </div>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </header>
-
-        <main class="main">
-
-            <section class="page-header page-header--news background-muted">
-                <div class="page-header__inner">
-                    <div class="page-header__text">
-                        <h1><span class="scribble">Nieuws<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 154 20" data-scrollspy="animate">
-                                    <path stroke="#d62028" d="M2 2C50.9744 2 99.9574 3.14155 148.943 3.14155C179.405 3.14155 88.0613 5.45919 57.6188 6.56619C51.2163 6.79901 44.6464 7.70774 38.2759 7.70774C38.0838 7.70774 36.8795 7.70774 37.2295 7.70774C41.1729 7.70774 45.1158 7.67613 49.0572 7.83458C61.002 8.31478 73.4566 7.96358 85.3013 9.70545C87.2632 9.99396 89.6845 10.5616 91.6115 10.5616" style="fill:none;stroke-linecap:round;stroke-miterlimit:10;stroke-width:3px" />
-                                </svg></span></h1>
-                        <p>Hier vindt u de laatste updates, innovaties en ontwikkelingen bij Glasbeek. Blijf op de hoogte van onze nieuwe producten, projecten en duurzame oplossingen die de industrie vooruit helpen.</p>
-                    </div>
-                    <aside class="page-header__aside">
-                        <div class="card-contact background-primary sticky">
-                            <h3>Benieuwd wat we voor u kunnen betekenen?</h3>
-                            <div class="card__footer">
-                                <a class="button full-width" href="/">Contact</a>
-                            </div>
-                        </div>
-                    </aside>
-                </div>
-            </section>
-
-            <section class="page-news backround-default" data-sticky-container>
-                <div class="container">
-                    <div class="page-news__wrap">
-                        <div class="page-news__inner">
-                            <ul class="news-list sticky-stop">
-                                <li class="news-list__item">
-                                    <article class="card-news">
-                                        <div class="card-news__header">
-                                            <img src="images/news-image1.jpg" width="428" height="288" alt="">
-                                            <div class="card-news__date">18 juni 2021</div>
-                                        </div>
-                                        <div class="card-news__body">
-                                            <h3>Nieuwe poederlakinstallatie bij Signatekst N.V.</h3>
-                                            <p>Deze maand heeft Glasbeek een nieuwe poederlakinstallatie opgeleverd bij Signatekst N.V...</p>
-                                        </div>
-                                        <div class="card-news__footer">
-                                            <a class="link-hover" href="/">Lees meer</a>
-                                        </div>
-                                    </article>
-                                </li>
-                                <li class="news-list__item">
-                                    <article class="card-news">
-                                        <div class="card-news__header">
-                                            <img src="images/card-why1.jpg" width="428" height="288" alt="">
-                                            <div class="card-news__date">18 juni 2021</div>
-                                        </div>
-                                        <div class="card-news__body">
-                                            <h3>Nieuwe poederlakinstallatie bij Signatekst N.V.</h3>
-                                            <p>Deze maand heeft Glasbeek een nieuwe poederlakinstallatie opgeleverd bij Signatekst N.V...</p>
-                                        </div>
-                                        <div class="card-news__footer">
-                                            <a class="link-hover" href="/">Lees meer</a>
-                                        </div>
-                                    </article>
-                                </li>
-                                <li class="news-list__item">
-                                    <article class="card-news">
-                                        <div class="card-news__header">
-                                            <img src="images/card-why1.jpg" width="428" height="288" alt="">
-                                            <div class="card-news__date">18 juni 2021</div>
-                                        </div>
-                                        <div class="card-news__body">
-                                            <h3>Nieuwe poederlakinstallatie bij Signatekst N.V.</h3>
-                                            <p>Deze maand heeft Glasbeek een nieuwe poederlakinstallatie opgeleverd bij Signatekst N.V...</p>
-                                        </div>
-                                        <div class="card-news__footer">
-                                            <a class="link-hover" href="/">Lees meer</a>
-                                        </div>
-                                    </article>
-                                </li>
-                                <li class="news-list__item">
-                                    <article class="card-news">
-                                        <div class="card-news__header">
-                                            <img src="images/card-why1.jpg" width="428" height="288" alt="">
-                                            <div class="card-news__date">18 juni 2021</div>
-                                        </div>
-                                        <div class="card-news__body">
-                                            <h3>Nieuwe poederlakinstallatie bij Signatekst N.V.</h3>
-                                            <p>Deze maand heeft Glasbeek een nieuwe poederlakinstallatie opgeleverd bij Signatekst N.V...</p>
-                                        </div>
-                                        <div class="card-news__footer">
-                                            <a class="link-hover" href="/">Lees meer</a>
-                                        </div>
-                                    </article>
-                                </li>
-                            </ul>
-                            <nav class="pagination">
-                                <a class="pagination__prev icon-pagination-prev disabled" href="/">
-                                    <svg>
-                                        <use xlink:href="./images/sprites.svg#arrow-left"></use>
-                                    </svg>
-                                </a>
-                                <div>pagina 1/5</div>
-                                <a class="pagination__next icon-pagination-next" href="/">
-                                    <svg>
-                                        <use xlink:href="./images/sprites.svg#arrow-right"></use>
-                                    </svg>
-                                </a>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
-                <div class="section-bottom-border">
-                    <div class="container"></div>
-                </div>
-            </section>
-        </main>
-        <footer class="footer">
-            <div class="container">
-                <div class="footer__inner border-left border-right">
-                    <div class="footer__column left-col">
-                        <div class="footer-contact__item">
-                            <h3>Glasbeek Finish BV</h3>
-                            <p>Noordkade 20</p>
-                            <p>2741 EV Waddinxveen</p>
-                            <p>Nederland</p>
-                        </div>
-                        <div class="footer-logo">
-                            <img src="images/glasbeek-logo-white.svg" alt="">
-                        </div>
-                    </div>
-                    <div class="footer__column middle-col">
-                        <div class="footer-contact__item">
-                            <h3>Bel ons:</h3>
-                            <a href="tel:+31 (0) 182 322 422">+31 (0) 182 322 422</a>
-                        </div>
-                        <div class="footer-contact__item">
-                            <h3>Mail ons:</h3>
-                            <a href="mailto:info@glasbeek.com">info@glasbeek.com</a>
-                        </div>
-                    </div>
-                    <div class="footer__column right-col">
-                        <div class="footer-contact__item">
-                            <h3>Volg ons op:</h3>
-                            <a href="/">
-                                <svg>
-                                    <use xlink:href="./images/sprites.svg#linkedin"></use>
-                                </svg>
-                            </a>
-                        </div>
-                        <div class="footer-logo">
-                            <img src="images/iso-logo.svg" width="98" height="100" alt="">
-                            <img src="images/vca-logo.svg" width="97" height="44" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-    </div>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script src="./js/vendor.js?v=1740610665314"></script>
-    <script src="./js/main.js?v=1740610665314"></script>
-</body>
+	<head>
+		<meta charset="utf-8">
+		<meta color-scheme="dark light">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width">
+		<meta property="og:type" content="website">
+		<meta property="og:locale" content="en_GB">
+		<meta property="og:title" content="News">
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:title" content="News">
+		<title>News</title>
+		<link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+		<link rel="manifest" href="/site.webmanifest">
+		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#4d2f91">
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="theme-color" content="#ffffff">
+		<link rel="stylesheet" href="./css/main.css?v=1740642567433">
+	</head>
+	<body>
+		<div class="page-wrapper">
+			<div class="splash">
+				<div class="splash__title"><span>Leading in</span><b><span class="scribble">
+							sustainable<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 350 60" data-scrollspy="animate" class="no-animate"><path stroke="#fff" d="M2 2.62545C20.7733 2.62545 39.6523 2.74118 58.5197 2.74118C132.681 2.74118 207.291 1.1128 281.439 2.68332C303.269 3.14569 324.969 3.66707 346.838 3.66707C372.471 3.66707 295.626 5.34152 269.999 5.69243C222.292 6.34566 174.54 7.68025 126.821 7.83353C112.185 7.88055 68.3406 8.14229 82.9375 8.87515C133.196 11.3984 284.451 12 234.055 12" style="fill:none;stroke-linecap:round;stroke-miterlimit:10;stroke-width:3px"/></svg></span></b><span>design</span></div>
+			</div>
+			<header class="header background-muted">
+				<div class="container header-container">
+					<div class="header__inner">
+						<div class="header__inner-wrap"><a class="header__logo" href="/"><img class="logo" src="images/logo.svg" alt="glasbeek logo." width="224" height="56"></a>
+							<div class="header__lang">
+								<ul class="lang">
+									<li> <a href="/">NL</a></li>
+									<li><a href="/en">EN</a></li>
+									<li> <a href="/de">DE</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="header__menu">
+							<nav class="menu">
+								<ul class="menu__list">
+									<li class="menu__item"><a class="menu__link active" href="/">Home</a></li>
+									<li class="menu__item menu__item--submenu"><a class="menu__link" href="/products">Producten</a>
+										<button class="menu__link dropdown js-dropdown">Producten</button>
+										<ul class="menu__list">
+											<li class="menu__item"><a class="menu__link" href="/pretreatment">Voorbehandeling</a></li>
+											<li class="menu__item"><a class="menu__link" href="/powder-coating">Poederlakken</a></li>
+											<li class="menu__item"><a class="menu__link" href="/ovens">Ovens</a></li>
+											<li class="menu__item"><a class="menu__link" href="/transport">Transport</a></li>
+										</ul>
+									</li>
+									<li class="menu__item"><a class="menu__link" href="/service">Service</a></li>
+									<li class="menu__item"><a class="menu__link" href="/glasbeek">Glasbeek</a></li>
+									<li class="menu__item"><a class="menu__link" href="/news">Nieuws</a></li>
+									<li class="menu__item"><a class="menu__link" href="/contact">Contact</a></li>
+								</ul>
+								<ul class="lang menu__lang">
+									<li> <a href="/">NL</a></li>
+									<li><a href="/en">EN</a></li>
+									<li> <a href="/de">DE</a></li>
+								</ul>
+							</nav>
+						</div>
+						<div class="header__menu-toggle">
+							<button class="menu-toggle js-toggle-menu" type="button">
+								<div class="menu-toggle__text">Sluiten</div>
+								<div class="menu-icon">
+									<div class="menu-icon__line"> </div>
+									<div class="menu-icon__line"> </div>
+									<div class="menu-icon__line"></div>
+								</div>
+							</button>
+						</div>
+					</div>
+				</div>
+			</header>
+			<main class="main">
+				<section class="page-header page-header--news background-muted">
+					<div class="page-header__inner">
+						<div class="page-header__text">
+							<h1><span class="scribble">Nieuws<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 154 20" data-scrollspy="animate"><path stroke="#d62028" d="M2 2C50.9744 2 99.9574 3.14155 148.943 3.14155C179.405 3.14155 88.0613 5.45919 57.6188 6.56619C51.2163 6.79901 44.6464 7.70774 38.2759 7.70774C38.0838 7.70774 36.8795 7.70774 37.2295 7.70774C41.1729 7.70774 45.1158 7.67613 49.0572 7.83458C61.002 8.31478 73.4566 7.96358 85.3013 9.70545C87.2632 9.99396 89.6845 10.5616 91.6115 10.5616" style="fill:none;stroke-linecap:round;stroke-miterlimit:10;stroke-width:3px"/></svg></span></h1>
+							<p>Hier vindt u de laatste updates, innovaties en ontwikkelingen bij Glasbeek. Blijf op de hoogte van onze nieuwe producten, projecten en duurzame oplossingen die de industrie vooruit helpen.</p>
+						</div>
+						<aside class="page-header__aside">
+							<div class="card-contact background-primary sticky">
+								<h3>Benieuwd wat we voor u kunnen betekenen?</h3>
+								<div class="card__footer"><a class="button full-width" href="/">Contact</a></div>
+							</div>
+						</aside>
+					</div>
+				</section>
+				<section class="page-news backround-default" data-sticky-container>
+					<div class="container">
+						<div class="page-news__wrap">
+							<div class="page-news__inner">
+								<ul class="news-list sticky-stop">
+									<li class="news-list__item"> 
+										<article class="card-news">
+											<div class="card-news__header"> <img src="images/news-image1.jpg" width="428" height="288" alt="">
+												<div class="card-news__date">18 juni 2021</div>
+											</div>
+											<div class="card-news__body"> 
+												<h3>Nieuwe poederlakinstallatie bij Signatekst N.V.</h3>
+												<p>Deze maand heeft Glasbeek een nieuwe poederlakinstallatie opgeleverd bij Signatekst N.V...</p>
+											</div>
+											<div class="card-news__footer"><a class="link-hover" href="/">Lees meer</a></div>
+										</article>
+									</li>
+									<li class="news-list__item"> 
+										<article class="card-news">
+											<div class="card-news__header"> <img src="images/card-why1.jpg" width="428" height="288" alt="">
+												<div class="card-news__date">18 juni 2021</div>
+											</div>
+											<div class="card-news__body"> 
+												<h3>Nieuwe poederlakinstallatie bij Signatekst N.V.</h3>
+												<p>Deze maand heeft Glasbeek een nieuwe poederlakinstallatie opgeleverd bij Signatekst N.V...</p>
+											</div>
+											<div class="card-news__footer"><a class="link-hover" href="/">Lees meer</a></div>
+										</article>
+									</li>
+									<li class="news-list__item"> 
+										<article class="card-news">
+											<div class="card-news__header"> <img src="images/card-why1.jpg" width="428" height="288" alt="">
+												<div class="card-news__date">18 juni 2021</div>
+											</div>
+											<div class="card-news__body"> 
+												<h3>Nieuwe poederlakinstallatie bij Signatekst N.V.</h3>
+												<p>Deze maand heeft Glasbeek een nieuwe poederlakinstallatie opgeleverd bij Signatekst N.V...</p>
+											</div>
+											<div class="card-news__footer"><a class="link-hover" href="/">Lees meer</a></div>
+										</article>
+									</li>
+									<li class="news-list__item"> 
+										<article class="card-news">
+											<div class="card-news__header"> <img src="images/card-why1.jpg" width="428" height="288" alt="">
+												<div class="card-news__date">18 juni 2021</div>
+											</div>
+											<div class="card-news__body"> 
+												<h3>Nieuwe poederlakinstallatie bij Signatekst N.V.</h3>
+												<p>Deze maand heeft Glasbeek een nieuwe poederlakinstallatie opgeleverd bij Signatekst N.V...</p>
+											</div>
+											<div class="card-news__footer"><a class="link-hover" href="/">Lees meer</a></div>
+										</article>
+									</li>
+								</ul>
+								<nav class="pagination"><a class="pagination__prev icon-pagination-prev disabled" href="/">
+										<svg>
+											<use xlink:href="./images/sprites.svg#arrow-left"></use>
+										</svg></a>
+									<div>pagina 1/5</div><a class="pagination__next icon-pagination-next" href="/">
+										<svg>
+											<use xlink:href="./images/sprites.svg#arrow-right"></use>
+										</svg></a>
+								</nav>
+							</div>
+						</div>
+					</div>
+					<div class="section-bottom-border">
+						<div class="container"></div>
+					</div>
+				</section>
+			</main>
+			<footer class="footer">
+				<div class="container">
+					<div class="footer__inner border-left border-right">
+						<div class="footer__column left-col">
+							<div class="footer-contact__item">
+								<h3>Glasbeek Finish BV</h3>
+								<p>Noordkade 20</p>
+								<p>2741 EV  Waddinxveen</p>
+								<p>Nederland</p>
+							</div>
+							<div class="footer-logo"><img src="images/glasbeek-logo-white.svg" alt=""></div>
+						</div>
+						<div class="footer__column middle-col">
+							<div class="footer-contact__item">
+								<h3>Bel ons:</h3><a href="tel:+31 (0) 182 322 422">+31 (0) 182 322 422</a>
+							</div>
+							<div class="footer-contact__item">
+								<h3>Mail ons:</h3><a href="mailto:info@glasbeek.com">info@glasbeek.com</a>
+							</div>
+						</div>
+						<div class="footer__column right-col">
+							<div class="footer-contact__item">
+								<h3>Volg ons op:</h3><a href="/"> 
+									<svg>
+										<use xlink:href="./images/sprites.svg#linkedin"></use>
+									</svg></a>
+							</div>
+							<div class="footer-logo"><img src="images/iso-logo.svg" width="98" height="100" alt=""><img src="images/vca-logo.svg" width="97" height="44" alt=""></div>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div><script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+		<script src="./js/vendor.js?v=1740642567433"></script>
+		<script src="./js/main.js?v=1740642567433"></script>
+	</body>
 </html>

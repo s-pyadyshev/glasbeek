@@ -13,8 +13,10 @@
     padding: 23px 16px;
   }
 
-  &:focus {
+  &:focus,
+  &:focus-visible {
     border-color: $input-color;
+    outline-color: $color-secondary;
   }
 
   &:hover {

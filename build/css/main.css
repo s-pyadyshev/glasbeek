@@ -2176,6 +2176,16 @@ p {
   margin-top: 50px;
 }
 
+.card--contact__section a {
+  text-decoration: none;
+  border-bottom: 1px solid #fff;
+}
+
+.card--contact__section a:focus,
+.card--contact__section a:hover {
+  border-bottom: 1px solid transparent;
+}
+
 .card__body {
   padding: 24px 40px;
 }
@@ -2674,8 +2684,10 @@ p {
   color: #000;
 }
 
-.input:focus {
+.input:focus,
+.input:focus-visible {
   border-color: #000;
+  outline-color: #000;
 }
 
 .input:hover {
@@ -3137,6 +3149,7 @@ p {
 }
 
 .page-header--contact .page-header__aside .card {
+  z-index: 1;
   box-shadow: 0px 4px 46.7px 0px rgba(214, 32, 40, 0.3019607843);
 }
 
@@ -3358,7 +3371,6 @@ p {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 85% 0;
-  background-position: fixed;
 }
 
 .section-benefits .sun {
@@ -4306,6 +4318,11 @@ p {
   border-color: #000;
   resize: vertical;
   background-color: #eee;
+}
+
+.textarea:focus,
+.textarea:focus-visible {
+  outline-color: #000;
 }
 
 .product {
@@ -5737,7 +5754,7 @@ p {
   }
 
   .card--contact p {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .card--contact b {
@@ -5998,7 +6015,7 @@ p {
   .page-header--contact .page-header__aside .card {
     margin-right: auto !important;
     margin-left: auto;
-    padding-top: 70px;
+    padding: 25px;
     max-width: 300px;
   }
 
@@ -6434,6 +6451,10 @@ p {
     padding: 120px 72px;
   }
 
+  .card--contact p {
+    font-size: 20px;
+  }
+
   .clients__inner img {
     width: 20%;
   }
@@ -6555,6 +6576,7 @@ p {
 
   .page-header--contact .page-header__aside .card {
     max-width: 340px;
+    padding: 50px;
   }
 
   .page-header__text h1 {
@@ -6754,6 +6776,16 @@ p {
   .section-why__link-wrap {
     padding: 159px 76px 25px 54px;
     margin-left: 45%;
+  }
+}
+
+@media (min-width: 1921px) {
+  .services__slider .slider-services {
+    margin-right: -50%;
+  }
+
+  .services__slider .slider-services {
+    margin-right: -50%;
   }
 }
 

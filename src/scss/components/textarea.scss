@@ -6,6 +6,11 @@
   resize: vertical;
   background-color: $input-background-color;
 
+  &:focus,
+  &:focus-visible {
+    outline-color: $color-secondary;
+  }
+
   @include laptop {
     font-size: 20px;
     padding: 23px 16px;
