@@ -113,6 +113,10 @@
     padding-right: 0;
     padding-left: 0;
   }
+
+  @include laptop {
+    padding-right: 25px;
+  }
 }
 
 .page-header--news .page-header__aside>* {

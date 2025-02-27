@@ -62,6 +62,7 @@
 
     @include laptop {
       justify-content: flex-end;
+      margin-top: 40px;
     }
   }
 }
@@ -69,4 +70,5 @@
 .article__slider+.card-contact {
   margin-right: auto;
   margin-left: auto;
+  max-width: 338px;
 }

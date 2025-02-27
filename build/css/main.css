@@ -1714,6 +1714,7 @@ p {
 .article__slider + .card-contact {
   margin-right: auto;
   margin-left: auto;
+  max-width: 338px;
 }
 
 .button {
@@ -5005,6 +5006,7 @@ p {
 
   .article__slider .slider-photo__controls {
     justify-content: flex-end;
+    margin-top: 40px;
   }
 
   .button {
@@ -5260,6 +5262,10 @@ p {
   .page-header--news .page-header__aside,
   .page-header--news-item .page-header__aside {
     margin-left: auto;
+  }
+
+  .page-header--news-item .page-header__text h1 {
+    padding-right: 25px;
   }
 
   .page-header__inner {

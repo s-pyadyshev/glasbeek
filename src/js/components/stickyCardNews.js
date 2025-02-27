@@ -20,7 +20,7 @@ export const stickyCardNews = (() => {
       const scene = new ScrollMagic.Scene({
         triggerElement: stickyElement,
         triggerHook: 0,
-        offset: -70,
+        offset: -stickyElementWrapperPaddingTop,
         duration: getDuration,
       }).addTo(controller);
 

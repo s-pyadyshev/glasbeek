@@ -12,7 +12,7 @@ export const relocateContactNews = (() => {
     }
 
     const relocateCardContact = debounce(() => {
-      if (window.matchMedia("(max-width: 1200px)").matches) {
+      if (window.matchMedia("(max-width: 1199px)").matches) {
         articleSlider.after(cardContact);
       } else {
         if (!cardContact.contains(pageHeaderAside)) {
