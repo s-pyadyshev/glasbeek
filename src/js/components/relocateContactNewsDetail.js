@@ -1,7 +1,7 @@
 import { debounce } from "../helpers.js";
 import { stickyCardNews } from "./stickyCardNews.js";
 
-export const relocateContactNews = (() => {
+export const relocateContactNewsDetail = (() => {
   const init = () => {
     const cardContact = document.querySelector(".card-contact");
     const articleSlider = document.querySelector(".article__slider");

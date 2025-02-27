@@ -73,7 +73,7 @@
     @include laptop {
       display: inline-flex;
       padding: 0;
-      width: auto;
+      width: max-content;
       max-width: 100%;
       margin-top: 68px;
       margin-right: 0;

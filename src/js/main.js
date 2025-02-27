@@ -10,7 +10,7 @@ import { toggle } from "./components/toggle.js";
 import { scrollspy } from "./components/scrollspy.js";
 import { splash } from "./components/splash.js";
 import { relocateContact } from "./components/relocateContact.js";
-import { relocateContactNews } from "./components/relocateContactNews.js";
+import { relocateContactNewsDetail } from "./components/relocateContactNewsDetail.js";
 import { stickyCard } from "./components/stickyCard.js";
 
 window.addEventListener(
@@ -27,8 +27,17 @@ window.addEventListener(
     toggle.init();
     scrollspy.init();
     relocateContact.init();
-    relocateContactNews.init();
-    stickyCard.init();
+    relocateContactNewsDetail.init();
+
+    if (document.querySelector(".page-header--news")) {
+      if (
+        !document
+          .querySelector(".page-header--news")
+          .classList.contains("page-header--news-item")
+      )
+        stickyCard.init();
+    }
+
     const rellax = new Rellax(".rellax");
 
     function initDropdown() {

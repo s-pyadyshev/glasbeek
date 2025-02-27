@@ -38,6 +38,10 @@
   max-width: 1000px;
   padding: 60px 0 72px;
 
+  @include desktop-l {
+    padding-top: 100px;
+  }
+
   .slider-photo {
     z-index: 3;
     width: calc(100vw - 35px);

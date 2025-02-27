@@ -4198,6 +4198,7 @@ p {
   height: 350px;
   -o-object-fit: cover;
   object-fit: cover;
+  box-shadow: 0 4px 45px 0 rgba(0, 0, 0, 0.0784313725);
 }
 
 .slider-product {
@@ -5498,7 +5499,8 @@ p {
   .services__list a {
     display: inline-flex;
     padding: 0;
-    width: auto;
+    width: -moz-max-content;
+    width: max-content;
     max-width: 100%;
     margin-top: 68px;
     margin-right: 0;
@@ -5544,7 +5546,8 @@ p {
   .services__list a {
     display: inline-flex;
     padding: 0;
-    width: auto;
+    width: -moz-max-content;
+    width: max-content;
     max-width: 100%;
     margin-top: 68px;
     margin-right: 0;
@@ -6420,6 +6423,10 @@ p {
   .section-bottom-border .container {
     width: calc(100% - 432px);
     max-width: 1488px;
+  }
+
+  .article__slider {
+    padding-top: 100px;
   }
 
   .article__slider .slider-photo {
