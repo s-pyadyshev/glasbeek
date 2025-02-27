@@ -3081,6 +3081,7 @@ p {
   margin-right: 0 !important;
   margin-left: auto !important;
   box-sizing: border-box !important;
+  margin-bottom: 0;
 }
 
 .page-header__inner {
@@ -5979,6 +5980,7 @@ p {
   }
 
   .page-header--news .page-header__aside > * {
+    max-width: 330px;
     margin-right: auto !important;
     margin-left: auto !important;
   }

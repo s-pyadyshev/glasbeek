@@ -72,6 +72,7 @@
 
 .page-header--news .page-header__aside,
 .page-header--news-item .page-header__aside {
+
   @include tablet {
     border-left: none;
   }
@@ -123,8 +124,10 @@
   margin-right: 0 !important;
   margin-left: auto !important;
   box-sizing: border-box !important;
+  margin-bottom: 0;
 
   @include desktop {
+    max-width: 330px;
     margin-right: auto !important;
     margin-left: auto !important;
   }

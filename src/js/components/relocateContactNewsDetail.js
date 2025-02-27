@@ -1,5 +1,5 @@
 import { debounce } from "../helpers.js";
-import { stickyCardNews } from "./stickyCardNews.js";
+import { stickyCard } from "./stickyCard.js";
 
 export const relocateContactNewsDetail = (() => {
   const init = () => {
@@ -18,7 +18,7 @@ export const relocateContactNewsDetail = (() => {
         if (!cardContact.contains(pageHeaderAside)) {
           pageHeaderAside.prepend(cardContact);
           if (pageHeaderAside.querySelector(".card-contact")) {
-            stickyCardNews.init();
+            stickyCard.init();
           }
         }
       }
