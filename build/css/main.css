@@ -3322,7 +3322,7 @@ p {
 
 .scribble svg {
   position: absolute;
-  top: 65%;
+  top: 70%;
   width: 100%;
   height: 100%;
   stroke: #d62028;
@@ -3334,6 +3334,7 @@ p {
   transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0s;
   transition-delay: 0.3s;
   transition-duration: 1.5s;
+  stroke-width: 2px !important;
 }
 
 .scribble .animate__animated {
@@ -4749,6 +4750,12 @@ p {
 
   .scribble svg {
     top: 80%;
+    height: -moz-max-content;
+    height: max-content;
+  }
+
+  .scribble svg path {
+    stroke-width: 3px !important;
   }
 
   .section-benefits {
@@ -6086,11 +6093,6 @@ p {
 
   .pagination {
     padding: 82px 0;
-  }
-
-  .scribble svg {
-    height: -moz-max-content;
-    height: max-content;
   }
 
   .section-benefits {
