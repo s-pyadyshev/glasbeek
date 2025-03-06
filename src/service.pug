@@ -1,0 +1,57 @@
+extends pug/base
+
+prepend vars
+  - title = 'Service'
+
+append vars
+
+block content 
+  +page-header-service(
+    'Service',
+    'Bij onvoorziene storingen, geplande reparaties of revisiewerkzaamheden kunt u rekenen op onze service. Ons goed opgeleide team staat 24 uur per dag, 7 dagen per week voor u klaar. Ook bij de verplaatsing of aanpassing van bestaande apparatuur bieden wij de nodige ondersteuning en expertise.'
+    )
+  section.page-news-item.background-default
+    .container
+      .page-news-item__wrap.sticky-stop
+        .page-news-item__inner.border-left.border-right
+          article.article.background-default
+            <h3>Reserveonderdelen en Onderhoud</h3>
+            <p>Onze afdeling Service &amp; After Sales levert hoogwaardige onderhoudsdiensten en originele onderdelen van topkwaliteit. Dankzij onze ruime voorraad onderdelen kunnen wij snel leveren, waardoor de stilstand van uw installatie minimaal blijft. Dit voorkomt vertragingen en zorgt ervoor dat uw werkzaamheden zonder onnodige onderbrekingen doorgaan.</p>
+            <h3>Servicecontracten</h3>
+            <p>Wij bieden de mogelijkheid om een servicecontract af te sluiten, waar steeds meer klanten gebruik van maken. Met een servicecontract wordt uw apparatuur regelmatig gecontroleerd door een servicemonteur op afgesproken tijden. U ontvangt gedetailleerde rapportages met aanbevelingen om de bedrijfszekerheid van uw systemen te waarborgen.</p>
+            <h3>Meer weten?</h3>
+            <p>Heeft u interesse in onze service? Neem gerust contact met ons op via <a href="mailto:service@glasbeek.com">service@glasbeek.com</a>.</p>
+  section.section.section-contact-us.pt-0.pb-0
+    .container
+      .background-primary.poster-wrap
+        img(src="images/portrait-service.png" width="430" height="448" alt="service.")
+        .poster__text
+          h2 Kunnen we u ergens mee van dienst zijn? Laat het ons weten!
+          .poster__actions
+            a(href="/").button Stuur een bericht
+            a(href="tel:+0182322422") Of bel 0182 322 422
+  section.section.background-default.section-equipment.pt-0.pb-0
+    .container
+      .section-equipment__cards.border-left.border-right 
+        h2 Meer over Glasbeek-installaties
+        .section-equipment__cards-wrap
+          div 
+            a(href="/").card-link 
+              img.card-link__image(src="images/card-why1.jpg" width="400" height="228" alt="")
+              .card-link__body
+                div.title Sproeikamer
+                +svg('arrow-right')
+          div 
+            a(href="/").card-link 
+              img.card-link__image(src="images/card-why1.jpg" width="400" height="228" alt="")
+              .card-link__body
+                div.title Sproeitunnel
+                +svg('arrow-right')
+          div 
+            a(href="/").card-link 
+              img.card-link__image(src="images/card-why1.jpg" width="400" height="228" alt="")
+              .card-link__body
+                div.title Badenreeks
+                +svg('arrow-right')
+    .section-bottom-border
+      .container

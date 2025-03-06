@@ -137,3 +137,19 @@ mixin page-header-slider(title, text, image)
           a.swiper-button-next.pagination__next.icon-pagination-next(href="/")
             +svg('arrow-right')
         .swiper-pagination
+
+mixin page-header-service(title, text, image)
+  section.page-header.page-header--news-item.background-muted
+    .page-header__inner
+      .page-header__text
+        h1
+          span.scribble= title
+            <svg xmlns="http://www.w3.org/2000/svg" height="20" fill="none" viewBox="0 0 154 20" data-scrollspy="animate"><path stroke="#d62028" d="M2 2C50.9744 2 99.9574 3.14155 148.943 3.14155C179.405 3.14155 88.0613 5.45919 57.6188 6.56619C51.2163 6.79901 44.6464 7.70774 38.2759 7.70774C38.0838 7.70774 36.8795 7.70774 37.2295 7.70774C41.1729 7.70774 45.1158 7.67613 49.0572 7.83458C61.002 8.31478 73.4566 7.96358 85.3013 9.70545C87.2632 9.99396 89.6845 10.5616 91.6115 10.5616" style="fill:none;stroke-linecap:round;stroke-miterlimit:10;stroke-width:3px"/></svg>
+        h3 Storingen, Reparaties en Revisies
+        if text
+          p= text
+      aside.page-header__aside
+        .card-contact.background-primary.sticky
+          h3 Benieuwd wat we voor u kunnen betekenen?
+          .card__footer
+            a(href="/").button.full-width Contact

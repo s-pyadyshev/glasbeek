@@ -1715,6 +1715,7 @@ p {
   margin-right: auto;
   margin-left: auto;
   max-width: 338px;
+  width: 100%;
 }
 
 .button {
@@ -3072,7 +3073,13 @@ p {
   padding-left: 0;
 }
 
-.page-header--news-item .page-header__text h1 {
+.page-header--news-item .page-header__text h1,
+.page-header--news-item .page-header__text h2,
+.page-header--news-item .page-header__text h3,
+.page-header--news-item .page-header__text h4,
+.page-header--news-item .page-header__text h5,
+.page-header--news-item .page-header__text h6,
+.page-header--news-item .page-header__text p {
   padding-right: 25px;
   padding-left: 25px;
 }
@@ -3093,6 +3100,13 @@ p {
   padding-left: 40px;
   width: 100%;
   max-width: 1472px;
+}
+
+.page-news .card-contact {
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+  max-width: 334px;
 }
 
 .page-news__wrap {
@@ -3150,6 +3164,11 @@ p {
   margin-bottom: 40px;
 }
 
+.page-header__aside .card-contact {
+  width: 100%;
+  max-width: 334px;
+}
+
 .page-header--contact .page-header__aside .card {
   z-index: 1;
   box-shadow: 0px 4px 46.7px 0px rgba(214, 32, 40, 0.3019607843);
@@ -3192,6 +3211,10 @@ p {
 }
 
 .page-header--news-item .page-header__aside:after {
+  display: none;
+}
+
+.page-header--news .page-header__aside {
   display: none;
 }
 
@@ -3245,11 +3268,16 @@ p {
 .page-news__inner {
   padding-top: 50px;
   padding-right: 25px;
+  padding-bottom: 40px;
   padding-left: 25px;
 }
 
 .page-news-item {
   overflow: hidden;
+}
+
+.page-news-item article {
+  padding-bottom: 100px;
 }
 
 .page-news-item__inner {
@@ -4698,7 +4726,13 @@ p {
     padding-left: 25px;
   }
 
-  .page-header--news-item .page-header__text h1 {
+  .page-header--news-item .page-header__text h1,
+  .page-header--news-item .page-header__text h2,
+  .page-header--news-item .page-header__text h3,
+  .page-header--news-item .page-header__text h4,
+  .page-header--news-item .page-header__text h5,
+  .page-header--news-item .page-header__text h6,
+  .page-header--news-item .page-header__text p {
     padding-right: 0;
     padding-left: 0;
   }
@@ -4742,6 +4776,10 @@ p {
     padding-top: 50px;
     padding-right: 0;
     border-left: 1px solid #fff;
+  }
+
+  .page-header--news .page-header__text {
+    max-width: 100%;
   }
 
   .page-header--slider p {
@@ -5060,10 +5098,6 @@ p {
     padding: 52px;
   }
 
-  .card-contact {
-    width: auto;
-  }
-
   .clients__inner {
     padding: 48px 72px;
     justify-content: space-between;
@@ -5273,7 +5307,13 @@ p {
     margin-left: auto;
   }
 
-  .page-header--news-item .page-header__text h1 {
+  .page-header--news-item .page-header__text h1,
+  .page-header--news-item .page-header__text h2,
+  .page-header--news-item .page-header__text h3,
+  .page-header--news-item .page-header__text h4,
+  .page-header--news-item .page-header__text h5,
+  .page-header--news-item .page-header__text h6,
+  .page-header--news-item .page-header__text p {
     padding-right: 25px;
   }
 
@@ -5778,6 +5818,10 @@ p {
     font-size: 24px;
   }
 
+  .card-contact {
+    width: auto;
+  }
+
   .card.card--service h3 {
     font-size: 28px;
   }
@@ -6030,6 +6074,10 @@ p {
     margin-right: 0;
   }
 
+  .page-header__aside .card-contact {
+    max-width: 100%;
+  }
+
   .page-header--contact .page-header__aside .card {
     margin-right: auto !important;
     margin-left: auto;
@@ -6057,6 +6105,10 @@ p {
     border-left: 0;
   }
 
+  .page-header--news .page-header__aside {
+    display: block;
+  }
+
   .page-header--slider .swiper-button-prev {
     left: 23px;
   }
@@ -6068,6 +6120,7 @@ p {
   .page-news__inner {
     width: 75%;
     padding-top: 0;
+    padding-bottom: 0;
     padding-right: 72px;
     padding-left: 72px;
   }
