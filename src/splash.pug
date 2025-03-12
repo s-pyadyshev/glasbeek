@@ -1,0 +1,14 @@
+extends pug/base
+
+prepend vars
+  - title = 'Homepage with Splash'
+
+append vars
+
+block content
+  include pug/components/hero
+  include pug/components/services
+  include pug/components/section-benefits
+  include pug/components/clients
+  include pug/components/section-news
+  include pug/components/section-why

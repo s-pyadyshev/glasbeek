@@ -7,13 +7,12 @@ const applyScrollspyClasses = (elements) => {
         return;
       }
 
-      if (!element.hasAttribute("height")) {
+      if (element.tagName === "svg" && !element.hasAttribute("height")) {
         element.setAttribute(
           "height",
-          element.getAttribute("viewBox").slice(-2)
+          `${element.getAttribute("viewBox").slice(-2)}`
         );
       }
-
       const animationClass = element.dataset.scrollspy;
 
       element.classList.add("animate__animated");
