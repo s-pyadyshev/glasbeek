@@ -6,7 +6,7 @@ window.addEventListener(
       return;
     }
     if (
-      window.location.pathname === "/splash.html" ||
+      window.location.pathname === "/glasbeek/build/splash.html" ||
       window.location.pathname === "/en" ||
       window.location.pathname === "/de"
     ) {
