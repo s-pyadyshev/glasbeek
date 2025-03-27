@@ -17,8 +17,18 @@ mixin menu()
             a.menu__link(href='/transport') Transport
       li.menu__item
         a.menu__link(href='/service') Service
-      li.menu__item
+      li.menu__item.menu__item--submenu
         a.menu__link(href='/glasbeek') Glasbeek
+        button.menu__link.dropdown.js-dropdown Glasbeek
+        ul.menu__list
+          li.menu__item
+            a.menu__link(href='/pretreatment') Over Glasbeek
+          li.menu__item
+            a.menu__link(href='/powder-coating') Kernactiviteiten
+          li.menu__item
+            a.menu__link(href='/ovens') Missie & Visie
+          li.menu__item
+            a.menu__link(href='/transport') Werken bij
       li.menu__item
         a.menu__link(href='/news') Nieuws
       li.menu__item

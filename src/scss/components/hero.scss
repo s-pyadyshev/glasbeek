@@ -16,43 +16,49 @@
   list-style-type: none;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  align-items: flex-start;
+  gap: 0;
 
   @include tablet {
-    gap: 60px;
     flex-direction: row;
-  }
-
-  @include laptop {
-    gap: 40px;
-    max-width: 556px;
+    border-radius: 100px;
+    background-color: $color-white;
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1);
+    max-width: 576px;
   }
 }
 
-.hero__list li {
+.hero__list li a {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 15px;
+  text-decoration: none;
+  padding: 10px 0;
+  border-radius: 100px;
 
-  @include laptop {
-    gap: 0;
+  @include tablet {
+    padding: 22px 35px;
+
+    &:focus,
+    &:hover {
+      background-color: $color-primary;
+      color: $color-white;
+
+      svg {
+        fill: $color-white;
+      }
+    }
   }
 }
 
 .hero__list svg {
-  width: 20px;
-  height: 20px;
+  height: 35px;
+  width: 30px;
   flex-shrink: 0;
   fill: $color-primary;
 
   @include tablet {
-    width: 35px;
-    height: 35px;
-  }
-
-  @include laptop {
-    height: 52px;
-    width: 54px;
+    height: 25px;
   }
 }
 
@@ -61,11 +67,7 @@
   margin: 0;
 
   @include tablet {
-    font-size: 18px;
-  }
-
-  @include laptop {
-    font-size: 28px;
+    font-size: 20px;
   }
 }
 
@@ -81,6 +83,7 @@
 .hero__text {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   padding: 32px 40px;
 
   @include laptop {
@@ -132,7 +135,7 @@
   @include laptop {
     height: 575px;
     width: calc(100% - 204px);
-    border-left: 1px solid #fff;
+    border-left: 1px solid $color-white;
     margin-left: auto;
   }
 

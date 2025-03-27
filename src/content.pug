@@ -1,0 +1,75 @@
+extends pug/base
+
+prepend vars
+  - title = 'Content'
+
+append vars
+
+block content 
+  +page-header-content(
+    'Compatibiliteit',
+    'Glasbeek voorbehandeling-, poederlak- en oveninstallaties zijn compatibel met de onderstaande producten:'
+    )
+  section.background-default
+    .container
+      article.article.product-list-wrap.border-left.border-right
+        ul.product-list
+          li QUALICOAT seaside
+          li Qualisteelcoat
+          li GSB international
+          li Multi-Metal pretreatment
+          li Chromate (Cr3+) conversion
+          li Zinc phosphating
+          li Iron phosphating
+          li Precoat Cr-free
+          li Oxsilan
+          li Decorrdal
+          li SurTec
+          li VIANT coating
+          li Powder coatings
+          li Water-Based coatings
+          li Solvent-Based coatings
+          li DACROMET®
+          li GEOMET®
+          li Zinc flake coatings
+          li Ant-friction coatings
+          li Non-stick coatings
+          li Functional coatings
+          li Fluoropolymer coatings
+          li PTFE – FEP – PFA
+          li Teflonᵀᴹ
+          li Kynar®
+          li Rilsan®
+          li Halar®
+          li Xylan®
+          li Resicoat®
+          li Abcite®
+          li PEEK©
+  section
+    .container
+      .background-primary.poster-wrap
+        img(src="images/portrait-woman.png" width="430" height="448" alt="service.")
+        .poster__text
+          h2 Ontdek de mogelijkheden. Wij denken graag met u mee!
+          .poster__actions
+            a(href="/").button Stuur een bericht
+            a(href="tel:+0182322422") Of bel 0182 322 422
+  section.section.background-default.section-equipment.pt-0.pb-0
+    .container
+      .section-equipment__cards.border-left.border-right 
+        h2 Meer over Glasbeek-installaties
+        .section-equipment__cards-wrap
+          div 
+            a(href="/").card-link 
+              img.card-link__image(src="images/card-why1.jpg" width="400" height="228" alt="")
+              .card-link__body
+                div.title Sproeikamer
+                +svg('arrow-right')
+          div 
+            a(href="/").card-link 
+              img.card-link__image(src="images/card-why1.jpg" width="400" height="228" alt="")
+              .card-link__body
+                div.title Sproeitunnel
+                +svg('arrow-right')
+    .section-bottom-border
+      .container

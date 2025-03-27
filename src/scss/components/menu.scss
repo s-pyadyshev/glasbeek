@@ -30,6 +30,17 @@
   }
 }
 
+.menu>.menu__list {
+  padding-top: 0;
+  margin-top: 160px;
+  overflow-y: auto;
+
+  @include laptop {
+    margin-top: 0;
+    overflow-y: initial;
+  }
+}
+
 .menu__lang {
   margin-top: 20px;
   font-size: 18px;
@@ -53,6 +64,10 @@
   height: 100%;
   width: 100%;
   color: $color-black;
+
+  @include desktop {
+    padding: 0;
+  }
 }
 
 .menu__list {
@@ -77,9 +92,14 @@
   }
 
   @include desktop {
-    gap: 32px;
-    padding-left: 72px;
-    padding-right: 0;
+    gap: 0;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @include desktop-l {
+    padding-left: 40px;
+    padding-right: 40px;
   }
 
   .menu-active & {
@@ -137,6 +157,10 @@
   }
 
   @include desktop-l {
+    font-size: 17px;
+  }
+
+  @media (min-width: 1800px) {
     font-size: 20px;
   }
 
@@ -176,19 +200,85 @@
       margin-bottom: 60px;
     }
   }
+
+  @include desktop {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  @include desktop-l {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+}
+
+.menu__item--submenu .menu__link.dropdown {
+  @include desktop {
+    display: none;
+  }
+}
+
+.menu__item--submenu {
+  @include desktop {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 80px;
+  }
+
+  @include desktop-l {
+    height: 141px;
+  }
+
+  &:hover {
+    @include desktop {
+      background-color: #780000;
+    }
+  }
+
+  .menu__link {
+    border-bottom: 0;
+  }
+
+  .menu__item {
+    @include desktop {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+
+  .menu__list .menu__link {
+    &:hover {
+      border-bottom: 1px solid #fff;
+    }
+  }
+}
+
+.menu__item--submenu:hover .menu__list {
+  @include desktop {
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: auto;
+    background-color: #780000;
+  }
+
+  @include desktop-l {
+    top: 141px;
+  }
 }
 
 .menu__item--submenu>a.menu__link {
   display: none;
 
-  @include laptop {
+  @include desktop {
     display: block;
-  }
-}
-
-.menu__item--submenu button.menu__link {
-  @include laptop {
-    display: none;
   }
 }
 
@@ -217,10 +307,6 @@
         padding-left: 240px;
       }
     }
-  }
-
-  .menu__item--submenu>a.menu__link {
-    display: none;
   }
 
   .menu__item--submenu>button.menu__link {

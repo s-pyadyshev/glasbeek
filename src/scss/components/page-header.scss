@@ -536,3 +536,49 @@
     font-size: 20px;
   }
 }
+
+.page-header--image .page-header__inner {
+  gap: 0;
+  min-height: 430px;
+}
+
+.page-header--image .page-header__aside {
+  @include tablet {
+    display: flex;
+    align-items: center;
+    border-left: 1px solid #fff;
+    width: 50%;
+    padding-right: 32px;
+    padding-left: 32px;
+    padding-top: 0;
+  }
+
+  @include desktop {
+    padding-right: 68px;
+    padding-left: 68px;
+  }
+}
+
+.page-header--image .page-header__aside>* {
+  @include tablet {
+    margin-bottom: 0;
+  }
+}
+
+.page-header--image .page-header__text {
+  @include tablet {
+    width: 50%;
+  }
+}
+
+.page-header__image {
+  img {
+    width: 100%;
+
+    @include tablet {
+      width: 599px;
+      height: 288px;
+      object-fit: cover;
+    }
+  }
+}
