@@ -12,10 +12,11 @@
 
   @include laptop {
     flex-direction: row;
-    padding: 110px 76px 55px;
+    padding: 110px 40px 55px;
   }
 
-  @include desktop {
+
+  @include desktop-l {
     padding: 220px 76px 55px;
   }
 }
@@ -51,6 +52,7 @@
     flex-direction: column;
     padding-bottom: 0;
     width: 32.7%;
+    padding-right: 40px;
   }
 
   li {
@@ -93,20 +95,41 @@
 }
 
 .services__slider {
+  position: relative;
+
   @include laptop {
     width: 68.3%;
     padding-left: 70px;
   }
 
+  @include desktop {
+    padding-left: 120px;
+  }
+
+  &:before {
+    @include laptop {
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: calc(100% + 290px);
+      background: lightgrey;
+      display: block;
+      left: 0;
+      top: -145px;
+    }
+  }
+
   .slider-services {
     z-index: 3;
-    padding: 50px;
-    margin: -50px;
+    padding: 50px 100px;
+    margin: -50px -100px;
     margin-right: -76px;
     padding-right: 76px;
     padding-bottom: 60px;
 
     @include laptop {
+      padding: 50px;
+      margin: -50px;
       margin-right: -140px;
       padding-right: 140px;
     }

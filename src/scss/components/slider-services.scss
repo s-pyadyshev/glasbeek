@@ -1,11 +1,15 @@
 .slider-services {
   margin-bottom: 20px;
+
+  .swiper-slide {
+    height: auto;
+  }
 }
 
 .slider-services__controls {
-  z-index: 1;
+  z-index: 3;
   position: absolute;
-  bottom: -20px;
+  bottom: -55px;
   display: flex;
   justify-content: center;
   gap: 40px;
@@ -13,6 +17,7 @@
   left: 0;
 
   @include laptop {
+    bottom: -20px;
     justify-content: flex-end;
     margin: 20px 0 0 0;
     position: static;
@@ -21,10 +26,16 @@
   @include desktop-l {
     margin: 0;
   }
+
+  .menu-active & {
+    position: relative;
+    z-index: 1;
+  }
 }
 
 .slider-services .card--service {
   max-width: 100%;
+  height: 100%;
 }
 
 .slider-services .card--service img {

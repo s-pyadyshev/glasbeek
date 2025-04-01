@@ -2218,7 +2218,8 @@ p {
 }
 
 .card.card--service {
-  display: block;
+  display: flex;
+  flex-direction: column;
   background-color: #fff;
   padding: 0;
   text-decoration: none;
@@ -2251,6 +2252,7 @@ p {
 }
 
 .card.card--service .card__body {
+  height: 100%;
   background-color: #fff;
   transition: background-color 0.2s;
 }
@@ -2745,6 +2747,7 @@ p {
   gap: 30px;
   line-height: 1;
   font-size: 15px;
+  word-break: break-all;
 }
 
 .list.list--services li {
@@ -4025,10 +4028,14 @@ p {
   display: none;
 }
 
+.services__slider {
+  position: relative;
+}
+
 .services__slider .slider-services {
   z-index: 3;
-  padding: 50px;
-  margin: -50px;
+  padding: 50px 100px;
+  margin: -50px -100px;
   margin-right: -76px;
   padding-right: 76px;
   padding-bottom: 60px;
@@ -4080,10 +4087,14 @@ p {
   display: none;
 }
 
+.services__slider {
+  position: relative;
+}
+
 .services__slider .slider-services {
   z-index: 3;
-  padding: 50px;
-  margin: -50px;
+  padding: 50px 100px;
+  margin: -50px -100px;
   margin-right: -76px;
   padding-right: 76px;
   padding-bottom: 60px;
@@ -4114,10 +4125,14 @@ p {
   margin-bottom: 20px;
 }
 
+.slider-services .swiper-slide {
+  height: auto;
+}
+
 .slider-services__controls {
-  z-index: 1;
+  z-index: 3;
   position: absolute;
-  bottom: -20px;
+  bottom: -55px;
   display: flex;
   justify-content: center;
   gap: 40px;
@@ -4125,8 +4140,14 @@ p {
   left: 0;
 }
 
+.menu-active .slider-services__controls {
+  position: relative;
+  z-index: 1;
+}
+
 .slider-services .card--service {
   max-width: 100%;
+  height: 100%;
 }
 
 .slider-services .card--service img {
@@ -4408,7 +4429,7 @@ p {
 }
 
 .product__details-column:nth-child(2) {
-  padding-left: 20px;
+  padding-left: 0;
 }
 
 .product__details-column ul {
@@ -5593,7 +5614,7 @@ ul.product-list {
 
   .services__inner {
     flex-direction: row;
-    padding: 110px 76px 55px;
+    padding: 110px 40px 55px;
   }
 
   .services__list::after {
@@ -5605,6 +5626,7 @@ ul.product-list {
     flex-direction: column;
     padding-bottom: 0;
     width: 32.7%;
+    padding-right: 40px;
   }
 
   .services__list a {
@@ -5629,7 +5651,20 @@ ul.product-list {
     padding-left: 70px;
   }
 
+  .services__slider:before {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: calc(100% + 290px);
+    background: lightgrey;
+    display: block;
+    left: 0;
+    top: -145px;
+  }
+
   .services__slider .slider-services {
+    padding: 50px;
+    margin: -50px;
     margin-right: -140px;
     padding-right: 140px;
   }
@@ -5640,7 +5675,7 @@ ul.product-list {
 
   .services__inner {
     flex-direction: row;
-    padding: 110px 76px 55px;
+    padding: 110px 40px 55px;
   }
 
   .services__list::after {
@@ -5652,6 +5687,7 @@ ul.product-list {
     flex-direction: column;
     padding-bottom: 0;
     width: 32.7%;
+    padding-right: 40px;
   }
 
   .services__list a {
@@ -5676,12 +5712,26 @@ ul.product-list {
     padding-left: 70px;
   }
 
+  .services__slider:before {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: calc(100% + 290px);
+    background: lightgrey;
+    display: block;
+    left: 0;
+    top: -145px;
+  }
+
   .services__slider .slider-services {
+    padding: 50px;
+    margin: -50px;
     margin-right: -140px;
     padding-right: 140px;
   }
 
   .slider-services__controls {
+    bottom: -20px;
     justify-content: flex-end;
     margin: 20px 0 0 0;
     position: static;
@@ -6505,12 +6555,12 @@ ul.product-list {
     padding-bottom: 80px;
   }
 
-  .services__inner {
-    padding: 220px 76px 55px;
+  .services__slider {
+    padding-left: 120px;
   }
 
-  .services__inner {
-    padding: 220px 76px 55px;
+  .services__slider {
+    padding-left: 120px;
   }
 
   .swiper-button-prev,
@@ -6902,9 +6952,17 @@ ul.product-list {
     width: 46% !important;
   }
 
+  .services__inner {
+    padding: 220px 76px 55px;
+  }
+
   .services__slider .slider-services {
     margin-right: -279px;
     margin-bottom: 0;
+  }
+
+  .services__inner {
+    padding: 220px 76px 55px;
   }
 
   .services__slider .slider-services {

@@ -136,7 +136,8 @@
 }
 
 .card.card--service {
-  display: block;
+  display: flex;
+  flex-direction: column;
   background-color: #fff;
   padding: 0;
   text-decoration: none;
@@ -175,6 +176,7 @@
 }
 
 .card.card--service .card__body {
+  height: 100%;
   background-color: #fff;
   transition: background-color 0.2s;
 }

@@ -31,6 +31,9 @@ export const sliderServices = (function () {
         },
       },
     });
+    if (window.matchMedia("(min-width: 1200px)").matches) {
+      swiperServices.slideTo(swiperServices.slides.length);
+    }
   };
 
   return {
