@@ -2,7 +2,7 @@ import Swiper from "swiper";
 import { Navigation, Pagination } from "swiper/modules";
 export const sliderProduct = (function () {
   const init = function () {
-    const swiper = new Swiper(".slider-product", {
+    const swiperProduct = new Swiper(".slider-product", {
       modules: [Navigation, Pagination],
       navigation: {
         nextEl: ".swiper-button-next",

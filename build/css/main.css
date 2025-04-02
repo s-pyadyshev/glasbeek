@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 /**
- * Swiper 11.2.4
+ * Swiper 11.2.6
  * Most modern mobile touch slider and framework with hardware accelerated transitions
  * https://swiperjs.com
  *
@@ -9,7 +9,7 @@
  *
  * Released under the MIT License
  *
- * Released on: February 14, 2025
+ * Released on: March 19, 2025
  */
 
 @font-face {
@@ -1380,7 +1380,7 @@ video {
   content: "";
   position: absolute;
   top: -1px;
-  left: -50vw;
+  left: calc(50vw - 15px);
   width: 145vw;
   height: 1px;
   background-color: #dadada;
@@ -1968,7 +1968,6 @@ p {
 .card-news-slider {
   display: flex;
   flex-direction: column;
-  max-width: 504px;
   width: 100%;
   height: 100%;
   background-color: #fff;
@@ -2543,7 +2542,8 @@ p {
   display: none;
 }
 
-.menu-active .header__logo {
+.menu-active .header__logo,
+.header__logo.splash-active {
   z-index: 11;
   border: 1px solid transparent;
   filter: brightness(0) invert(1);
@@ -2805,6 +2805,14 @@ p {
   animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
 }
 
+.splash__logo {
+  position: absolute;
+  top: 50px;
+  margin: 0 auto;
+  right: 0;
+  left: 0;
+}
+
 .splash__title {
   max-width: 250px;
   text-align: center;
@@ -2849,7 +2857,7 @@ p {
   height: 41px;
   position: relative;
   cursor: pointer;
-  transform: rotate(0deg);
+  transform: scale(0.8) rotate(0deg);
   transition: all 0.5s ease-in-out;
 }
 
@@ -3690,8 +3698,8 @@ p {
 }
 
 .section-news .slider-news {
-  margin-right: -72px;
-  padding-right: 72px;
+  margin-right: -82px;
+  padding-right: 82px;
 }
 
 .section-news h2 {
@@ -4767,6 +4775,12 @@ ul.product-list {
     font-size: 20px;
   }
 
+  .splash__logo {
+    left: 124px;
+    right: auto;
+    margin: 0;
+  }
+
   .news-list {
     grid-template-columns: 1fr 1fr;
   }
@@ -4959,10 +4973,10 @@ ul.product-list {
   }
 
   .section-news .slider-news {
-    margin-left: -49%;
-    width: 146%;
+    margin-left: -76px;
+    width: calc(100% + 76px);
     margin-right: 0;
-    padding-right: 0;
+    padding-right: 20px;
   }
 
   .section-news h2 {
@@ -5526,6 +5540,11 @@ ul.product-list {
     padding: 40px;
   }
 
+  .section-news .slider-news {
+    margin-left: -106px;
+    width: calc(100% + 106px);
+  }
+
   .section-specs__header h2 {
     font-size: 22px;
   }
@@ -5648,7 +5667,7 @@ ul.product-list {
 
   .services__slider {
     width: 68.3%;
-    padding-left: 70px;
+    padding-left: 51px;
   }
 
   .services__slider:before {
@@ -5709,7 +5728,7 @@ ul.product-list {
 
   .services__slider {
     width: 68.3%;
-    padding-left: 70px;
+    padding-left: 51px;
   }
 
   .services__slider:before {
@@ -6065,6 +6084,10 @@ ul.product-list {
   .hero__inner {
     display: flex;
     justify-content: end;
+  }
+
+  .splash__logo {
+    left: 248px;
   }
 
   .menu-toggle__text {
@@ -6435,9 +6458,8 @@ ul.product-list {
   }
 
   .section-news .slider-news {
-    padding-left: 46%;
-    margin-left: -74%;
-    width: 170%;
+    width: calc(100% + 142px);
+    margin-left: -142px;
   }
 
   .section-news__inner {
@@ -6553,14 +6575,6 @@ ul.product-list {
   .section {
     padding-top: 80px;
     padding-bottom: 80px;
-  }
-
-  .services__slider {
-    padding-left: 120px;
-  }
-
-  .services__slider {
-    padding-left: 120px;
   }
 
   .swiper-button-prev,
@@ -6876,6 +6890,12 @@ ul.product-list {
 
   .section-equipment .card-link {
     max-width: 400px;
+  }
+
+  .section-news .slider-news {
+    width: calc(100% + 288px);
+    margin-left: -288px;
+    padding-right: 40px;
   }
 
   .section-specs__title-wrap {

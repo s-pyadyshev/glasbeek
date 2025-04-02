@@ -1,5 +1,6 @@
 import Swiper from "swiper";
 import { Navigation, Pagination } from "swiper/modules";
+
 export const sliderServices = (function () {
   const init = function () {
     const swiperServices = new Swiper(".slider-services", {
@@ -7,8 +8,8 @@ export const sliderServices = (function () {
       slidesPerView: 1,
       spaceBetween: 15,
       navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+        nextEl: ".swiper-button-next.services-next",
+        prevEl: ".swiper-button-prev.services-prev",
       },
       pagination: {
         el: ".swiper-pagination",
@@ -31,9 +32,8 @@ export const sliderServices = (function () {
         },
       },
     });
-    if (window.matchMedia("(min-width: 1200px)").matches) {
-      swiperServices.slideTo(swiperServices.slides.length);
-    }
+
+    window.swiperServices = swiperServices;
   };
 
   return {

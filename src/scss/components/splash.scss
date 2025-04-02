@@ -29,6 +29,24 @@
   }
 }
 
+.splash__logo {
+  position: absolute;
+  top: 50px;
+  margin: 0 auto;
+  right: 0;
+  left: 0;
+
+  @include tablet {
+    left: 124px;
+    right: auto;
+    margin: 0;
+  }
+
+  @include desktop {
+    left: 248px;
+  }
+}
+
 .splash__title {
   max-width: 250px;
   text-align: center;

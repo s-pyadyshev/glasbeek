@@ -1,18 +1,28 @@
 .section-news .slider-news {
-  margin-right: -72px;
-  padding-right: 72px;
+  margin-right: -82px;
+  padding-right: 82px;
 
   @include tablet {
-    margin-left: -49%;
-    width: 146%;
+    margin-left: -76px;
+    width: calc(100% + 76px);
     margin-right: 0;
-    padding-right: 0;
+    padding-right: 20px;
+  }
+
+  @include laptop {
+    margin-left: -106px;
+    width: calc(100% + 106px);
   }
 
   @include desktop {
-    padding-left: 46%;
-    margin-left: -74%;
-    width: 170%;
+    width: calc(100% + 142px);
+    margin-left: -142px;
+  }
+
+  @include desktop-l {
+    width: calc(100% + 288px);
+    margin-left: -288px;
+    padding-right: 40px;
   }
 }
 

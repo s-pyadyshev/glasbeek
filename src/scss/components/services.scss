@@ -99,11 +99,7 @@
 
   @include laptop {
     width: 68.3%;
-    padding-left: 70px;
-  }
-
-  @include desktop {
-    padding-left: 120px;
+    padding-left: 51px;
   }
 
   &:before {

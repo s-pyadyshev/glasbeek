@@ -44,8 +44,9 @@
   height: 41px;
   position: relative;
   cursor: pointer;
-  transform: rotate(0deg);
+  transform: scale(0.8) rotate(0deg);
   transition: all 0.5s ease-in-out;
+
 
   &:focus,
   &:hover,

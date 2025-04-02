@@ -91,7 +91,8 @@ $mobile-menu-background-color: $color-primary;
     }
   }
 
-  .menu-active & {
+  .menu-active &,
+  &.splash-active {
     z-index: 11;
     border: 1px solid transparent;
     filter: brightness(0) invert(1);
