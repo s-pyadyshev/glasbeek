@@ -453,24 +453,15 @@
   }
 }
 
-.section-why__cards li:nth-child(1) {
+.section-why__cards li:nth-child(odd) {
   border-right: 1px solid #dadada;
   border-bottom: 1px solid #dadada;
 }
 
-.section-why__cards li:nth-child(2) {
+.section-why__cards li:nth-child(even) {
   border-bottom: 1px solid #dadada;
 
   @include tablet {
     border-left: 0;
   }
-}
-
-.section-why__cards li:nth-child(3) {
-  border-right: 1px solid #dadada;
-  border-bottom: 1px solid #dadada;
-}
-
-.section-why__cards li:nth-child(4) {
-  border-bottom: 1px solid #dadada;
 }
