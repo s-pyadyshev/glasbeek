@@ -28,7 +28,6 @@ export const stickyCard = (() => {
 
       isInitialized = true;
     } catch (error) {
-      console.error("Failed to initialize StickyCardNews:", error);
       destroy();
     }
   };
@@ -70,7 +69,6 @@ export const stickyCard = (() => {
 
       return true;
     } catch (error) {
-      console.error("Failed to setup scene:", error);
       return false;
     }
   };

@@ -81,20 +81,19 @@
   padding-top: 160px;
 
   @include laptop {
-    gap: 24px;
+    gap: 0;
     flex-direction: row;
     margin-right: 0;
     padding-top: 0;
     width: 100%;
     justify-content: space-between;
-    padding-left: 36px;
-    padding-right: 36px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   @include desktop {
-    gap: 0;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   @include desktop-l {
@@ -201,6 +200,11 @@
     }
   }
 
+  @include laptop {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
   @include desktop {
     padding-right: 20px;
     padding-left: 20px;
@@ -213,13 +217,13 @@
 }
 
 .menu__item--submenu .menu__link.dropdown {
-  @include desktop {
+  @include laptop {
     display: none;
   }
 }
 
 .menu__item--submenu {
-  @include desktop {
+  @include laptop {
     position: relative;
     display: flex;
     align-items: center;
@@ -231,7 +235,7 @@
   }
 
   &:hover {
-    @include desktop {
+    @include laptop {
       background-color: #780000;
     }
   }
@@ -255,18 +259,23 @@
 }
 
 .menu__item--submenu:hover .menu__list {
-  @include desktop {
+  @include laptop {
     z-index: 3;
     display: flex;
     flex-direction: column;
     gap: 20px;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     position: absolute;
     top: 80px;
     left: 0;
     width: auto;
     background-color: #780000;
+  }
+
+  @include desktop {
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
 
   @include desktop-l {
@@ -277,7 +286,7 @@
 .menu__item--submenu>a.menu__link {
   display: none;
 
-  @include desktop {
+  @include laptop {
     display: block;
   }
 }
@@ -313,7 +322,7 @@
     display: block;
     margin: 0 auto;
 
-    @include desktop {
+    @include laptop {
       margin: 0;
     }
   }

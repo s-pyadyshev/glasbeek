@@ -1934,6 +1934,7 @@ p {
 }
 
 .card-link__image {
+  width: 100%;
   height: 229px;
   -o-object-fit: cover;
   object-fit: cover;
@@ -5256,6 +5257,10 @@ ul.product-list {
     margin-bottom: -1px;
   }
 
+  .header__menu-toggle {
+    display: none;
+  }
+
   .header__menu {
     width: 60%;
     height: 80px;
@@ -5357,14 +5362,14 @@ ul.product-list {
   }
 
   .menu__list {
-    gap: 24px;
+    gap: 0;
     flex-direction: row;
     margin-right: 0;
     padding-top: 0;
     width: 100%;
     justify-content: space-between;
-    padding-left: 36px;
-    padding-right: 36px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   .menu__link {
@@ -5373,6 +5378,48 @@ ul.product-list {
 
   .menu-active .menu__item {
     margin-bottom: 60px;
+  }
+
+  .menu__item {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  .menu__item--submenu .menu__link.dropdown {
+    display: none;
+  }
+
+  .menu__item--submenu {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 80px;
+  }
+
+  .menu__item--submenu:hover {
+    background-color: #780000;
+  }
+
+  .menu__item--submenu:hover .menu__list {
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: auto;
+    background-color: #780000;
+  }
+
+  .menu__item--submenu > a.menu__link {
+    display: block;
+  }
+
+  .menu.menu--open .menu__item--submenu > button.menu__link {
+    margin: 0;
   }
 
   .navbar__list {
@@ -6061,10 +6108,6 @@ ul.product-list {
     width: calc(50% - 40px);
   }
 
-  .header__menu-toggle {
-    display: none;
-  }
-
   .lang li a {
     font-size: 20px;
   }
@@ -6099,9 +6142,8 @@ ul.product-list {
   }
 
   .menu__list {
-    gap: 0;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .menu-active .menu__list {
@@ -6126,42 +6168,14 @@ ul.product-list {
     padding-left: 20px;
   }
 
-  .menu__item--submenu .menu__link.dropdown {
-    display: none;
-  }
-
-  .menu__item--submenu {
-    position: relative;
-    display: flex;
-    align-items: center;
-    height: 80px;
-  }
-
-  .menu__item--submenu:hover {
-    background-color: #780000;
-  }
-
   .menu__item--submenu .menu__item {
     padding-right: 0;
     padding-left: 0;
   }
 
   .menu__item--submenu:hover .menu__list {
-    z-index: 3;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
     padding-top: 40px;
     padding-bottom: 40px;
-    position: absolute;
-    top: 80px;
-    left: 0;
-    width: auto;
-    background-color: #780000;
-  }
-
-  .menu__item--submenu > a.menu__link {
-    display: block;
   }
 
   .menu.menu--open {
@@ -6174,10 +6188,6 @@ ul.product-list {
 
   .menu.menu--open .menu__list .menu__list {
     padding-left: 240px;
-  }
-
-  .menu.menu--open .menu__item--submenu > button.menu__link {
-    margin: 0;
   }
 
   .news-list {

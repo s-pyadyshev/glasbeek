@@ -111,7 +111,7 @@ $mobile-menu-background-color: $color-primary;
     margin-bottom: -1px;
   }
 
-  @include desktop {
+  @include laptop {
     display: none;
   }
 }
