@@ -89,6 +89,7 @@
 }
 
 .card-why-tabs__tab-button {
+  flex-shrink: 0;
   background-color: #dadada !important;
   border-radius: 50%;
   color: $color-white;
@@ -108,4 +109,10 @@
 
 .card-why-tabs__tab-button:not(:last-child) {
   margin-right: 22px;
+}
+
+.card-why[data-scrollspy] {
+  @media (max-width: 767px) and (orientation: landscape) {
+    opacity: 1;
+  }
 }

@@ -2113,6 +2113,7 @@ p {
 }
 
 .card-why-tabs__tab-button {
+  flex-shrink: 0;
   background-color: #dadada !important;
   border-radius: 50%;
   color: #fff;
@@ -4530,6 +4531,18 @@ ul.product-list {
   font-size: 16px;
   list-style-position: outside;
   padding: 20px 0 50px 50px;
+}
+
+body:has(.splash:not(.loaded)) .header,
+body:has(.splash:not(.loaded)) .main,
+body:has(.splash:not(.loaded)) .footer {
+  opacity: 0;
+}
+
+body:has(.splash.loaded) .header,
+body:has(.splash.loaded) .main,
+body:has(.splash.loaded) .footer {
+  opacity: 1;
 }
 
 @media (min-width: 0) {
@@ -7083,6 +7096,12 @@ ul.product-list {
 
   .services__slider .slider-services {
     margin-right: -50%;
+  }
+}
+
+@media (max-width: 767px) and (orientation: landscape) {
+  .card-why[data-scrollspy] {
+    opacity: 1;
   }
 }
 

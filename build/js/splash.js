@@ -16,11 +16,15 @@ window.addEventListener(
         splashElement.classList.add("active");
         scribble.classList.toggle("animate__animated");
         setTimeout(() => {
+          splashElement.classList.add("loaded");
+        }, 2000);
+        setTimeout(() => {
           splashElement.classList.remove("active");
         }, 3000);
         sessionStorage.setItem("splashShown", "true");
       } else {
         splashElement.classList.remove("active");
+        splashElement.classList.add("loaded");
       }
     }
   },

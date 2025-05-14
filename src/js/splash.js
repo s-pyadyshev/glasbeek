@@ -17,16 +17,19 @@ window.addEventListener(
         headerLogo.classList.add("splash-active");
         splashElement.classList.add("active");
         scribble.classList.add("animate__animated");
+
         setTimeout(() => {
           splashElement.classList.remove("active");
           headerLogo.classList.remove("splash-active");
           scribble.classList.remove("animate__animated");
+          splashElement.classList.add("loaded");
         }, 3000);
         sessionStorage.setItem("splashShown", "true");
       } else {
         splashElement.classList.remove("active");
         headerLogo.classList.remove("splash-active");
         scribble.classList.remove("animate__animated");
+        splashElement.classList.add("loaded");
       }
     }
   },

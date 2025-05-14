@@ -1,8 +1,8 @@
-import { throttle, isElementInViewport } from "../helpers.js";
+import { throttle, isElementCompletelyInViewport } from "../helpers.js";
 
 const applyScrollspyClasses = (elements) => {
   elements.forEach((element) => {
-    if (isElementInViewport(element)) {
+    if (isElementCompletelyInViewport(element)) {
       if (element.classList.contains("no-animate")) {
         return;
       }
