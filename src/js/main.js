@@ -29,8 +29,12 @@ window.addEventListener("load", () => {
   relocateContactNewsDetail.init();
 
   if (window.matchMedia("(min-width: 768px)").matches) {
-    window.swiperServices.slideTo(swiperServices.slides.length);
-    window.swiperNews.slideTo(0);
+    if (document.querySelector(".slider-services")) {
+      window.swiperServices.slideTo(swiperServices.slides.length);
+    }
+    if (document.querySelector(".slider-news")) {
+      window.swiperNews.slideTo(0);
+    }
   }
 
   const rellax = new Rellax(".rellax");

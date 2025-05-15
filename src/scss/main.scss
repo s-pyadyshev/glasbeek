@@ -11,14 +11,14 @@
 @import "typography";
 @import "components";
 
-body:has(.splash:not(.loaded)) .header,
-body:has(.splash:not(.loaded)) .main,
-body:has(.splash:not(.loaded)) .footer {
+body .header,
+body .main,
+body .footer {
     opacity: 0;
 }
 
-body:has(.splash.loaded) .header,
-body:has(.splash.loaded) .main,
-body:has(.splash.loaded) .footer {
+body:has(.splash.hidden) .header,
+body:has(.splash.hidden) .main,
+body:has(.splash.hidden) .footer {
     opacity: 1;
 }

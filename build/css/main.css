@@ -7100,7 +7100,7 @@ body:has(.splash.hidden) .footer {
 }
 
 @media (max-width: 767px) and (orientation: landscape) {
-  .card-why[data-scrollspy] {
+  .card-why {
     opacity: 1;
   }
 }
